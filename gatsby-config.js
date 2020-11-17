@@ -26,6 +26,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Envision 2040',
+    description: 'Why wait for the world of tomorrow when it could be the world of today?'
   },
   pathPrefix: '/envision-2040',
   plugins: [

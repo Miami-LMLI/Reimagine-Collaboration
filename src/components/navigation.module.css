@@ -18,3 +18,16 @@
 .navigationItem a {
   color: currentColor;
 }
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  transition: all 200ms ease;
+  margin: 0 1em;
+}
+
+.icon:hover, .icon:active {
+  color:#23a6d5;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
