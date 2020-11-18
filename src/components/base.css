@@ -1,17 +1,45 @@
+/* roboto-regular - latin */
 @font-face {
-  font-family: "Avenir";
-  font-weight: 400;
+  font-family: 'Roboto';
   font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
-  font-display: swap;
+  font-weight: 400;
+  src: url('../../static/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../../static/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../static/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../static/fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../static/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../static/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+:root {
+  /* 
+  Sets the color palette to be used.
+  To ensure colors blend nicely together and avoid
+  complexity, forcing myself to only use these colors.
+  */
+  --shade-light: #ffffff;
+  --shade-dark: #373F49;
+  --shade-accent:#3f85da;
+
+  --background-light: #eee;
+  --background-dark: #ddd;
+  --background-darker: #25292e;
+  /* 
+  Sets the fonts to be used.
+  To ensure fonts blend together and avoid
+  complexity.
+  */
+  --brand-font: 'Roboto', sans-serif;
+  --main-font: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
-  background: #eee;
+  color: var(--shade-dark);
+  background: var(--background-light);
   margin: 0;
 }
 
@@ -27,8 +55,19 @@ h3 {
   font-weight: normal;
 }
 
+::selection {
+  color: var(--shade-light);
+  background-color: var(--shade-accent);
+}
+
 a {
-  color: currentColor;
+  color: var(--shade-dark);
+  transition: all 200ms ease;
+}
+
+a:hover, a:active {
+  color: var(--shade-accent);
+  text-decoration: none;
 }
 
 .wrapper {
@@ -55,7 +94,7 @@ a {
 .section-headline {
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var( --background-dark);
 }
 
 /**
