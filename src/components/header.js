@@ -1,19 +1,17 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import Image from 'react-bootstrap/Image'
 
 import styles from './hero.module.css'
 
-export default ({ data }) => (
+export default ({ image, text }) => (
   <div className={styles.hero}>
-    <Img
+    <Image
       className={styles.heroImage}
-      alt={data.name}
-      fluid={data.heroImage.fluid}
+      src={image} fluid
     />
-    <div className={styles.heroDetails}>
+    {/* <div className={styles.heroDetails}>
       <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p className={styles.heroTitle}>{data.title}</p>
-      <p>{data.shortBio.shortBio}</p>
-    </div>
+      <p>{text}</p>
+    </div> */}
   </div>
 )

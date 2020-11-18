@@ -1,6 +1,8 @@
 .hero {
   position: relative;
-  background: #000;
+	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
+  animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
   color: #fff;
   text-align: center;
 }
@@ -12,6 +14,8 @@
   */
   height: 61.8vh;
   max-height: 400px;
+  width: auto;
+  margin: auto;
 }
 
 .heroDetails {
@@ -44,4 +48,16 @@
   margin: 0;
   font-size: 1.125em;
   font-weight: bold;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

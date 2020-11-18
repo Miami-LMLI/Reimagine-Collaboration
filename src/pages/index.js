@@ -12,22 +12,16 @@ class RootIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
+    var headerImg = require('../../static/header.png')
+
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <Header data={author.node} />
+          <Header image={headerImg} />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+            <h2 className="section-headline">Why wait for the world of tomorrow when it could be the world of today?</h2>
+            <p>As a result of a global health crisis, heightened social rights tension, and a polarized political environment, the world faces an uncertain future. This is where 2040 comes into play. Join us in the near future as we take a deep dive into how we can prepare for what the next 20 years will bring as we explore the intersections of technology, social rights, and what it means to be human.</p>
           </div>
         </div>
       </Layout>
