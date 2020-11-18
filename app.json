@@ -1,13 +1,13 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Envision 2040",
+  "description": "This is for the development of Lockheed Martin Leadership Institute's Cohort 9 Envision 2040 website.",
   "keywords": [
     "contentful",
     "gatsby",
     "static",
     "ssg"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/LMLI-Cohort-9/Envision-2040",
   "success_url": "/",
   "buildpacks": [
     {
