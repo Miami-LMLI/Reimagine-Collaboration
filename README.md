@@ -6,11 +6,12 @@
 
 # Envision 2040
 
-- [Overview](#overview)
-- [Core Tech Stack](#tech)
-- [Prerequisites](#prereq)
-- [Setup](#setup)
-- [License](#license)
+- [Envision 2040](#envision-2040)
+  - [Overview](#overview)
+  - [Core Tech Stack](#core-tech-stack)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [License](#license)
 
 <a name="overview"/></a>
 ## Overview
@@ -27,7 +28,7 @@ This repository is for the development of Lockheed Martin Leadership Institute's
 <a name="prereq"/></a>
 ## Prerequisites
 - [ ] NodeJS (version >=10.13.0)
-- [ ] Yarn
+- [ ] NPM
 - [ ] Contentful API Access
 - [ ] An IDE of your choice ([Visual Studio Code](https://code.visualstudio.com/) recommended)
 
@@ -35,9 +36,9 @@ This repository is for the development of Lockheed Martin Leadership Institute's
 ## Setup
 1. `git clone git@github.com:LMLI-Cohort-9/Envision-2040.git`
 2. `cd Envision-2040/`
-3. `yarn install`
-4. `yarn setup`
-5. `yarn run dev`
+3. `npm install`
+4. `nmp run setup`
+5. `npm run dev`
 
 <a name="license"/></a>
 ## License
