@@ -26,7 +26,15 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Envision 2040',
-    description: 'Why wait for the world of tomorrow when it could be the world of today?'
+    description: 'Why wait for the world of tomorrow when it could be the world of today?',
+    social: {
+      facebook: 'https://www.facebook.com/cecleadership',
+      twitter: 'https://twitter.com/MUEngLdrInst',
+      youtube: 'https://www.youtube.com/channel/UCF9Pze8Ma2RiYjRupxNC_dQ',
+      instagram: 'https://www.instagram.com/muleadershipinstitute/',
+      linkedin: 'https://www.linkedin.com/groups/4276871/',
+      website: 'https://miamioh.edu/cec/about/centers-institutes/lockheed-martin/index.html'
+    }
   },
   pathPrefix: '/envision-2040',
   plugins: [

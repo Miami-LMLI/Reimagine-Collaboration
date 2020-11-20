@@ -14,14 +14,15 @@ class Layout extends React.Component {
     const { data, children } = this.props
 
     return (
-      <>
-      <Helmet title={data.site.siteMetadata.title} />
       <Container>
+        <Helmet>
+          <title>{data.site.siteMetadata.title}</title>
+          <meta name="description" content={data.site.siteMetadata.description} />
+        </Helmet>
         <Navigation />
         {children}
         <Footer />
       </Container>
-      </>
     )
   }
 }
@@ -34,6 +35,7 @@ export default function MyLayout(props) {
           site {
             siteMetadata {
               title
+              description
             }
           }
         }
