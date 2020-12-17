@@ -1,28 +1,80 @@
-import React from 'react'
-import './navigation.module.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Link, StaticQuery, graphql} from 'gatsby';
+import './navigation.module.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDonate, faHome } from "@fortawesome/free-solid-svg-icons";
+import {Navbar, Nav} from 'react-bootstrap';
 
-import { Navbar, Nav } from 'react-bootstrap';
+/**
+ * [Insert comment here].
+ */
+class Navigation extends React.Component {
+  /**
+   * [Insert comment here].
+   * @return {*} [Insert comment here].
+   */
+  render() {
+    const {data, location} = this.props;
 
-export default () => (
-  <Navbar collapseOnSelect expand="lg" bg="transparent " variant="light">
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href="/"><FontAwesomeIcon icon={faHome} /> Home</Nav.Link>
-        {/* <NavDropdown title="Modules" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Future of Technology</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Future of Social Rights</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Future of Humans</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown> */}
-      </Nav>
-      <Nav>
-        <Nav.Link href="https://securelb.imodules.com/s/916/16/interior-flah.aspx?sid=916&gid=1&pgid=6010&cid=11236&dids=205.7&bledit=1&appealcode=MIM"><FontAwesomeIcon icon={faDonate} /> Donate</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-)
+    return (
+      <Navbar collapseOnSelect expand="lg" bg="transparent " variant="light">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto" activeKey={location.pathname}>
+            <Nav.Link eventKey="/" as={Link} to="/">About</Nav.Link>
+          </Nav>
+          <Nav className="mx-auto" activeKey={location.pathname}>
+            {data.allContentfulCategory.edges.map(({node}) => {
+              return (
+                <Nav.Link eventKey={`/${node.slug}`} as={Link} to={`/${node.slug}`}>
+                  {node.title}
+                </Nav.Link>
+              );
+            })}
+          </Nav>
+          <Nav className="ml-auto" activeKey={location.pathname}>
+            <Nav.Link eventKey="/contact" as={Link} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    );
+  }
+}
+
+/**
+ * [Insert comment here]
+ * @param {*} props [Insert comment here].
+ * @return {*} [Insert comment here].
+ */
+export default function MyNavigation(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          allContentfulCategory {
+            edges {
+              node {
+                title
+                slug
+              }
+            }
+          }
+        }
+      `}
+      render={(data) => <Navigation data={data} {...props} />}
+    />
+  );
+}
+
+Navigation.propTypes = {
+  data: PropTypes.shape({
+    allContentfulCategory: PropTypes.shape({
+      edges: PropTypes.shape({
+        map: PropTypes.func,
+      }),
+    }),
+  }),
+  location: PropTypes.shape({
+    pathname: PropTypes.any,
+  }),
+};

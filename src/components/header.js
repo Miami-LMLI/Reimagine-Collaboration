@@ -1,17 +1,32 @@
-import React from 'react'
-import Image from 'react-bootstrap/Image'
+import PropTypes from 'prop-types';
+import React from 'react';
+import Image from 'react-bootstrap/Image';
 
-import styles from './hero.module.css'
+import styles from './hero.module.css';
+/**
+ * [Insert comment here].
+ */
+class Header extends React.Component {
+  /**
+   * [Insert comment here].
+   * @return {*} [Insert comment here].
+   */
+  render() {
+    const {image} = this.props;
 
-export default ({ image, text }) => (
-  <div className={styles.hero}>
-    <Image
-      className={styles.heroImage}
-      src={image} fluid
-    />
-    {/* <div className={styles.heroDetails}>
-      <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p>{text}</p>
-    </div> */}
-  </div>
-)
+    return (
+      <div className={styles.heroGradient}>
+        <Image
+          className={styles.heroImage}
+          src={image} fluid
+        />
+      </div>
+    );
+  }
+}
+
+Header.propTypes = {
+  image: PropTypes.any,
+};
+
+export default Header;

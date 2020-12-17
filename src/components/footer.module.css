@@ -10,20 +10,6 @@
   text-decoration: none;
 }
 
-.navigationItem {
-  display: inline-flex;
-  align-items: center;
-  margin: 0 1em;
-}
-
-.navigationItem a {
-  color: currentColor;
-}
-
-.navigationItemActive {
-  text-decoration: underline;
-}
-
 .icon {
   display: inline-flex;
   align-items: center;

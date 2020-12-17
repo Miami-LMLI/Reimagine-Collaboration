@@ -1,5 +1,25 @@
 .hero {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61.8vh;
+  max-height: 400px;
+  background: #e1e1e1;
+  font-size: 2em;
+  overflow: hidden;
+}
+
+.heroGradient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61.8vh;
+  max-height: 400px;
+  font-size: 5em;
+  overflow: hidden;
+
+  position: relative;
 	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
   animation: gradient 15s ease infinite;
 	background-size: 400% 400%;
@@ -12,7 +32,9 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 61.8vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: auto;
   max-height: 400px;
   width: auto;
   margin: auto;

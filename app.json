@@ -1,20 +1,25 @@
 {
-  "name": "Envision 2040",
-  "description": "This is for the development of Lockheed Martin Leadership Institute's Cohort 9 Envision 2040 website.",
-  "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
-  ],
-  "repository": "https://github.com/LMLI-Cohort-9/Envision-2040",
-  "success_url": "/",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-static"
-    }
-  ]
-}
+    "name": "Envision 2040",
+    "description": "This repository is for the development of Lockheed Martin Leadership Institute's Cohort 9 Envision 2040 website.",
+    "repository": "https://github.com/LMLI-Cohort-9/Envision-2040",
+    "keywords": [
+        "node", 
+        "gatsby", 
+        "static"
+    ],
+    "website": "https://miamioh.edu/cec/about/centers-institutes/lockheed-martin/index.html",
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-static"
+      }
+    ],
+    "env": {
+        "CONTENTFUL_ACCESS_TOKEN": {
+        },
+        "CONTENTFUL_SPACE_ID": {
+        }
+      }
+  }
