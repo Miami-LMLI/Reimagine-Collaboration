@@ -24,7 +24,7 @@ class CategoryPreview extends React.Component {
         </h3>
         <div
           dangerouslySetInnerHTML={{
-            __html: category.description,
+            __html: category.description.childMarkdownRemark.html,
           }}
         />
       </div>

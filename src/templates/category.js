@@ -3,9 +3,8 @@ import React from 'react';
 import {Link, graphql} from 'gatsby';
 import get from 'lodash/get';
 import Layout from '../components/layout';
+import Header from '../components/header';
 import ModulePreview from '../components/module-preview';
-
-import styles from '../components/hero.module.css';
 
 /**
  * [Insert comment here].
@@ -22,7 +21,7 @@ class CategoryTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <h1 className={styles.heroGradient}>{category.title}</h1>
+          <Header text={category.title}/>
           <div className="wrapper">
             <div
               dangerouslySetInnerHTML={{

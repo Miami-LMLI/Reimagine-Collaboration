@@ -11,14 +11,6 @@
 }
 
 .heroGradient {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 61.8vh;
-  max-height: 400px;
-  font-size: 5em;
-  overflow: hidden;
-
   position: relative;
 	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
   animation: gradient 15s ease infinite;
@@ -38,6 +30,16 @@
   max-height: 400px;
   width: auto;
   margin: auto;
+}
+
+.heroText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  max-height: 400px;
+  font-size: 5em;
+  overflow: hidden;
 }
 
 @keyframes gradient {
