@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Col, Row} from 'react-bootstrap';
 import Layout from '../components/layout';
+import Header from '../components/header';
 import {StaticQuery, graphql} from 'gatsby';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -23,8 +24,8 @@ class Contact extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{background: '#fff'}}>
+          <Header text={"Contact Us"}/>
           <div className="wrapper">
-            <h2 className="section-headline">Contact</h2>
             <Row>
               <Col lg>
                 <h3>Address</h3>

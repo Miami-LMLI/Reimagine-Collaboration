@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link, StaticQuery, graphql} from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import './navigation.module.css';
 
-import {Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 /**
  * [Insert comment here].
@@ -14,17 +14,17 @@ class Navigation extends React.Component {
    * @return {*} [Insert comment here].
    */
   render() {
-    const {data, location} = this.props;
+    const { data, location } = this.props;
 
     return (
       <Navbar collapseOnSelect expand="lg" bg="transparent " variant="light">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" activeKey={location.pathname}>
-            <Nav.Link eventKey="/" as={Link} to="/">About</Nav.Link>
+            <Nav.Link eventKey="/" as={Link} to="/">Home</Nav.Link>
           </Nav>
           <Nav className="mx-auto" activeKey={location.pathname}>
-            {data.allContentfulCategory.edges.map(({node}) => {
+            {data.allContentfulCategory.edges.map(({ node }) => {
               return (
                 <Nav.Link eventKey={`/${node.slug}`} as={Link} to={`/${node.slug}`}>
                   {node.title}
@@ -33,7 +33,11 @@ class Navigation extends React.Component {
             })}
           </Nav>
           <Nav className="ml-auto" activeKey={location.pathname}>
-            <Nav.Link eventKey="/contact" as={Link} to="/contact">Contact</Nav.Link>
+            <NavDropdown title="More" id="nav-dropdown">
+              <Nav.Link eventKey="/about" as={Link} to="/about">About</Nav.Link>
+              <Nav.Link eventKey="/contact" as={Link} to="/contact">Contact</Nav.Link>
+              <Nav.Link eventKey="/recognition" as={Link} to="/recognition">Recognition</Nav.Link>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

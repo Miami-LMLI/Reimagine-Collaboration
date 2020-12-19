@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 /**
  * [Insert comment here]
  */
-class RootIndex extends React.Component {
+class Home extends React.Component {
   /**
    * [Insert comment here]
    * @return {*} [Insert comment here]
@@ -35,8 +35,8 @@ class RootIndex extends React.Component {
   }
 }
 
-RootIndex.propTypes = {
+Home.propTypes = {
   location: PropTypes.any,
 };
 
-export default RootIndex;
+export default Home;
