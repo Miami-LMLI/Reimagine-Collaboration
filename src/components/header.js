@@ -19,11 +19,11 @@ class Header extends React.Component {
     return (
       <div className={styles.heroGradient}>
         <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-          {text != null && <h1 className={styles.heroText}>{text}</h1>}
-          <Image
+        {image != null && <Image
             className={styles.heroImage}
             src={image} fluid
-          />
+          />}
+          {text != null && <h1 className={styles.heroText}>{text}</h1>}
         </Animated>
       </div>
     );
