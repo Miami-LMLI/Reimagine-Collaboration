@@ -23,6 +23,7 @@ class CategoryTemplate extends React.Component {
         <div style={{background: '#fff'}}>
           <Header text={category.title}/>
           <div className="wrapper">
+          {category.tagline && <h2 className="section-headline">{category.tagline}</h2>}
             <div
               dangerouslySetInnerHTML={{
                 __html: category.body.childMarkdownRemark.html,
@@ -55,6 +56,7 @@ export const pageQuery = graphql`
     contentfulCategory(slug: { eq: $slug }) {
       id
       title
+      tagline
       body {
         childMarkdownRemark {
           html
