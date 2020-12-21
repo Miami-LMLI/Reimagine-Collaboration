@@ -12,7 +12,7 @@ class Home extends React.Component {
    * @return {*} [Insert comment here]
    */
   render() {
-    const headerImg = require('../../static/header.png');
+    const headerImg = require('../../static/header-white.svg');
 
     return (
       <Layout location={this.props.location}>
