@@ -1,27 +1,31 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { graphql} from 'gatsby';
+import {graphql} from 'gatsby';
 import get from 'lodash/get';
 import Layout from '../components/layout';
 import CategoryPreview from '../components/category-preview';
 
-import styles from '../components/hero.module.css';
+import Header from '../components/header';
 
 /**
- * [Insert comment here].
+ * The class that represents the categories page.
  */
 class Categories extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the categories page content that is supposed to be rendered by a
+   * user's browser inside a Layout component.
+   * @return {*} The categories page content that is supposed to be rendered by a
+   * browser.
    */
   render() {
+    // Gets the GraphQL page query. This gets the images, title, descriptions, and slugs
+    // for all categories.
     const categories = get(this.props, 'data.allContentfulCategory.edges');
 
     return (
       <Layout location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <h1 className={styles.heroGradient}>Categories</h1>
+          <Header text={"Categories"} />
           <div className="wrapper">
             <ul className="list">
               {categories.map(({node}) => {
@@ -39,12 +43,14 @@ class Categories extends React.Component {
   }
 }
 
+// Defines the propTypes of Categories.
 Categories.propTypes = {
   location: PropTypes.any
 }
 
 export default Categories;
 
+// Performs a GraphQL query to get the image, description, title, and slug used above.
 export const pageQuery = graphql`
   query AllCategories {
     allContentfulCategory {

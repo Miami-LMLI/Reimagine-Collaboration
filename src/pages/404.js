@@ -3,12 +3,14 @@ import React from 'react';
 import Layout from '../components/layout';
 
 /**
- * [Insert comment here]
+ * The class that represents the not found page.
  */
 class NotFound extends React.Component {
   /**
-   * [Insert comment here]
-   * @return {*}
+   * Returns the not found page content that is supposed to be rendered by a
+   * user's browser inside a Layout component.
+   * @return {*} The not found page content that is supposed to be rendered by a
+   * browser.
    */
   render() {
     return (
@@ -23,6 +25,7 @@ class NotFound extends React.Component {
   }
 }
 
+// Defines the propTypes of NotFound.
 NotFound.propTypes = {
   location: PropTypes.any,
 };

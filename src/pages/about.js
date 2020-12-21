@@ -12,7 +12,7 @@ class About extends React.Component {
   /**
    * Returns the about page content that is supposed to be rendered by a
    * user's browser inside a Layout component.
-   * @return {*} about page content that is supposed to be rendered by a
+   * @return {*} The about page content that is supposed to be rendered by a
    * browser.
    */
   render() {

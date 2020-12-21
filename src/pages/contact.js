@@ -6,17 +6,24 @@ import Header from '../components/header';
 import {StaticQuery, graphql} from 'gatsby';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin}
-  from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import {faGlobe} from '@fortawesome/free-solid-svg-icons';
 
 /**
- * [Insert comment here].
+ * The class that represents the contact page.
  */
 class Contact extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the contact page content that is supposed to be rendered by a
+   * user's browser inside a Layout component.
+   * @return {*} about contact content that is supposed to be rendered by a
+   * browser.
    */
   render() {
     const {data} = this.props;
@@ -24,7 +31,7 @@ class Contact extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Header text={"Contact Us"}/>
+          <Header text={'Contact Us'} />
           <div className="wrapper">
             <Row>
               <Col lg>
@@ -63,36 +70,49 @@ class Contact extends React.Component {
             <Row>
               <Col lg>
                 <h3>Social Media</h3>
-                <a aria-label="Facebook"
-                  href={data.site.siteMetadata.social.facebook}>
+                <a
+                  aria-label="Facebook"
+                  href={data.site.siteMetadata.social.facebook}
+                >
                   <FontAwesomeIcon icon={faFacebook} /> Facebook
                 </a>
                 <br />
-                <a aria-label="Twitter"
-                  href={data.site.siteMetadata.social.twitter}>
+                <a
+                  aria-label="Twitter"
+                  href={data.site.siteMetadata.social.twitter}
+                >
                   <FontAwesomeIcon icon={faTwitter} /> Twitter
                 </a>
                 <br />
-                <a aria-label="Instagram"
-                  href={data.site.siteMetadata.social.instagram}>
+                <a
+                  aria-label="Instagram"
+                  href={data.site.siteMetadata.social.instagram}
+                >
                   <FontAwesomeIcon icon={faInstagram} /> Instagram
                 </a>
                 <br />
-                <a aria-label="Youtube"
-                  href={data.site.siteMetadata.social.youtube}>
+                <a
+                  aria-label="Youtube"
+                  href={data.site.siteMetadata.social.youtube}
+                >
                   <FontAwesomeIcon icon={faYoutube} /> Youtube
                 </a>
                 <br />
-                <a aria-label="LinkedIn"
-                  href={data.site.siteMetadata.social.linkedin}>
+                <a
+                  aria-label="LinkedIn"
+                  href={data.site.siteMetadata.social.linkedin}
+                >
                   <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                 </a>
               </Col>
               <Col lg>
                 <h3>Website</h3>
-                <a aria-label="Lockheed Martin Leadership Institute's Website"
-                  href={data.site.siteMetadata.social.website}>
-                  <FontAwesomeIcon icon={faGlobe} /> Lockheed Martin Leadership Institute's Website
+                <a
+                  aria-label="Lockheed Martin Leadership Institute's Website"
+                  href={data.site.siteMetadata.social.website}
+                >
+                  <FontAwesomeIcon icon={faGlobe} /> Lockheed Martin Leadership
+                  Institute&apos;s Website
                 </a>
               </Col>
               <Col></Col>
@@ -104,6 +124,7 @@ class Contact extends React.Component {
   }
 }
 
+// Defines the propTypes of Contact.
 Contact.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
@@ -123,9 +144,9 @@ Contact.propTypes = {
 };
 
 /**
- * [Insert comment here].
- * @param {*} props [Insert comment here].
- * @return {*} [Insert comment here].
+ * Performs a static query and feeds that into the Contact component.
+ * @param {*} props The properties of the contact page.
+ * @return {*} The contact page content with the results from the static query.
  */
 export default function MyContact(props) {
   return (
