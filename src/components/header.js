@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Image from 'react-bootstrap/Image';
+import {Animated} from "react-animated-css";
 
 import styles from './hero.module.css';
 
@@ -17,11 +18,13 @@ class Header extends React.Component {
 
     return (
       <div className={styles.heroGradient}>
-        {text != null && <h1 className={styles.heroText}>{text}</h1>}
-        <Image
-          className={styles.heroImage}
-          src={image} fluid
-        />
+        <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+          {text != null && <h1 className={styles.heroText}>{text}</h1>}
+          <Image
+            className={styles.heroImage}
+            src={image} fluid
+          />
+        </Animated>
       </div>
     );
   }
