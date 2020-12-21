@@ -90,9 +90,9 @@ class Contact extends React.Component {
               </Col>
               <Col lg>
                 <h3>Website</h3>
-                <a aria-label="Miami University"
+                <a aria-label="Lockheed Martin Leadership Institute's Website"
                   href={data.site.siteMetadata.social.website}>
-                  <FontAwesomeIcon icon={faGlobe} /> Main Website
+                  <FontAwesomeIcon icon={faGlobe} /> Lockheed Martin Leadership Institute's Website
                 </a>
               </Col>
               <Col></Col>

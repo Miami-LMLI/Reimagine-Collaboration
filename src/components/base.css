@@ -32,9 +32,10 @@
   To ensure colors blend nicely together and avoid
   complexity, forcing myself to only use these colors.
   */
-  --shade-light: #ffffff;
-  --shade-dark: #373F49;
-  --shade-accent:#3f85da;
+  --text-light: #ffffff;
+  --text-dark: #373F49;
+  --text-accent:#3f85da;
+  --text-shade:#285285;
 
   --background-light: #eee;
   --background-dark: #ddd;
@@ -52,7 +53,7 @@ body {
   font-family: var(--main-font);
   font-size: 1em;
   line-height: 1.65;
-  color: var(--shade-dark);
+  color: var(--text-dark);
   background: var(--background-light);
   margin: 0;
 }
@@ -79,17 +80,27 @@ h3 {
 }
 
 ::selection {
-  color: var(--shade-light);
-  background-color: var(--shade-accent);
+  color: var(--text-light);
+  background-color: var(--text-accent);
 }
 
 a {
-  color: var(--shade-dark);
+  color: var(--text-dark);
   transition: all 200ms ease;
 }
 
 a:hover, a:active {
-  color: var(--shade-accent);
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+p a {
+  color: var(--text-accent);
+  transition: all 200ms ease;
+}
+
+p a:hover, p a:active {
+  color: var(--text-shade);
   text-decoration: none;
 }
 

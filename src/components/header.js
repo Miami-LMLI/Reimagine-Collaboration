@@ -17,11 +17,11 @@ class Header extends React.Component {
 
     return (
       <div className={styles.heroGradient}>
+        {text != null && <h1 className={styles.heroText}>{text}</h1>}
         <Image
           className={styles.heroImage}
           src={image} fluid
         />
-        {text != null && <h1 className={styles.heroText}>{text}</h1>}
       </div>
     );
   }

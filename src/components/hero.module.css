@@ -11,6 +11,7 @@
 }
 
 .heroGradient {
+  height: 30vh;
   position: relative;
 	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
   animation: gradient 15s ease infinite;
