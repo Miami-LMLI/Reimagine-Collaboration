@@ -4,12 +4,13 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 
 /**
- * [Insert comment here]
+ * The class that represents the homepage.
  */
 class Home extends React.Component {
   /**
-   * [Insert comment here]
-   * @return {*} [Insert comment here]
+   * Returns the homepage content that is supposed to be rendered by a user's
+   * browser inside a Layout component.
+   * @return {*} homepage content that is supposed to be rendered by a browser.
    */
   render() {
     const headerImg = require('../../static/header-white.svg');
