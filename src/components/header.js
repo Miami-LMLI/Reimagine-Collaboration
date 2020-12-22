@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Image from 'react-bootstrap/Image';
-import {Animated} from "react-animated-css";
+import {Animated} from 'react-animated-css';
 
 import styles from './hero.module.css';
 
 /**
- * [Insert comment here].
+ * The class that represents the header component.
  */
 class Header extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the headere content that is supposed to be rendered by a
+   * user's browser.
+   * @return {*} The content of the header component that is rendered
+   * by a browser
    */
   render() {
     const {image, text} = this.props;
@@ -19,10 +21,11 @@ class Header extends React.Component {
     return (
       <div className={styles.heroGradient}>
         <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-        {image != null && <Image
-            className={styles.heroImage}
-            src={image} fluid
-          />}
+          {image != null &&
+            <Image className={styles.heroImage}
+              alt="Envision 2040"
+              src={image} fluid />
+          }
           {text != null && <h1 className={styles.heroText}>{text}</h1>}
         </Animated>
       </div>
@@ -32,6 +35,7 @@ class Header extends React.Component {
 
 Header.propTypes = {
   image: PropTypes.any,
+  text: PropTypes.any,
 };
 
 export default Header;
