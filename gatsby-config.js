@@ -27,6 +27,7 @@ module.exports = {
   siteMetadata: {
     title: 'Envision 2040',
     description: '',
+    lang: 'en',
     social: {
       facebook: 'https://www.facebook.com/cecleadership',
       twitter: 'https://twitter.com/MUEngLdrInst',

@@ -27,6 +27,7 @@ class Layout extends React.Component {
           <meta name="description"
             content={data.site.siteMetadata.description}
           />
+          <html lang={data.site.siteMetadata.lang} />
         </Helmet>
         <Navigation location={location}/>
         {children}
@@ -50,6 +51,7 @@ export default function MyLayout(props) {
             siteMetadata {
               title
               description
+              lang
             }
           }
         }
