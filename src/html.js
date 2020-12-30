@@ -27,6 +27,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{__html: props.body}}
         />
         {props.postBodyComponents}
+        <script async src="//cdn.embedly.com/widgets/platform.js"></script>
       </body>
     </html>
   );

@@ -110,6 +110,10 @@ p a:hover, p a:active {
   padding: 5vmin 0;
 }
 
+.brd {
+  display:none !important;
+}
+
 /**
  * article grid
  */
