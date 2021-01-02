@@ -111,6 +111,7 @@ p a:hover, p a:active {
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
+  height: 100%;
   padding: 3vmin 0;
 }
 

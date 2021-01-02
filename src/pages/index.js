@@ -1,3 +1,6 @@
+import { faSpotify, faGooglePlay, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faPodcast } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
@@ -57,6 +60,40 @@ class Home extends React.Component {
                 );
               })}
             </ul>
+          </div>
+        </div>
+
+        <div className="break" />
+
+        <div className="content">
+          <div class="wrapper">
+            <h2 className="section-headline">
+              Listen to Our Podcast on
+            </h2>
+            <nav role="navigation">
+              <ul className={styles.navigation}>
+                <li className={styles.icon}>
+                  <a aria-label="Anchor.FM"
+                    href="">
+                    <FontAwesomeIcon icon={faPodcast} /></a>
+                </li>
+                <li className={styles.icon}>
+                  <a aria-label="Spotify"
+                    href="">
+                    <FontAwesomeIcon icon={faSpotify} /></a>
+                </li>
+                <li className={styles.icon}>
+                  <a aria-label="Google Podcasts"
+                    href="">
+                    <FontAwesomeIcon icon={faGooglePlay} /></a>
+                </li>
+                <li className={styles.icon}>
+                  <a aria-label="Apple Podcasts"
+                    href="">
+                    <FontAwesomeIcon icon={faApple} /></a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </Layout >
