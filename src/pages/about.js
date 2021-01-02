@@ -27,17 +27,18 @@ class About extends React.Component {
               <Col lg>
                 <h3>Who Are We?</h3>
                 <p>
-                  We are Miami University&apos;s Lockheed Martin Leadership
-                  Institute! The Lockheed Martin Leadership is a three year
-                  intensive cohort certification program that focuses on
-                  Transformational Leadership for Students in Miami
-                  University&apos;s College of Engineering and Computing. The
-                  purpose of the Lockheed Martin Leadership Institute is simple,
-                  yet powerful: to cultivate leaders who will flourish in their
-                  professions and lives by: thinking strategically; working
-                  collaboratively with others; effectively communicating their
-                  ideas; finding innovative solutions to society&apos;s most
-                  complex problems.
+                The Lockheed Martin Leadership Institute was established to 
+                address the need for a new kind of transformational leadership 
+                development for a new kind of world. The rigorous curriculum of 
+                six classes over three years is designed to challenge the students 
+                to step out of their comfort zone and think strategically, collaborate 
+                successfully with others, and effectively communicate ideas.
+                </p>
+                <p>
+                The Lockheed Martin Leadership Institute is a 3-year leadership 
+                development program – we’re continuously looking to learn and 
+                improve ourselves. Below is a list of some of our favorite 
+                leadership resources.
                 </p>
                 <p>
                   To learn more about the leadership institute, check out the

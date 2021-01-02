@@ -54,7 +54,7 @@ export default function MyNavigation(props) {
     <StaticQuery
       query={graphql`
         query {
-          allContentfulCategory {
+          allContentfulCategory(sort: {fields: sortOrder}) {
             edges {
               node {
                 title

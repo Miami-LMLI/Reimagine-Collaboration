@@ -1,4 +1,4 @@
-import { faSpotify, faGooglePlay, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faApple, faGooglePlay, faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { faPodcast } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql } from 'gatsby';
@@ -34,10 +34,10 @@ class Home extends React.Component {
               today?
             </h2>
             <p>
-              As a result of a global health crisis, heightened social rights
+              Between a global health crisis, heightened social rights
               tension, and a polarized political environment, the world faces an
-              uncertain future. This is where 2040 comes into play. Join us in
-              the near future as we take a deep dive into how we can prepare for
+              uncertain future. This is where 2040 comes into play. Join the Lockheed
+              Martin Leadership Institute as we take a deep dive into how we can prepare for
               what the next 20 years will bring as we explore the intersections
               of technology, social rights, and what it means to be human.
             </p>
@@ -68,7 +68,7 @@ class Home extends React.Component {
         <div className="content">
           <div class="wrapper">
             <h2 className="section-headline">
-              Listen to Our Podcast on
+              Listen to the Envision 2040 Podcast On
             </h2>
             <nav role="navigation">
               <ul className={styles.navigation}>
@@ -96,6 +96,34 @@ class Home extends React.Component {
             </nav>
           </div>
         </div>
+
+        <div className="break" />
+
+        <div className="content">
+          <div class="wrapper">
+            <h2 className="section-headline">
+              Who Are We?
+            </h2>
+            <p>
+              We are Miami University&apos;s Lockheed Martin Leadership
+              Institute! The Lockheed Martin Leadership is a three year
+              intensive cohort certification program that focuses on
+              Transformational Leadership for Students in Miami
+              University&apos;s College of Engineering and Computing. The
+              purpose of the Lockheed Martin Leadership Institute is simple,
+              yet powerful: to cultivate leaders who will flourish in their
+              professions and lives by: thinking strategically; working
+              collaboratively with others; effectively communicating their
+              ideas; finding innovative solutions to society&apos;s most
+              complex problems.
+              </p>
+              <p>
+                To learn more about us, you can checkout our 
+                <a href="/about"> about page</a> or our 
+                <a href="/contact"> contact page</a>.
+              </p>
+          </div>
+        </div>
       </Layout >
     );
   }
@@ -110,7 +138,7 @@ export default Home;
 // Performs a GraphQL query to get the image, description, title, and slug used above.
 export const pageQuery = graphql`
   query Home {
-    allContentfulCategory {
+    allContentfulCategory(sort: {fields: sortOrder}) {
       edges {
         node {
           heroImage {
