@@ -1,8 +1,5 @@
 .hero {
-  position: relative;
-	background: #e2e2e2;
   color: #fff;
-  text-align: center;
 }
 
 /*
@@ -10,11 +7,9 @@
  */
 .heroGradient {
   position: relative;
-	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
+  background: linear-gradient(-45deg, #ee7752, #963484, #3066be, #2af5ff);
   animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
-  color: #fff;
-  text-align: center;
+  background-size: 400% 400%;
   overflow: hidden;
 }
 
@@ -23,11 +18,9 @@
  */
 .heroGradientColorBlue {
   position: relative;
-	background: linear-gradient(-45deg,#3066BE, #2AF5FF);
+  background: linear-gradient(-45deg, #3066be, #2af5ff);
   animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
-  color: #fff;
-  text-align: center;
+  background-size: 400% 400%;
   overflow: hidden;
 }
 
@@ -36,11 +29,9 @@
  */
 .heroGradientColorPurple {
   position: relative;
-	background: linear-gradient(-45deg, #963484, #3066BE);
+  background: linear-gradient(-45deg, #963484, #3066be);
   animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
-  color: #fff;
-  text-align: center;
+  background-size: 400% 400%;
   overflow: hidden;
 }
 
@@ -49,11 +40,9 @@
  */
 .heroGradientColorOrange {
   position: relative;
-	background: linear-gradient(-45deg, #ee7752, #963484);
+  background: linear-gradient(-45deg, #ee7752, #963484);
   animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
-  color: #fff;
-  text-align: center;
+  background-size: 400% 400%;
   overflow: hidden;
 }
 
@@ -70,23 +59,27 @@
 
 .heroImageGradient {
   filter: blur(3px);
-
   opacity: 0.3;
 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   height: auto;
   max-height: 400px;
   width: auto;
   margin: auto;
 }
 
-.heroText {
+.heroOverlayText {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 45vh;
+  width: 100%;
+  font-size: 15vmin;
   max-height: 400px;
-  font-size: 5em;
-  overflow: hidden;
 
   position: absolute;
   top: 50%;
@@ -94,14 +87,25 @@
   transform: translate(-50%, -50%);
 }
 
+.heroText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 45vh;
+  width: 100%;
+  font-size: 15vmin;
+  max-height: 400px;
+}
+
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

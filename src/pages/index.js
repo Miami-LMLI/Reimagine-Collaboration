@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
@@ -51,15 +52,15 @@ class Home extends React.Component {
             <h2 className="section-headline">
               Start Exploring
             </h2>
-            <ul className={styles.list}>
+            <Row>
               {categories.map(({ node }) => {
                 return (
-                  <li key={node.slug}>
+                  <Col md={4}>
                     <CategoryPreview category={node} />
-                  </li>
+                  </Col>
                 );
               })}
-            </ul>
+            </Row>
           </div>
         </div>
 

@@ -7,6 +7,7 @@ import Header from '../components/header';
 import ModulePreview from '../components/module-preview';
 import Img from 'gatsby-image';
 import styles from '../components/hero.module.css';
+import { Col, Row } from 'react-bootstrap';
 
 /**
  * [Insert comment here].
@@ -31,15 +32,15 @@ class CategoryTemplate extends React.Component {
                 __html: category.body.childMarkdownRemark.html,
               }}
             />
-            <ul className="list">
+            <Row>
               {modules.map(({node}) => {
                 return (
-                  <li key={node.slug}>
+                  <Col md={6}>
                     <ModulePreview module={node} />
-                  </li>
+                  </Col>
                 );
               })}
-            </ul>
+            </Row>
           </div>
         </div>
       </Layout>

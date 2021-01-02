@@ -20,27 +20,33 @@ class Header extends React.Component {
     const { fluid, image, text, colorNum } = this.props;
 
     return (
-      <div className={
-        // If a color num is defined, pick a specific gradient color.
-        // The color num should be based on the sortOrder of the category.
-        colorNum == 1 ? styles.heroGradientColorBlue : {} &&
-        colorNum == 2 ? styles.heroGradientColorPurple : {} &&
-        colorNum == 3 ? styles.heroGradientColorOrange : {} &&
-        styles.heroGradient
-      }>
-        <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-          {image != null && fluid == null &&
-            <Image className={styles.heroImage}
-              alt={text}
-              src={image} fluid />
-          }
-          {image == null && fluid != null &&
-            <Img className={styles.heroImageGradient}
-              alt={text}
-              fluid={fluid} />
-          }
-          {text != null && <h1 className={styles.heroText}>{text}</h1>}
-        </Animated>
+      <div className={styles.hero}>
+        <div className={
+          // If a color num is defined, pick a specific gradient color.
+          // The color num should be based on the sortOrder of the category.
+          colorNum == 1 ? styles.heroGradientColorBlue : {} &&
+            colorNum == 2 ? styles.heroGradientColorPurple : {} &&
+              colorNum == 3 ? styles.heroGradientColorOrange : {} &&
+              styles.heroGradient
+        }>
+          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+            {image != null && fluid == null &&
+              <Image className={styles.heroImage}
+                alt={text}
+                src={image} fluid />
+            }
+            {image == null && fluid != null &&
+              <Img className={styles.heroImageGradient}
+                alt={text}
+                fluid={fluid} />
+            }
+            {text != null && 
+              <h1 className={fluid != null || image != null ? styles.heroOverlayText : styles.heroText}>
+                {text}
+              </h1>
+            }
+          </Animated>
+        </div>
       </div>
     );
   }
