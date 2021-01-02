@@ -1,10 +1,11 @@
-import React from 'react';
-import {StaticQuery, graphql} from 'gatsby';
-import {Helmet} from 'react-helmet';
-import Container from './container';
-import Navigation from './navigation';
-import Footer from './footer';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+
+import Container from './container';
+import Footer from './footer';
+import Navigation from './navigation';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './base.css';

@@ -1,9 +1,9 @@
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Col, Row} from 'react-bootstrap';
-import Layout from '../components/layout';
+import { Col, Row } from 'react-bootstrap';
 import Header from '../components/header';
-import {StaticQuery, graphql} from 'gatsby';
+import Layout from '../components/layout';
 
 /**
  * The class that represents the about page.
@@ -41,8 +41,7 @@ class About extends React.Component {
                 </p>
                 <p>
                   To learn more about the leadership institute, check out the
-                  Institute&apos;s
-                  <a
+                  Institute&apos;s <a
                     aria-label="Lockheed Martin Leadership Institute's Website"
                     href={data.site.siteMetadata.social.website}
                   >

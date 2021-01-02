@@ -1,7 +1,11 @@
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
+import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import styles from './index.module.css';
 
 /**
  * The class that represents the home page.
@@ -15,10 +19,11 @@ class Home extends React.Component {
    */
   render() {
     const headerImg = require('../../static/header-white.svg');
+    const categories = get(this.props, 'data.allContentfulCategory.edges');
 
     return (
       <Layout location={this.props.location}>
-        <div style={{background: '#fff'}}>
+        <div className="content">
           <Header image={headerImg} />
           <div className="wrapper">
             <h2 className="section-headline">
@@ -35,7 +40,26 @@ class Home extends React.Component {
             </p>
           </div>
         </div>
-      </Layout>
+
+        <div className="break" />
+
+        <div className="content">
+          <div class="wrapper">
+            <h2 className="section-headline">
+              Start Exploring
+            </h2>
+            <ul className={styles.list}>
+              {categories.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <CategoryPreview category={node} />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </Layout >
     );
   }
 }
@@ -45,3 +69,28 @@ Home.propTypes = {
 };
 
 export default Home;
+
+// Performs a GraphQL query to get the image, description, title, and slug used above.
+export const pageQuery = graphql`
+  query Home {
+    allContentfulCategory {
+      edges {
+        node {
+          heroImage {
+            fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          description {
+            childMarkdownRemark {
+              html
+            }
+          }
+          title
+          slug
+        }
+      }
+    }
+  }
+`;
+

@@ -1,19 +1,12 @@
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Col, Row} from 'react-bootstrap';
-import Layout from '../components/layout';
+import { Col, Row } from 'react-bootstrap';
 import Header from '../components/header';
-import {StaticQuery, graphql} from 'gatsby';
-
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-  faYoutube,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import {faGlobe} from '@fortawesome/free-solid-svg-icons';
+import Layout from '../components/layout';
 
 /**
  * The class that represents the contact page.

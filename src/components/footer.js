@@ -1,13 +1,12 @@
-import React from 'react';
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube }
+  from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
+import React from 'react';
 
 import styles from './footer.module.css';
-
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin}
-  from '@fortawesome/free-brands-svg-icons';
-import {faGlobe} from '@fortawesome/free-solid-svg-icons';
 
 /**
  * [Insert comment here].

@@ -1,8 +1,7 @@
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Link} from 'gatsby';
-import Img from 'gatsby-image';
-
 import styles from './category-preview.module.css';
 
 /**
@@ -17,17 +16,17 @@ class CategoryPreview extends React.Component {
     const {category} = this.props;
 
     return (
-      <div className={styles.preview}>
+      <Link to={`/${category.slug}`} className={styles.preview}>
         <Img alt="" fluid={category.heroImage.fluid} />
         <h3 className={styles.previewTitle}>
-          <Link to={`/${category.slug}`}>{category.title}</Link>
+          {category.title}
         </h3>
         <div
           dangerouslySetInnerHTML={{
             __html: category.description.childMarkdownRemark.html,
           }}
         />
-      </div>
+      </Link>
     );
   }
 }

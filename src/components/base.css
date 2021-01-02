@@ -37,8 +37,8 @@
   --text-accent:#3f85da;
   --text-shade:#285285;
 
-  --background-light: #eee;
-  --background-dark: #ddd;
+  --background-light: #fff;
+  --background-dark: #eee;
   --background-darker: #25292e;
   /* 
   Sets the fonts to be used.
@@ -51,10 +51,10 @@
 
 body {
   font-family: var(--main-font);
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--text-dark);
-  background: var(--background-light);
+  background: var(--background-dark);
   margin: 0;
 }
 
@@ -104,14 +104,19 @@ p a:hover, p a:active {
   text-decoration: none;
 }
 
+.content {
+  background: var(--background-light);
+}
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 3vmin 0;
 }
 
-.brd {
-  display:none !important;
+.break {
+  margin: 0 auto;
+  padding: 1vmin 0;
 }
 
 /**
@@ -130,9 +135,15 @@ p a:hover, p a:active {
  *
  */
 .section-headline {
+  text-align: center;
   padding: 0 0 0.4em 0;
-  margin: 0 0 5vmin 0;
+  margin-bottom: 2vmin;
   border-bottom: 1px solid var( --background-dark);
+}
+
+hr {
+  padding: 0 0 0.4em 0;
+  border-top: 1px solid var( --background-dark);
 }
 
 /**

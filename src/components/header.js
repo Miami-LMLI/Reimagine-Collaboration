@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Animated } from 'react-animated-css';
 import Image from 'react-bootstrap/Image';
-import {Animated} from 'react-animated-css';
 
 import styles from './hero.module.css';
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import './navigation.module.css';
+import React from 'react';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './navigation.module.css';
 
 /**
  * [Insert comment here].

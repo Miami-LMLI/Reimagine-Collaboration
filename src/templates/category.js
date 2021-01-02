@@ -70,8 +70,13 @@ export const pageQuery = graphql`
           title
           slug
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+            fluid(maxWidth: 1400, maxHeight: 684, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
+            }
+          }
+          description {
+            childMarkdownRemark {
+              html
             }
           }
           category {

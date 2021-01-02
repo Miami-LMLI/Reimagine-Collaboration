@@ -1,7 +1,7 @@
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Link} from 'gatsby';
-import Img from 'gatsby-image';
 
 import styles from './module-preview.module.css';
 
@@ -24,7 +24,7 @@ class ModulePreview extends React.Component {
         </h3>
         <div
           dangerouslySetInnerHTML={{
-            __html: module.description,
+            __html: module.description.childMarkdownRemark.html,
           }}
         />
       </Link >
