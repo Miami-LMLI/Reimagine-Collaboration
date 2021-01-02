@@ -5,6 +5,9 @@
   text-align: center;
 }
 
+/*
+ * Defines a gradient with all colors.
+ */
 .heroGradient {
   position: relative;
 	background: linear-gradient(-45deg, #ee7752, #963484, #3066BE, #2AF5FF);
@@ -12,6 +15,46 @@
 	background-size: 400% 400%;
   color: #fff;
   text-align: center;
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with only blue colors.
+ */
+.heroGradientColorBlue {
+  position: relative;
+	background: linear-gradient(-45deg,#3066BE, #2AF5FF);
+  animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with only purple colors.
+ */
+.heroGradientColorPurple {
+  position: relative;
+	background: linear-gradient(-45deg, #963484, #3066BE);
+  animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with only orange colors.
+ */
+.heroGradientColorOrange {
+  position: relative;
+	background: linear-gradient(-45deg, #ee7752, #963484);
+  animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
 }
 
 .heroImage {
@@ -19,6 +62,17 @@
   padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  margin: auto;
+}
+
+.heroImageGradient {
+  filter: blur(3px);
+
+  opacity: 0.3;
+
   height: auto;
   max-height: 400px;
   width: auto;
@@ -33,6 +87,11 @@
   max-height: 400px;
   font-size: 5em;
   overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes gradient {

@@ -1,3 +1,37 @@
+/*
+ * Defines a gradient with blue colors.
+ */
+.previewBackgroundColorBlue {
+  position: relative;
+	background: linear-gradient(-45deg, #3066BE, #2AF5FF);
+	background-size: 400% 400%;
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with purple colors.
+ */
+.previewBackgroundColorPurple {
+  position: relative;
+	background: linear-gradient(-45deg, #963484, #3066BE);
+	background-size: 400% 400%;
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with orange colors.
+ */
+.previewBackgroundColorOrange {
+  position: relative;
+	background: linear-gradient(-45deg, #ee7752, #963484);
+	background-size: 400% 400%;
+  overflow: hidden;
+}
+
 .previewTitle {
   font-size: 1.5em;
+}
+
+.previewImg {
+  opacity: 0.5;
 }

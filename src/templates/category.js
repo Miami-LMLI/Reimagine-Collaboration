@@ -5,6 +5,8 @@ import get from 'lodash/get';
 import Layout from '../components/layout';
 import Header from '../components/header';
 import ModulePreview from '../components/module-preview';
+import Img from 'gatsby-image';
+import styles from '../components/hero.module.css';
 
 /**
  * [Insert comment here].
@@ -21,7 +23,7 @@ class CategoryTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Header text={category.title}/>
+          <Header text={category.title} fluid={category.heroImage.fluid} colorNum={category.sortOrder}/>
           <div className="wrapper">
           {category.tagline && <h2 className="section-headline">{category.tagline}</h2>}
             <div
@@ -54,14 +56,19 @@ export default CategoryTemplate;
 export const pageQuery = graphql`
   query CategoryBySlug($slug: String!) {
     contentfulCategory(slug: { eq: $slug }) {
-      id
       title
       tagline
+      heroImage {
+        fluid(maxWidth: 1920, maxHeight: 1080, resizingBehavior: SCALE) {
+          ...GatsbyContentfulFluid
+        }
+      }
       body {
         childMarkdownRemark {
           html
         }
       }
+      sortOrder
     }
     allContentfulModule(filter: {category: {slug: {eq: $slug}}}, 
                         sort: {fields: title}) {

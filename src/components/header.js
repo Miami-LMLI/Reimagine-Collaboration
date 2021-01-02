@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated } from 'react-animated-css';
 import Image from 'react-bootstrap/Image';
+import Img from 'gatsby-image';
 
 import styles from './hero.module.css';
 
@@ -16,15 +17,27 @@ class Header extends React.Component {
    * by a browser
    */
   render() {
-    const {image, text} = this.props;
+    const { fluid, image, text, colorNum } = this.props;
 
     return (
-      <div className={styles.heroGradient}>
+      <div className={
+        // If a color num is defined, pick a specific gradient color.
+        // The color num should be based on the sortOrder of the category.
+        colorNum == 1 ? styles.heroGradientColorBlue : {} &&
+        colorNum == 2 ? styles.heroGradientColorPurple : {} &&
+        colorNum == 3 ? styles.heroGradientColorOrange : {} &&
+        styles.heroGradient
+      }>
         <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-          {image != null &&
+          {image != null && fluid == null &&
             <Image className={styles.heroImage}
-              alt="Envision 2040"
+              alt={text}
               src={image} fluid />
+          }
+          {image == null && fluid != null &&
+            <Img className={styles.heroImageGradient}
+              alt={text}
+              fluid={fluid} />
           }
           {text != null && <h1 className={styles.heroText}>{text}</h1>}
         </Animated>

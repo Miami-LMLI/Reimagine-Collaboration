@@ -16,8 +16,15 @@ class CategoryPreview extends React.Component {
     const {category} = this.props;
 
     return (
-      <Link to={`/${category.slug}`} className={styles.preview}>
-        <Img alt="" fluid={category.heroImage.fluid} />
+      <Link to={`/${category.slug}`}>
+        <div className={
+          // If a sortOrder is defined, pick a specific gradient color.
+          category.sortOrder == 1 ? styles.previewBackgroundColorBlue : {} && 
+          category.sortOrder == 2 ? styles.previewBackgroundColorPurple : {} && 
+          category.sortOrder == 3 ? styles.previewBackgroundColorOrange : {}
+        }>    
+          <Img alt={category.title} className={styles.previewImg} fluid={category.heroImage.fluid} />
+        </div>
         <h3 className={styles.previewTitle}>
           {category.title}
         </h3>

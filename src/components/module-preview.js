@@ -18,7 +18,7 @@ class ModulePreview extends React.Component {
 
     return (
       <Link to={`/modules/${module.slug}`}>
-        <Img alt="" fluid={module.heroImage.fluid} />
+        <Img alt={module.title} fluid={module.heroImage.fluid} />
         <h3 className={styles.previewTitle}>
           {module.title}
         </h3>

@@ -141,6 +141,8 @@ export const pageQuery = graphql`
     allContentfulCategory(sort: {fields: sortOrder}) {
       edges {
         node {
+          title
+          slug
           heroImage {
             fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
@@ -151,8 +153,7 @@ export const pageQuery = graphql`
               html
             }
           }
-          title
-          slug
+          sortOrder
         }
       }
     }
