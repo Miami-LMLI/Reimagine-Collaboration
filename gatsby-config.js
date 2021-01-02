@@ -25,6 +25,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://envision2040.digital',
     title: 'Envision 2040',
     description: '',
     lang: 'en',
@@ -39,6 +40,7 @@ module.exports = {
   },
   pathPrefix: '/Envision-2040',
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
