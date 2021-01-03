@@ -24,9 +24,9 @@ class Header extends React.Component {
           // If a color num is defined, pick a specific gradient color.
           // The color num should be based on the sortOrder of the category.
           colorNum == 1 ? styles.heroGradientColorBlue : {} &&
-            colorNum == 2 ? styles.heroGradientColorPurple : {} &&
-              colorNum == 3 ? styles.heroGradientColorOrange : {} &&
-              styles.heroGradient
+          colorNum == 2 ? styles.heroGradientColorPurple : {} &&
+          colorNum == 3 ? styles.heroGradientColorOrange : {} &&
+          styles.heroGradient
         }>
           <Animated animationIn="fadeIn" animationOut="fadeOut">
             {image != null && fluid == null &&
