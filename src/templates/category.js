@@ -22,7 +22,7 @@ class CategoryTemplate extends React.Component {
     return (
       <Layout title={category.title} description={category.description.description} location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Header text={category.title} fluid={category.heroImage.fluid} colorNum={category.sortOrder} />
+          <Header text={category.title} bgImage={category.heroImage.fluid} />
           <div className="wrapper">
             {category.tagline && <h2 className="section-headline">{category.tagline}</h2>}
             <div

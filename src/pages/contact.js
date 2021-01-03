@@ -32,7 +32,7 @@ class Contact extends React.Component {
               description="Learn how to contact us." 
               location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Header text={'Contact Us'} />
+          <Header text={'Contact Us'} applyGradient={true}/>
           <div className="wrapper">
             <Row>
               <Col lg>

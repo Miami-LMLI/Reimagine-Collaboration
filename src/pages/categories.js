@@ -25,7 +25,7 @@ class Categories extends React.Component {
     return (
       <Layout title="Categories" location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Header text={'Categories'} />
+          <Header text={'Categories'} applyGradient={true}/>
           <div className="wrapper">
             <Row>
               {categories.map(({node}) => {

@@ -1,11 +1,9 @@
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {graphql} from 'gatsby';
-import get from 'lodash/get';
-import Img from 'gatsby-image';
+import Header from '../components/header';
 import Layout from '../components/layout';
-
-import styles from '../components/hero.module.css';
 
 /**
  * [Insert comment here].
@@ -21,15 +19,13 @@ class ModuleTemplate extends React.Component {
     return (
       <Layout title={module.title} description={module.description.description} location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Img
-            className={styles.heroImage}
-            alt={module.title}
-            fluid={module.heroImage.fluid}
-          />
+        <Header text={module.title} bgImage={module.heroImage.fluid} />
           <div className="wrapper">
-            <h1 className="section-headline">
-              {module.category.title} - {module.title}
-            </h1>
+            {module.tagLine && 
+              <h1 className="section-headline">
+                {module.tagLine}
+              </h1>
+            }
             <div
               dangerouslySetInnerHTML={{
                 __html: module.body.childMarkdownRemark.html,
@@ -52,6 +48,7 @@ export const pageQuery = graphql`
   query ModuleBySlug($slug: String!) {
     contentfulModule(slug: { eq: $slug }) {
       title
+      tagLine
       category {
         title
       }

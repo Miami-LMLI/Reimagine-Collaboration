@@ -31,10 +31,11 @@ class Home extends React.Component {
 
     return (
       <Layout
+        title="Home"
         description="Why wait for the world of tomorrow when it could be the world of today?"
         location={this.props.location}>
         <div className="content">
-          <Header image={headerImg} />
+          <Header image={headerImg} applyGradient={true} />
           <div className="wrapper">
             <h2 className="section-headline">
               Why wait for the world of tomorrow when it could be the world of
@@ -62,7 +63,7 @@ class Home extends React.Component {
               {categories.map(({node}) => {
                 return (
                   <Col key={node.slug} md={4}>
-                    <CategoryPreview category={node} colorNum={node.sortOrder} />
+                    <CategoryPreview category={node} />
                   </Col>
                 );
               })}

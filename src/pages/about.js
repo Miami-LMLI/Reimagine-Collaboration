@@ -23,7 +23,7 @@ class About extends React.Component {
         description="Learn more about us!"
         location={this.props.location}>
         <div style={{background: '#fff'}}>
-          <Header text={'About'} />
+          <Header text={'About'} applyGradient={true}/>
           <div className="wrapper">
             <Row>
               <Col lg>

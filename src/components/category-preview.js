@@ -1,4 +1,4 @@
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,21 +15,14 @@ class CategoryPreview extends React.Component {
    * be rendered by a browser.
    */
   render() {
-    const {category, colorNum} = this.props;
+    const { category } = this.props;
 
     return (
       <Link to={`/${category.slug}`}>
-        <div className={
-          // If a sortOrder is defined, pick a specific gradient color.
-          colorNum == 1 ? styles.previewBackgroundColorBlue : {} &&
-          colorNum == 2 ? styles.previewBackgroundColorPurple : {} &&
-          colorNum == 3 ? styles.previewBackgroundColorOrange : {}
-        }>
-          <Img alt={category.title}
-            className={styles.previewImg}
-            fluid={category.heroImage.fluid}
-          />
-        </div>
+        <Img alt={category.title}
+          className={styles.previewImg}
+          fluid={category.heroImage.fluid}
+        />
         <h3 className={styles.previewTitle}>
           {category.title}
         </h3>

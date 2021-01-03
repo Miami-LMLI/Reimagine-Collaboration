@@ -1,49 +1,20 @@
 .hero {
+  position: relative;
   color: #fff;
+  overflow: hidden;
 }
 
 /*
  * Defines a gradient with all colors.
  */
 .heroGradient {
-  position: relative;
   background: linear-gradient(-45deg, #ee7752, #963484, #3066be, #2af5ff);
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
-  overflow: hidden;
 }
 
-/*
- * Defines a gradient with only blue colors.
- */
-.heroGradientColorBlue {
-  position: relative;
-  background: linear-gradient(-45deg, #3066be, #2af5ff);
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
-  overflow: hidden;
-}
-
-/*
- * Defines a gradient with only purple colors.
- */
-.heroGradientColorPurple {
-  position: relative;
-  background: linear-gradient(-45deg, #963484, #3066be);
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
-  overflow: hidden;
-}
-
-/*
- * Defines a gradient with only orange colors.
- */
-.heroGradientColorOrange {
-  position: relative;
-  background: linear-gradient(-45deg, #ee7752, #963484);
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
-  overflow: hidden;
+.heroSolid {
+  background: #fff;
 }
 
 .heroImage {
@@ -59,12 +30,9 @@
 
 .heroImageGradient {
   filter: blur(3px);
-  opacity: 0.3;
+  transform: scale(1.05);
+  /*opacity: 0.3;*/
 
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   height: 45vh;
   max-height: 400px;
   width: auto;
