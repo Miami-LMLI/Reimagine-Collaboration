@@ -82,15 +82,15 @@ class Home extends React.Component {
               <ul className={styles.navigation}>
                 <li className={styles.icon}>
                   <a aria-label="Anchor.FM"
-                    href="">
+                    href="https://anchor.fm/lmli">
                     <FontAwesomeIcon icon={faPodcast} /></a>
                 </li>
                 <li className={styles.icon}>
                   <a aria-label="Spotify"
-                    href="">
+                    href="https://open.spotify.com/show/3sWcFQlKp21onkA35AxZ3O">
                     <FontAwesomeIcon icon={faSpotify} /></a>
                 </li>
-                <li className={styles.icon}>
+                {/* <li className={styles.icon}>
                   <a aria-label="Google Podcasts"
                     href="">
                     <FontAwesomeIcon icon={faGooglePlay} /></a>
@@ -99,7 +99,7 @@ class Home extends React.Component {
                   <a aria-label="Apple Podcasts"
                     href="">
                     <FontAwesomeIcon icon={faApple} /></a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
