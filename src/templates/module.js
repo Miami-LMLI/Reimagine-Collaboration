@@ -19,7 +19,7 @@ class ModuleTemplate extends React.Component {
     const module = get(this.props, 'data.contentfulModule');
 
     return (
-      <Layout location={this.props.location}>
+      <Layout title={module.title} description={module.description} location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Img
             className={styles.heroImage}

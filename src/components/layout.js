@@ -19,16 +19,21 @@ class Layout extends React.Component {
    * @return {*}
    */
   render() {
-    const {data, children, location} = this.props;
+    const {title, description, data, children, location} = this.props;
 
     return (
       <Container>
         <Helmet>
-          <title>{data.site.siteMetadata.title}</title>
-          <meta name="description"
-            content={data.site.siteMetadata.description}
-          />
+          <title>{`${title ? title + ' | ' : ''}Envision 2040`}</title>
+          <meta name="description" content={description}/>
           <html lang={data.site.siteMetadata.lang} />
+
+          <link rel="canonical" href={location.href} />
+          <meta property="og:url" content={location.href} />
+          <meta property="og:type" content={data.site.siteMetadata.type} />
+          <meta property="og:title" content={`${title ? title + ' | ' : ''}Envision 2040`} />
+          <meta property="og:description" content={description} />
+          {/* <meta property="og:image" content={ogImg} /> */}
         </Helmet>
         <Navigation location={location}/>
         {children}
@@ -50,9 +55,8 @@ export default function MyLayout(props) {
         query {
           site {
             siteMetadata {
-              title
-              description
               lang
+              type
             }
           }
         }
@@ -67,10 +71,11 @@ Layout.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        description: PropTypes.any,
-        title: PropTypes.any,
-      }),
-    }),
+        lang: PropTypes.any
+      })
+    })
   }),
+  description: PropTypes.any,
   location: PropTypes.any,
-};
+  title: PropTypes.any
+}

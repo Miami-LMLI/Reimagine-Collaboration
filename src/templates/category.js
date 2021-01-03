@@ -22,7 +22,7 @@ class CategoryTemplate extends React.Component {
     const modules = get(this.props, 'data.allContentfulModule.edges');
 
     return (
-      <Layout location={this.props.location}>
+      <Layout title={category.title} description={category.description} location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={category.title} fluid={category.heroImage.fluid} colorNum={category.sortOrder}/>
           <div className="wrapper">

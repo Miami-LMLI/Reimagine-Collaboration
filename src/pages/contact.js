@@ -22,7 +22,7 @@ class Contact extends React.Component {
     const {data} = this.props;
 
     return (
-      <Layout location={this.props.location}>
+      <Layout title="Contact Us" description="Learn how to contact us." location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={'Contact Us'} />
           <div className="wrapper">

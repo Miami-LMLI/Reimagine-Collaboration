@@ -26,7 +26,9 @@ class Home extends React.Component {
     const categories = get(this.props, 'data.allContentfulCategory.edges');
 
     return (
-      <Layout location={this.props.location}>
+      <Layout
+        description="Why wait for the world of tomorrow when it could be the world of today?"
+        location={this.props.location}>
         <div className="content">
           <Header image={headerImg} />
           <div className="wrapper">
@@ -118,9 +120,9 @@ class Home extends React.Component {
               ideas; finding innovative solutions to society&apos;s most
               complex problems.
               </p>
-              <p>
-                To learn more about us, you can checkout our 
-                <a href="/about"> about page</a> or our 
+            <p>
+              To learn more about us, you can checkout our
+                <a href="/about"> about page</a> or our
                 <a href="/contact"> contact page</a>.
               </p>
           </div>

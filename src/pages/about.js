@@ -19,7 +19,7 @@ class About extends React.Component {
     const {data} = this.props;
 
     return (
-      <Layout location={this.props.location}>
+      <Layout title="About" description="Learn more about us!" location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={'About'} />
           <div className="wrapper">
