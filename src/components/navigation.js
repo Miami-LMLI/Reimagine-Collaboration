@@ -1,32 +1,39 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import {graphql, Link, StaticQuery} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import './navigation.module.css';
 
 /**
- * [Insert comment here].
+ * The class that represents the navigation component.
  */
 class Navigation extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the navigation component's content that is
+   * supposed to be rendered by a user's browser inside a Layout component.
+   * @return {*} The navigation component content that is supposed to
+   * be rendered by a browser.
    */
   render() {
-    const { data, location } = this.props;
+    const {data, location} = this.props;
 
     return (
       <Navbar collapseOnSelect expand="lg" bg="transparent " variant="light">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto" activeKey={location.pathname}>
-            <Nav.Link eventKey="/" as={Link} to="/">Home</Nav.Link>
+            <Nav.Link eventKey="/" as={Link} to="/">
+              Home
+            </Nav.Link>
           </Nav>
           <Nav className="mx-auto" activeKey={location.pathname}>
-            {data.allContentfulCategory.edges.map(({ node }) => {
+            {data.allContentfulCategory.edges.map(({node}) => {
               return (
-                <Nav.Link eventKey={`/${node.slug}`} as={Link} to={`/${node.slug}`}>
+                <Nav.Link
+                  eventKey={`/${node.slug}`}
+                  key={node.slug}
+                  as={Link}
+                  to={`/${node.slug}`}>
                   {node.title}
                 </Nav.Link>
               );
@@ -34,8 +41,12 @@ class Navigation extends React.Component {
           </Nav>
           <Nav className="ml-auto" activeKey={location.pathname}>
             <NavDropdown title="More" id="nav-dropdown">
-              <Nav.Link eventKey="/about" as={Link} to="/about">About</Nav.Link>
-              <Nav.Link eventKey="/contact" as={Link} to="/contact">Contact Us</Nav.Link>
+              <Nav.Link eventKey="/about" as={Link} to="/about">
+                About
+              </Nav.Link>
+              <Nav.Link eventKey="/contact" as={Link} to="/contact">
+                Contact Us
+              </Nav.Link>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -45,9 +56,10 @@ class Navigation extends React.Component {
 }
 
 /**
- * [Insert comment here]
- * @param {*} props [Insert comment here].
- * @return {*} [Insert comment here].
+ * Performs a static query and feeds that into the Navigation component.
+ * @param {*} props The properties of the Navigation component.
+ * @return {*} The Navigation component content with the results from
+ * the static query.
  */
 export default function MyNavigation(props) {
   return (
@@ -69,6 +81,7 @@ export default function MyNavigation(props) {
   );
 }
 
+// Defines the propTypes of Navigation.
 Navigation.propTypes = {
   data: PropTypes.shape({
     allContentfulCategory: PropTypes.shape({

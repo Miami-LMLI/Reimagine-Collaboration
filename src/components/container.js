@@ -2,12 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 /**
- * [Insert comment here].
+ * The class that represents the container component.
  */
 class Container extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the container component's content that is
+   * supposed to be rendered by a user's browser inside a Layout component.
+   * @return {*} The container component content that is supposed to
+   * be rendered by a browser.
    */
   render() {
     const {children} = this.props;
@@ -18,6 +20,7 @@ class Container extends React.Component {
   }
 }
 
+// Defines the propTypes of Container.
 Container.propTypes = {
   children: PropTypes.any,
 };

@@ -1,29 +1,34 @@
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './category-preview.module.css';
 
 /**
- * [Insert comment here].
+ * The class that represents the category preview component.
  */
 class CategoryPreview extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the category preview component's content that is
+   * supposed to be rendered by a user's browser inside a Layout component.
+   * @return {*} The category preview component content that is supposed to
+   * be rendered by a browser.
    */
   render() {
-    const {category} = this.props;
+    const {category, colorNum} = this.props;
 
     return (
       <Link to={`/${category.slug}`}>
         <div className={
           // If a sortOrder is defined, pick a specific gradient color.
-          category.sortOrder == 1 ? styles.previewBackgroundColorBlue : {} && 
-          category.sortOrder == 2 ? styles.previewBackgroundColorPurple : {} && 
-          category.sortOrder == 3 ? styles.previewBackgroundColorOrange : {}
-        }>    
-          <Img alt={category.title} className={styles.previewImg} fluid={category.heroImage.fluid} />
+          colorNum == 1 ? styles.previewBackgroundColorBlue : {} &&
+          colorNum == 2 ? styles.previewBackgroundColorPurple : {} &&
+          colorNum == 3 ? styles.previewBackgroundColorOrange : {}
+        }>
+          <Img alt={category.title}
+            className={styles.previewImg}
+            fluid={category.heroImage.fluid}
+          />
         </div>
         <h3 className={styles.previewTitle}>
           {category.title}
@@ -38,15 +43,21 @@ class CategoryPreview extends React.Component {
   }
 }
 
+// Defines the propTypes of CategoryPreview.
 CategoryPreview.propTypes = {
   category: PropTypes.shape({
-    description: PropTypes.any,
+    description: PropTypes.shape({
+      childMarkdownRemark: PropTypes.shape({
+        html: PropTypes.any,
+      }),
+    }),
     heroImage: PropTypes.shape({
       fluid: PropTypes.any,
     }),
     slug: PropTypes.any,
     title: PropTypes.any,
   }),
+  colorNum: PropTypes.number,
 };
 
 export default CategoryPreview;

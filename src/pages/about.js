@@ -1,7 +1,7 @@
-import { graphql, StaticQuery } from 'gatsby';
+import {graphql, StaticQuery} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import Header from '../components/header';
 import Layout from '../components/layout';
 
@@ -19,7 +19,9 @@ class About extends React.Component {
     const {data} = this.props;
 
     return (
-      <Layout title="About" description="Learn more about us!" location={this.props.location}>
+      <Layout title="About"
+        description="Learn more about us!"
+        location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={'About'} />
           <div className="wrapper">
@@ -27,17 +29,18 @@ class About extends React.Component {
               <Col lg>
                 <h3>Who Are We?</h3>
                 <p>
-                The Lockheed Martin Leadership Institute was established to 
-                address the need for a new kind of transformational leadership 
-                development for a new kind of world. The rigorous curriculum of 
-                six classes over three years is designed to challenge the students 
-                to step out of their comfort zone and think strategically, collaborate 
-                successfully with others, and effectively communicate ideas.
+                The Lockheed Martin Leadership Institute was established to
+                address the need for a new kind of transformational leadership
+                development for a new kind of world. The rigorous curriculum of
+                six classes over three years is designed to challenge the
+                students to step out of their comfort zone and think
+                strategically, collaborate successfully with others, and
+                effectively communicate ideas.
                 </p>
                 <p>
-                The Lockheed Martin Leadership Institute is a 3-year leadership 
-                development program – we’re continuously looking to learn and 
-                improve ourselves. Below is a list of some of our favorite 
+                The Lockheed Martin Leadership Institute is a 3-year leadership
+                development program – we’re continuously looking to learn and
+                improve ourselves. Below is a list of some of our favorite
                 leadership resources.
                 </p>
                 <p>
@@ -80,9 +83,10 @@ About.propTypes = {
 };
 
 /**
- * [Insert comment here].
- * @param {*} props [Insert comment here].
- * @return {*} [Insert comment here].
+ * Performs a static query and feeds that into the About component.
+ * @param {*} props The properties of the about page.
+ * @return {*} The about page content with the results from the
+ * static query.
  */
 export default function MyAbout(props) {
   return (

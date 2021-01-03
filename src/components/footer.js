@@ -1,20 +1,26 @@
-import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube }
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faYoutube}
   from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql, StaticQuery } from 'gatsby';
+import {faGlobe} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {graphql, StaticQuery} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import styles from './footer.module.css';
 
 /**
- * [Insert comment here].
+ * The class that represents the module preview component.
  */
 class Footer extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*}
+   * Returns the module preview component's content that is
+   * supposed to be rendered by a user's browser inside a Layout component.
+   * @return {*} The module preview component content that is supposed to
+   * be rendered by a browser.
    */
   render() {
     const {data} = this.props;
@@ -59,9 +65,10 @@ class Footer extends React.Component {
 }
 
 /**
- * [Insert comment here].
- * @param {*} props [Insert comment here].
- * @return {*} [Insert comment here].
+ * Performs a static query and feeds that into the Footer component.
+ * @param {*} props The properties of the Footer component.
+ * @return {*} The footer component content with the results from
+ * the static query.
  */
 export default function MyFooter(props) {
   return (

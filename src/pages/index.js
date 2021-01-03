@@ -1,4 +1,8 @@
-import { faApple, faGooglePlay, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import {
+  faApple,
+  faGooglePlay,
+  faSpotify
+} from '@fortawesome/free-brands-svg-icons';
 import { faPodcast } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql } from 'gatsby';
@@ -50,15 +54,15 @@ class Home extends React.Component {
         <div className="break" />
 
         <div className="content">
-          <div class="wrapper">
+          <div className="wrapper">
             <h2 className="section-headline">
               Start Exploring
             </h2>
             <Row>
-              {categories.map(({ node }) => {
+              {categories.map(({node}) => {
                 return (
-                  <Col md={4}>
-                    <CategoryPreview category={node} />
+                  <Col key={node.slug} md={4}>
+                    <CategoryPreview category={node} colorNum={node.sortOrder} />
                   </Col>
                 );
               })}
@@ -69,7 +73,7 @@ class Home extends React.Component {
         <div className="break" />
 
         <div className="content">
-          <div class="wrapper">
+          <div className="wrapper">
             <h2 className="section-headline">
               Listen to the Envision 2040 Podcast On
             </h2>
@@ -103,7 +107,7 @@ class Home extends React.Component {
         <div className="break" />
 
         <div className="content">
-          <div class="wrapper">
+          <div className="wrapper">
             <h2 className="section-headline">
               Who Are We?
             </h2>
@@ -119,12 +123,12 @@ class Home extends React.Component {
               collaboratively with others; effectively communicating their
               ideas; finding innovative solutions to society&apos;s most
               complex problems.
-              </p>
+            </p>
             <p>
               To learn more about us, you can checkout our
-                <a href="/about"> about page</a> or our
-                <a href="/contact"> contact page</a>.
-              </p>
+              <a href="/about"> about page</a> or our
+              <a href="/contact"> contact page</a>.
+            </p>
           </div>
         </div>
       </Layout >

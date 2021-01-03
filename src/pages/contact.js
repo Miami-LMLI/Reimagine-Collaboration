@@ -1,10 +1,16 @@
-import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql, StaticQuery } from 'gatsby';
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faYoutube}
+  from '@fortawesome/free-brands-svg-icons';
+import {faGlobe} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {graphql, StaticQuery} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import Header from '../components/header';
 import Layout from '../components/layout';
 
@@ -22,7 +28,9 @@ class Contact extends React.Component {
     const {data} = this.props;
 
     return (
-      <Layout title="Contact Us" description="Learn how to contact us." location={this.props.location}>
+      <Layout title="Contact Us" 
+              description="Learn how to contact us." 
+              location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={'Contact Us'} />
           <div className="wrapper">

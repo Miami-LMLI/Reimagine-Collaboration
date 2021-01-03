@@ -1,3 +1,11 @@
+ .previewBackground {
+  overflow: hidden;
+}
+
 .previewTitle {
   font-size: 1.5em;
+}
+
+.previewImg {
+  opacity: 1;
 }

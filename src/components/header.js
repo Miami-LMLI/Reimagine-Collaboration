@@ -1,9 +1,8 @@
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Animated } from 'react-animated-css';
+import {Animated} from 'react-animated-css';
 import Image from 'react-bootstrap/Image';
-import Img from 'gatsby-image';
-
 import styles from './hero.module.css';
 
 /**
@@ -17,7 +16,7 @@ class Header extends React.Component {
    * by a browser
    */
   render() {
-    const { fluid, image, text, colorNum } = this.props;
+    const {fluid, image, text, colorNum} = this.props;
 
     return (
       <div className={styles.hero}>
@@ -29,7 +28,7 @@ class Header extends React.Component {
               colorNum == 3 ? styles.heroGradientColorOrange : {} &&
               styles.heroGradient
         }>
-          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+          <Animated animationIn="fadeIn" animationOut="fadeOut">
             {image != null && fluid == null &&
               <Image className={styles.heroImage}
                 alt={text}
@@ -40,8 +39,10 @@ class Header extends React.Component {
                 alt={text}
                 fluid={fluid} />
             }
-            {text != null && 
-              <h1 className={fluid != null || image != null ? styles.heroOverlayText : styles.heroText}>
+            {text != null &&
+              <h1 className=
+                {fluid != null || image != null ?
+                  styles.heroOverlayText : styles.heroText}>
                 {text}
               </h1>
             }
@@ -52,7 +53,10 @@ class Header extends React.Component {
   }
 }
 
+// Defines the propTypes of Header.
 Header.propTypes = {
+  colorNum: PropTypes.number,
+  fluid: PropTypes.any,
   image: PropTypes.any,
   text: PropTypes.any,
 };

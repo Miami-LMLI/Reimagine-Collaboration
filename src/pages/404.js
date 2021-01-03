@@ -17,7 +17,7 @@ class NotFound extends React.Component {
       <Layout title="Page Not Found!"
         description="The requested page could not be found"
         location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div style={{background: '#fff'}}>
           <div className="wrapper">
             <h2 className="section-headline">Error 404: Page Not Found!</h2>
           </div>

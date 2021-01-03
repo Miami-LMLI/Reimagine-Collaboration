@@ -1,24 +1,31 @@
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import styles from './module-preview.module.css';
 
 /**
- * [Insert comment here].
+ * The class that represents the module preview component.
  */
 class ModulePreview extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the module preview component's content that is
+   * supposed to be rendered by a user's browser inside a Layout component.
+   * @return {*} The module preview component content that is supposed to
+   * be rendered by a browser.
    */
   render() {
     const {module} = this.props;
 
     return (
       <Link to={`/modules/${module.slug}`}>
-        <Img alt={module.title} fluid={module.heroImage.fluid} />
+        <div className={styles.previewBackground}>
+          <Img
+            alt={module.title}
+            className={styles.previewImg}
+            fluid={module.heroImage.fluid}
+          />
+        </div>
         <h3 className={styles.previewTitle}>
           {module.title}
         </h3>
@@ -32,9 +39,10 @@ class ModulePreview extends React.Component {
   }
 }
 
+// Defines the propTypes of ModulePreview.
 ModulePreview.propTypes = {
   module: PropTypes.shape({
-    category: PropTypes.shape({
+    module: PropTypes.shape({
       slug: PropTypes.any,
     }),
     description: PropTypes.any,
