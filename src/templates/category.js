@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Link, graphql} from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import Layout from '../components/layout';
 import Header from '../components/header';
 import ModulePreview from '../components/module-preview';
-import Img from 'gatsby-image';
-import styles from '../components/hero.module.css';
 import { Col, Row } from 'react-bootstrap';
 
 /**
@@ -22,18 +20,18 @@ class CategoryTemplate extends React.Component {
     const modules = get(this.props, 'data.allContentfulModule.edges');
 
     return (
-      <Layout title={category.title} description={category.description} location={this.props.location}>
-        <div style={{background: '#fff'}}>
-          <Header text={category.title} fluid={category.heroImage.fluid} colorNum={category.sortOrder}/>
+      <Layout title={category.title} description={category.description.description} location={this.props.location}>
+        <div style={{ background: '#fff' }}>
+          <Header text={category.title} fluid={category.heroImage.fluid} colorNum={category.sortOrder} />
           <div className="wrapper">
-          {category.tagline && <h2 className="section-headline">{category.tagline}</h2>}
+            {category.tagline && <h2 className="section-headline">{category.tagline}</h2>}
             <div
               dangerouslySetInnerHTML={{
                 __html: category.body.childMarkdownRemark.html,
               }}
             />
             <Row>
-              {modules.map(({node}) => {
+              {modules.map(({ node }) => {
                 return (
                   <Col md={6}>
                     <ModulePreview module={node} />
@@ -63,6 +61,9 @@ export const pageQuery = graphql`
         fluid(maxWidth: 1920, maxHeight: 1080, resizingBehavior: SCALE) {
           ...GatsbyContentfulFluid
         }
+      }
+      description {
+        description
       }
       body {
         childMarkdownRemark {

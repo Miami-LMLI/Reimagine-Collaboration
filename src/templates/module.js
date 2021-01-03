@@ -19,7 +19,7 @@ class ModuleTemplate extends React.Component {
     const module = get(this.props, 'data.contentfulModule');
 
     return (
-      <Layout title={module.title} description={module.description} location={this.props.location}>
+      <Layout title={module.title} description={module.description.description} location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Img
             className={styles.heroImage}
@@ -59,6 +59,9 @@ export const pageQuery = graphql`
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid
         }
+      }
+      description {
+        description
       }
       body {
         childMarkdownRemark {

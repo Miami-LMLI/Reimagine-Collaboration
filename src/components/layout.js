@@ -19,7 +19,7 @@ class Layout extends React.Component {
    * @return {*}
    */
   render() {
-    const {title, description, data, children, location} = this.props;
+    const {title, description, data, children, location, ogImg} = this.props;
 
     return (
       <Container>
@@ -33,7 +33,7 @@ class Layout extends React.Component {
           <meta property="og:type" content={data.site.siteMetadata.type} />
           <meta property="og:title" content={`${title ? title + ' | ' : ''}Envision 2040`} />
           <meta property="og:description" content={description} />
-          {/* <meta property="og:image" content={ogImg} /> */}
+          {/* <meta property="og:image" content={ogImg ? ogImg : defaultOgImg} /> */}
         </Helmet>
         <Navigation location={location}/>
         {children}
