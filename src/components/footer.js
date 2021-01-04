@@ -1,3 +1,8 @@
+// Sets up React stuff.
+import PropTypes from 'prop-types';
+import React from 'react';
+
+// Sets up all FontAwesome used in the footer.
 import {
   faFacebook,
   faInstagram,
@@ -7,9 +12,11 @@ import {
   from '@fortawesome/free-brands-svg-icons';
 import {faGlobe} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+// Sets up GraphQL to retrieve the metadata for social media links.
 import {graphql, StaticQuery} from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
+
+// Brings in stuff needed for css.
 import styles from './footer.module.css';
 
 /**

@@ -1,11 +1,17 @@
+// Gets Bootstrap CSS and the Base CSS 
+// that will be applied to everything
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './base.css';
+
+// Sets up React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
-import './base.css';
-import Container from './container';
-import Footer from './footer';
-import Navigation from './navigation';
+
+// Gets custom components.
 import Metadata from './metadata.js';
+import Container from './container';
+import Navigation from './navigation';
+import Footer from './footer';
 
 /**
  * The class that represents the layout component.

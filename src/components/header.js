@@ -1,8 +1,13 @@
-import Img from 'gatsby-image';
+// Sets up React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Animated } from 'react-animated-css';
+
+// Sets up stuff for header images.
+import Img from 'gatsby-image'
 import Image from 'react-bootstrap/Image';
+
+// Brings in stuff needed for css.
+import { Animated } from 'react-animated-css';
 import styles from './hero.module.css';
 
 /**
@@ -21,11 +26,6 @@ class Header extends React.Component {
     return (
       <div className={styles.hero}>
         <div className={
-          // If a color num is defined, pick a specific gradient color.
-          // The color num should be based on the sortOrder of the category.
-          // colorNum == 1 ? styles.heroGradientColorBlue : {} &&
-          // colorNum == 2 ? styles.heroGradientColorPurple : {} &&
-          // colorNum == 3 ? styles.heroGradientColorOrange : {} &&
           applyGradient && styles.heroGradient || styles.heroSolid
         }>
           {image != null && bgImage == null &&

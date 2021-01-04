@@ -1,3 +1,4 @@
+// Sets up React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
 

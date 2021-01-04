@@ -1,8 +1,15 @@
-import {graphql, Link, StaticQuery} from 'gatsby';
+// Setups React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
+
+// Sets up GraphQL to retrieve all Contentful categories.
+import {graphql, StaticQuery} from 'gatsby';
+
+// Brings in Gatsby component for hyperlinks.
+import {Link} from 'gatsby';
+
+// Brings in Bootstrap components for navigation.
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
-import './navigation.module.css';
 
 /**
  * The class that represents the navigation component.
