@@ -1,7 +1,13 @@
-import { graphql, StaticQuery } from 'gatsby';
+// Setups React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
+// Sets up GraphQL to retrieve the metadata for metadata tags.
+import { graphql, StaticQuery } from 'gatsby';
+
+// Setups the default image for OpenGraph.
+import ogImg from '../../static/og-image.png';
 
 /**
  * The class that represents the Metadata component.
@@ -22,6 +28,7 @@ class Metadata extends React.Component {
         const siteName = data.site.siteMetadata.title;
         const metaDescription = description || data.site.siteMetadata.description;
         const metaLang = data.site.siteMetadata.lang;
+        const metaLocale = data.site.siteMetadata.locale;
         const metaUrl = location.href;
         const metaType = data.site.siteMetadata.type;
 
@@ -48,6 +55,14 @@ class Metadata extends React.Component {
                     {
                         property: `og:description`,
                         content: metaDescription,
+                    },
+                    {
+                        property: `og:image`,
+                        content: ogImg,
+                    },
+                    {
+                        property: `og:locale`,
+                        content: metaLocale,
                     },
                     {
                         property: `og:type`,
@@ -89,6 +104,7 @@ export default function MyMetadata(props) {
               description
               type
               lang
+              locale
               type
             }
           }

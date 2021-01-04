@@ -29,6 +29,7 @@ module.exports = {
     title: 'Envision 2040',
     description: '',
     lang: 'en',
+    locale: 'en_US',
     type: 'website',
     social: {
       facebook: 'https://www.facebook.com/cecleadership',
