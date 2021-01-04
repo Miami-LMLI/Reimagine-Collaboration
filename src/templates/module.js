@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,22 +6,26 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 
 /**
- * [Insert comment here].
+ * The class that represents the template for a module page.
  */
 class ModuleTemplate extends React.Component {
   /**
-   * [Insert comment here].
-   * @return {*} [Insert comment here].
+   * Returns the module page content that is supposed to be rendered
+   * by a user's browser inside a Layout component.
+   * @return {*} The a module page content that is supposed to
+   * be rendered by a browser.
    */
   render() {
     const module = get(this.props, 'data.contentfulModule');
 
     return (
-      <Layout title={module.title} description={module.description.description} location={this.props.location}>
+      <Layout title={module.title}
+        description={module.description.description}
+        location={this.props.location}>
         <div style={{background: '#fff'}}>
-        <Header text={module.title} bgImage={module.heroImage.fluid} />
+          <Header text={module.title} bgImage={module.heroImage.fluid} />
           <div className="wrapper">
-            {module.tagLine && 
+            {module.tagLine &&
               <h1 className="section-headline">
                 {module.tagLine}
               </h1>
@@ -38,12 +42,15 @@ class ModuleTemplate extends React.Component {
   }
 }
 
+// Defines the propTypes of Module.
 ModuleTemplate.propTypes = {
   location: PropTypes.any,
 };
 
 export default ModuleTemplate;
 
+// Performs a GraphQL query to get all
+// module page's content based on the page's slug.
 export const pageQuery = graphql`
   query ModuleBySlug($slug: String!) {
     contentfulModule(slug: { eq: $slug }) {
