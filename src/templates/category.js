@@ -1,8 +1,8 @@
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Col, Row} from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import ModulePreview from '../components/module-preview';
@@ -25,7 +25,8 @@ class CategoryTemplate extends React.Component {
       <Layout title={category.title}
         description={category.description.description}
         location={this.props.location}>
-        <div style={{background: '#fff'}}>
+
+        <div className="content">
           <Header text={category.title} bgImage={category.heroImage.fluid} />
           <div className="wrapper">
             {category.tagline &&
@@ -38,8 +39,18 @@ class CategoryTemplate extends React.Component {
                 __html: category.body.childMarkdownRemark.html,
               }}
             />
+          </div>
+        </div>
+
+        <div className="break" />
+
+        <div className="content">
+          <div className="wrapper">
+            <h2 className="section-headline">
+              Explore {category.title} Modules
+            </h2>
             <Row>
-              {modules.map(({node}) => {
+              {modules.map(({ node }) => {
                 return (
                   <Col key={node.slug} md={6}>
                     <ModulePreview module={node} />

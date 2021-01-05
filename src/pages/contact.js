@@ -31,7 +31,7 @@ class Contact extends React.Component {
       <Layout title="Contact Us" 
               description="Learn how to contact us." 
               location={this.props.location}>
-        <div style={{background: '#fff'}}>
+        <div className="content">
           <Header text={'Contact Us'} applyGradient={true}/>
           <div className="wrapper">
             <Row>
