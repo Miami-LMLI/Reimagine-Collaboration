@@ -25,7 +25,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://envision2040.digital',
+    siteUrl: 'https://envision2040.com',
     title: 'Envision 2040',
     description: '',
     lang: 'en',
