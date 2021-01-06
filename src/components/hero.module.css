@@ -1,6 +1,17 @@
+/* Sets the height for the containers. */
+:root {
+  --height: 350px;
+}
+
 .hero {
   position: relative;
   color: #fff;
+
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
+
+  /* Ensures there is no overflow. */
   overflow: hidden;
 }
 
@@ -11,11 +22,8 @@
   background: linear-gradient(-45deg, #ee7752, #963484, #3066be, #2af5ff);
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
-
-  height: 40vh;
-  max-height: 400px;
-  width: auto;
-  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .heroSolid {
@@ -23,39 +31,44 @@
 }
 
 .heroImage {
+  /* Ensures the image isn't squished. */
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 
-  display: block;
-  margin: 0;
+  /* Center's the image. */
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  height: 100%;
-  max-height: 40vh;
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
 }
 
 .heroImageGradient {
+  /* Blurs the image. */
   filter: blur(3px);
-  transform: scale(1.25);
-  /*opacity: 0.3;*/
+  transform: scale(1.05);
 
-  height: 40vh;
-  max-height: 400px;
-  width: auto;
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
+
+  /* Center's the image. */
   margin: auto;
 }
 
 .heroOverlayText {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  
+  /* 
+   * Set's font size 
+   * relative to container size. 
+   */
+  font-size: 4em;
+
+  /* Center's text */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,25 +77,27 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  height: 40vh;
-  max-height: 400px;
-  width: 100%;
-  font-size: 10vh;
 }
 
 .heroText {
+  /* 
+   * Set's font size 
+   * relative to container size. 
+   */
+  font-size: 4em;
+
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  height: 40vh;
-  max-height: 400px;
   width: 100%;
-  font-size: 10vh;
+
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
 }
 
+/* Gradient background animation. */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
