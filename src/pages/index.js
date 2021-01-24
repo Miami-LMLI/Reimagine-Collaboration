@@ -31,7 +31,6 @@ class Home extends React.Component {
 
     return (
       <Layout
-        title="Home"
         description="Why wait for the world of tomorrow when it could be the world of today?"
         location={this.props.location}>
         <div className="content">

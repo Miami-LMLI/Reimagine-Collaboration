@@ -14,7 +14,7 @@ import ogImg from '../../static/og-image.png';
  * This is used to generate the overlay Metadata of every page
  * on the website.
  */
-class Metadata extends React.Component {
+class SEO extends React.Component {
     /**
      * Returns the Metadata component's content that is
      * supposed to be rendered by a user's browser inside a Metadata component.
@@ -38,7 +38,7 @@ class Metadata extends React.Component {
                     metaLang,
                 }}
                 title={metaTitle}
-                titleTemplate={`%s | ${siteName}`}
+                titleTemplate={siteName ? `%s | ${siteName}` : null}
                 meta={[
                     {
                         property: `og:url`,
@@ -92,7 +92,7 @@ class Metadata extends React.Component {
  * @return {*} The Metadata component content with the results from
  * the static query.
  */
-export default function MyMetadata(props) {
+export default function MySEO(props) {
     return (
         <StaticQuery
             query={graphql`
@@ -110,7 +110,7 @@ export default function MyMetadata(props) {
           }
         }
       `}
-        render={(data) => <Metadata data={data} {...props} />}
+        render={(data) => <SEO data={data} {...props} />}
         />
     );
 }

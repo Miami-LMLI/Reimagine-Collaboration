@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 // Gets custom components.
-import Metadata from './metadata.js';
+import SEO from './seo.js';
 import Container from './container';
 import Navigation from './navigation';
 import Footer from './footer';
@@ -30,7 +30,7 @@ class Layout extends React.Component {
 
     return (
       <Container>
-        <Metadata 
+        <SEO 
           title={title} 
           description={description} 
           location={location}
