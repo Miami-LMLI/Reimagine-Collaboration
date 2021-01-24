@@ -23,7 +23,9 @@ class Categories extends React.Component {
     const categories = get(this.props, 'data.allContentfulCategory.edges');
 
     return (
-      <Layout title="Categories" location={this.props.location}>
+      <Layout
+        title="Categories"
+        location={this.props.location}>
         <div className="content">
           <Header text={'Categories'} applyGradient={true}/>
           <div className="wrapper">

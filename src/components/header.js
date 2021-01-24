@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 // Sets up stuff for header images.
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
 import Image from 'react-bootstrap/Image';
 
 // Brings in stuff needed for css.
-import { Animated } from 'react-animated-css';
-import styles from './hero.module.css';
+import {Animated} from 'react-animated-css';
+import styles from '../css/header.module.css';
 
 /**
  * The class that represents the header component.
@@ -21,7 +21,7 @@ class Header extends React.Component {
    * by a browser
    */
   render() {
-    const { image, bgImage, text, applyGradient } = this.props;
+    const {image, bgImage, text, applyGradient} = this.props;
 
     return (
       <div className={styles.hero}>
@@ -57,8 +57,8 @@ class Header extends React.Component {
 
 // Defines the propTypes of Header.
 Header.propTypes = {
-  colorNum: PropTypes.number,
-  fluid: PropTypes.any,
+  applyGradient: PropTypes.any,
+  bgImage: PropTypes.any,
   image: PropTypes.any,
   text: PropTypes.any,
 };

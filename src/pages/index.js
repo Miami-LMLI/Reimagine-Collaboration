@@ -1,19 +1,21 @@
 import {
   faApple,
   faGooglePlay,
-  faSpotify
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
-import { faPodcast } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql } from 'gatsby';
+import {faPodcast} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {graphql} from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
-import styles from './index.module.css';
+
+// Brings in stuff needed for css.
+import styles from '../css/index.module.css';
 
 /**
  * The class that represents the home page.
@@ -31,6 +33,7 @@ class Home extends React.Component {
 
     return (
       <Layout
+        title="Home"
         description="Why wait for the world of tomorrow when it could be the world of today?"
         location={this.props.location}>
         <div className="content">

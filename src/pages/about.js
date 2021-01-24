@@ -19,7 +19,8 @@ class About extends React.Component {
     const {data} = this.props;
 
     return (
-      <Layout title="About"
+      <Layout
+        title="About"
         description="Learn more about us!"
         location={this.props.location}>
         <div className="content">

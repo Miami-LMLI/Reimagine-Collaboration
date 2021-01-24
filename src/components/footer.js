@@ -17,7 +17,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {graphql, StaticQuery} from 'gatsby';
 
 // Brings in stuff needed for css.
-import styles from './footer.module.css';
+import styles from '../css/footer.module.css';
 
 /**
  * The class that represents the module preview component.

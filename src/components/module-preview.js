@@ -1,8 +1,13 @@
-import {Link} from 'gatsby';
-import Img from 'gatsby-image';
+// Sets up React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
-import styles from './module-preview.module.css';
+
+// Brings stuff in for Gatsby hyperlinks and images.
+import {Link} from 'gatsby';
+import Img from 'gatsby-image';
+
+// Brings in stuff needed for css.
+import styles from '../css/module-preview.module.css';
 
 /**
  * The class that represents the module preview component.

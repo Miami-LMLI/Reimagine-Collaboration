@@ -1,10 +1,10 @@
 // Setups React stuff.
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import {Helmet} from 'react-helmet';
 
 // Sets up GraphQL to retrieve the metadata for metadata tags.
-import { graphql, StaticQuery } from 'gatsby';
+import {graphql, StaticQuery} from 'gatsby';
 
 // Setups the default image for OpenGraph.
 import ogImg from '../../static/og-image.png';
@@ -15,76 +15,96 @@ import ogImg from '../../static/og-image.png';
  * on the website.
  */
 class SEO extends React.Component {
-    /**
+  /**
      * Returns the Metadata component's content that is
      * supposed to be rendered by a user's browser inside a Metadata component.
      * @return {*} The Metadata component content that is supposed to
      * be rendered by a browser.
      */
-    render() {
-        const { title, description, data, location } = this.props;
+  render() {
+    const {title, description, data, location} = this.props;
 
-        const metaTitle = title;
-        const siteName = data.site.siteMetadata.title;
-        const metaDescription = description || data.site.siteMetadata.description;
-        const metaLang = data.site.siteMetadata.lang;
-        const metaLocale = data.site.siteMetadata.locale;
-        const metaUrl = location.href;
-        const metaType = data.site.siteMetadata.type;
+    const metaTitle = title;
+    const siteName = data.site.siteMetadata.title;
+    const metaDescription = description || data.site.siteMetadata.description;
+    const metaLang = data.site.siteMetadata.lang;
+    const metaLocale = data.site.siteMetadata.locale;
+    const metaUrl = location.href;
+    const metaType = data.site.siteMetadata.type;
 
-        return (
-            <Helmet
-                htmlAttributes={{
-                    metaLang,
-                }}
-                title={metaTitle}
-                titleTemplate={siteName ? `%s | ${siteName}` : null}
-                meta={[
-                    {
-                        property: `og:url`,
-                        content: metaUrl,
-                    },
-                    {
-                        name: `description`,
-                        content: metaDescription,
-                    },
-                    {
-                        property: `og:title`,
-                        content: metaTitle,
-                    },
-                    {
-                        property: `og:description`,
-                        content: metaDescription,
-                    },
-                    {
-                        property: `og:image`,
-                        content: ogImg,
-                    },
-                    {
-                        property: `og:locale`,
-                        content: metaLocale,
-                    },
-                    {
-                        property: `og:type`,
-                        content: metaType,
-                    },
-                    {
-                        name: `twitter:card`,
-                        content: `summary`,
-                    },
-                    {
-                        name: `twitter:title`,
-                        content: metaTitle,
-                    },
-                    {
-                        name: `twitter:description`,
-                        content: metaDescription,
-                    },
-                ]}
-            />
-        );
-    }
+    return (
+      <Helmet
+        htmlAttributes={{
+          metaLang,
+        }}
+        title={metaTitle}
+        titleTemplate={siteName ? `%s | ${siteName}` : null}
+        meta={[
+          {
+            property: `og:url`,
+            content: metaUrl,
+          },
+          {
+            name: `description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:title`,
+            content: metaTitle,
+          },
+          {
+            property: `og:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:image`,
+            content: ogImg,
+          },
+          {
+            property: `og:locale`,
+            content: metaLocale,
+          },
+          {
+            property: `og:type`,
+            content: metaType,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:title`,
+            content: metaTitle,
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription,
+          },
+        ]}
+      />
+    );
+  }
 }
+
+// Defines the propTypes of SEO.
+SEO.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        description: PropTypes.any,
+        lang: PropTypes.any,
+        locale: PropTypes.any,
+        title: PropTypes.any,
+        type: PropTypes.any,
+      }),
+    }),
+  }),
+  description: PropTypes.any,
+  location: PropTypes.shape({
+    href: PropTypes.any,
+  }),
+  title: PropTypes.any,
+};
 
 /**
  * Performs a static query and feeds that into the Metadata component.
@@ -93,9 +113,9 @@ class SEO extends React.Component {
  * the static query.
  */
 export default function MySEO(props) {
-    return (
-        <StaticQuery
-            query={graphql`
+  return (
+    <StaticQuery
+      query={graphql`
         query {
           site {
             siteMetadata {
@@ -110,25 +130,7 @@ export default function MySEO(props) {
           }
         }
       `}
-        render={(data) => <SEO data={data} {...props} />}
-        />
-    );
+      render={(data) => <SEO data={data} {...props} />}
+    />
+  );
 }
-
-// Defines the propTypes of Metadata.
-Metadata.propTypes = {
-    children: PropTypes.any,
-    data: PropTypes.shape({
-        site: PropTypes.shape({
-            siteMetadata: PropTypes.shape({
-                lang: PropTypes.any,
-                type: PropTypes.any,
-            }),
-        }),
-    }),
-    description: PropTypes.any,
-    location: PropTypes.shape({
-        href: PropTypes.any,
-    }),
-    title: PropTypes.string,
-};

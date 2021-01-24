@@ -1,7 +1,7 @@
-// Gets Bootstrap CSS and the Base CSS 
+// Gets Bootstrap CSS and the Base CSS
 // that will be applied to everything
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './base.css';
+import '../css/base.css';
 
 // Sets up React stuff.
 import PropTypes from 'prop-types';
@@ -30,9 +30,9 @@ class Layout extends React.Component {
 
     return (
       <Container>
-        <SEO 
-          title={title} 
-          description={description} 
+        <SEO
+          title={title}
+          description={description}
           location={location}
         />
         <Navigation location={location} />
@@ -48,7 +48,7 @@ Layout.propTypes = {
   children: PropTypes.any,
   description: PropTypes.any,
   location: PropTypes.any,
-  title: PropTypes.any
-}
+  title: PropTypes.any,
+};
 
 export default Layout;

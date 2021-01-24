@@ -15,7 +15,8 @@ class NotFound extends React.Component {
    */
   render() {
     return (
-      <Layout title="Page Not Found!"
+      <Layout
+        title="Page Not Found!"
         description="The requested page could not be found"
         location={this.props.location}>
         <div className="content">
