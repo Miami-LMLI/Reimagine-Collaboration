@@ -20,7 +20,7 @@ class ModuleTemplate extends React.Component {
 
     return (
       <Layout title={module.title}
-        description={module.description.description}
+        description={module.tagLine}
         location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={module.title} bgImage={module.heroImage.fluid} />

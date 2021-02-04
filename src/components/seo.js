@@ -7,7 +7,7 @@ import {Helmet} from 'react-helmet';
 import {graphql, StaticQuery} from 'gatsby';
 
 // Setups the default image for OpenGraph.
-import ogImg from '../../static/og-image.png';
+import ogImg from '../assets/images/og-image.png';
 
 /**
  * The class that represents the Metadata component.
@@ -37,8 +37,8 @@ class SEO extends React.Component {
         htmlAttributes={{
           metaLang,
         }}
-        title={metaTitle}
-        titleTemplate={siteName ? `%s | ${siteName}` : null}
+        title={metaTitle ? metaTitle : `${siteName}`}
+        titleTemplate={metaTitle ? `%s | ${siteName}` : null}
         meta={[
           {
             property: `og:url`,
@@ -58,7 +58,7 @@ class SEO extends React.Component {
           },
           {
             property: `og:image`,
-            content: ogImg,
+            content: `https://envision2040.com/${ogImg}`,
           },
           {
             property: `og:locale`,

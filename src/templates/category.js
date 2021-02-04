@@ -23,7 +23,7 @@ class CategoryTemplate extends React.Component {
 
     return (
       <Layout title={category.title}
-        description={category.description.description}
+        description={category.tagline}
         location={this.props.location}>
 
         <div className="content">

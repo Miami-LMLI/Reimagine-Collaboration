@@ -17,6 +17,8 @@ import Layout from '../components/layout';
 // Brings in stuff needed for css.
 import styles from '../css/index.module.css';
 
+import headerImg from '../assets/images/header-white.svg';
+
 /**
  * The class that represents the home page.
  */
@@ -28,13 +30,12 @@ class Home extends React.Component {
    * browser.
    */
   render() {
-    const headerImg = require('../../static/header-white.svg');
     const categories = get(this.props, 'data.allContentfulCategory.edges');
 
     return (
       <Layout
-        title="Home"
-        description="Why wait for the world of tomorrow when it could be the world of today?"
+        description="Join the Lockheed
+        Martin Leadership Institute as we envision 2040."
         location={this.props.location}>
         <div className="content">
           <Header image={headerImg} applyGradient={true} />
