@@ -32,6 +32,8 @@ class Footer extends React.Component {
   render() {
     const {data} = this.props;
 
+    const currentYear = new Date().getFullYear();
+
     return (
       <nav role="navigation">
         <ul className={styles.navigation}>
@@ -66,6 +68,7 @@ class Footer extends React.Component {
               <FontAwesomeIcon icon={faGlobe} /></a>
           </li>
         </ul>
+        <p className={styles.text}>&copy; {currentYear} Lockheed Martin Leadership Institute, All rights reserved.</p>
       </nav>
     );
   }
