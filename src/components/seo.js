@@ -22,7 +22,7 @@ class SEO extends React.Component {
      * be rendered by a browser.
      */
   render() {
-    const {title, description, data, location} = this.props;
+    const {title, description, image, data, location} = this.props;
 
     const metaTitle = title;
     const siteName = data.site.siteMetadata.title;
@@ -30,6 +30,7 @@ class SEO extends React.Component {
     const metaLang = data.site.siteMetadata.lang;
     const metaLocale = data.site.siteMetadata.locale;
     const metaUrl = location.href;
+    const metaImage = image || `https://envision2040.com/${ogImg}`;
     const metaType = data.site.siteMetadata.type;
 
     return (
@@ -58,7 +59,7 @@ class SEO extends React.Component {
           },
           {
             property: `og:image`,
-            content: `https://envision2040.com/${ogImg}`,
+            content: metaImage,
           },
           {
             property: `og:locale`,

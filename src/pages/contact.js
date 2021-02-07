@@ -30,7 +30,7 @@ class Contact extends React.Component {
     return (
       <Layout
         title="Contact Us"
-        description="Learn how to contact us."
+        description="Learn how to contact the Lockheed Martin Leadership Institute!"
         location={this.props.location}>
         <div className="content">
           <Header text={'Contact Us'} applyGradient={true}/>

@@ -24,6 +24,7 @@ class CategoryTemplate extends React.Component {
     return (
       <Layout title={category.title}
         description={category.tagline}
+        image={category.heroImage.fluid.src}
         location={this.props.location}>
 
         <div className="content">
@@ -82,6 +83,7 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1920, maxHeight: 1080, resizingBehavior: SCALE) {
           ...GatsbyContentfulFluid
+          src
         }
       }
       description {

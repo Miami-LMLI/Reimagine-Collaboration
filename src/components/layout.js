@@ -26,13 +26,14 @@ class Layout extends React.Component {
    * be rendered by a browser.
    */
   render() {
-    const {title, description, children, location} = this.props;
+    const {title, description, image, children, location} = this.props;
 
     return (
       <Container>
         <SEO
           title={title}
           description={description}
+          image={image}
           location={location}
         />
         <Navigation location={location} />

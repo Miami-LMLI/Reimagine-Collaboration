@@ -21,6 +21,7 @@ class ModuleTemplate extends React.Component {
     return (
       <Layout title={module.title}
         description={module.tagLine}
+        image={module.heroImage.fluid.src}
         location={this.props.location}>
         <div style={{background: '#fff'}}>
           <Header text={module.title} bgImage={module.heroImage.fluid} />
@@ -62,6 +63,7 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid
+          src
         }
       }
       description {

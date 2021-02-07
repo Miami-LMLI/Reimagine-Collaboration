@@ -21,7 +21,7 @@ class About extends React.Component {
     return (
       <Layout
         title="About"
-        description="Learn more about us!"
+        description="Learn more about the Lockheed Martin Leadership Institute!"
         location={this.props.location}>
         <div className="content">
           <Header text={'About'} applyGradient={true}/>
