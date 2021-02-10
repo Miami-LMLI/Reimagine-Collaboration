@@ -112,12 +112,12 @@ p a:hover, p a:active {
   width: calc(100% - 10vmin);
   margin: 0 auto;
   height: 100%;
-  padding: 3vmin 0;
+  padding: 1em 0;
 }
 
 .break {
   margin: 0 auto;
-  padding: 1vmin 0;
+  padding: 1em 0;
 }
 
 /**

@@ -27,7 +27,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://envision2040.com',
     title: 'Envision 2040',
-    description: '',
+    description: 'Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring as we explore the intersections of technology, social rights, and what it means to be human.',
     lang: 'en',
     locale: 'en_US',
     type: 'website',

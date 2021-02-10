@@ -34,8 +34,7 @@ class Home extends React.Component {
 
     return (
       <Layout
-        description="Join the Lockheed
-        Martin Leadership Institute as we Envision 2040!"
+        description="Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring as we explore the intersections of technology, social rights, and what it means to be human."
         location={this.props.location}>
         <div className="content">
           <Header image={headerImg} applyGradient={true} />
