@@ -27,7 +27,7 @@ class SEO extends React.Component {
     const metaTitle = title;
     const siteName = data.site.siteMetadata.title;
     const metaDescription = description || data.site.siteMetadata.description;
-    const metaLang = data.site.siteMetadata.lang;
+    const lang = data.site.siteMetadata.lang;
     const metaLocale = data.site.siteMetadata.locale;
     const metaUrl = location.href;
     const metaImage = image || `https://envision2040.com/${ogImg}`;
@@ -36,7 +36,7 @@ class SEO extends React.Component {
     return (
       <Helmet
         htmlAttributes={{
-          metaLang,
+          lang,
         }}
         title={metaTitle ? metaTitle : `${siteName}`}
         titleTemplate={metaTitle ? `%s | ${siteName}` : null}

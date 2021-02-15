@@ -21,7 +21,7 @@ class Header extends React.Component {
    * by a browser
    */
   render() {
-    const {image, bgImage, text, applyGradient} = this.props;
+    const {image, bgImage, text, alt, applyGradient} = this.props;
 
     return (
       <div className={styles.hero}>
@@ -31,13 +31,13 @@ class Header extends React.Component {
           {image != null && bgImage == null &&
             <Animated animationIn="fadeIn" animationOut="fadeOut">
               <Image className={styles.heroImage}
-                alt={text}
+                alt={alt}
                 src={image} fluid />
             </Animated>
           }
           {image == null && bgImage != null &&
             <Img className={styles.heroImageGradient}
-              alt={text}
+              alt={alt}
               fluid={bgImage} />
           }
           {text != null &&
