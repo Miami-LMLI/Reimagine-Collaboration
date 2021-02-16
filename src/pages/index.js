@@ -3,13 +3,13 @@ import {
   faGooglePlay,
   faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
-import {faPodcast} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {graphql} from 'gatsby';
+import { faPodcast } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Col, Row} from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
@@ -43,14 +43,21 @@ class Home extends React.Component {
               Why wait for the world of tomorrow when it could be the world of
               today?
             </h2>
-            <p>
-              Between a global health crisis, heightened social rights
-              tension, and a polarized political environment, the world faces an
-              uncertain future. This is where 2040 comes into play. Join the Lockheed
-              Martin Leadership Institute as we take a deep dive into how we can prepare for
-              what the next 20 years will bring as we explore the intersections
-              of technology, social rights, and what it means to be human.
+            <Row>
+              <Col md={6}>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/I8ZtHxOqFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </Col>
+              <Col md={6}>
+                <p>
+                  Between a global health crisis, heightened social rights
+                  tension, and a polarized political environment, the world faces an
+                  uncertain future. This is where 2040 comes into play. Join the Lockheed
+                  Martin Leadership Institute as we take a deep dive into how we can prepare for
+                  what the next 20 years will bring as we explore the intersections
+                  of technology, social rights, and what it means to be human.
             </p>
+              </Col>
+            </Row>
           </div>
         </div>
 
@@ -62,7 +69,7 @@ class Home extends React.Component {
               Start Exploring
             </h2>
             <Row>
-              {categories.map(({node}) => {
+              {categories.map(({ node }) => {
                 return (
                   <Col key={node.slug} md={4}>
                     <CategoryPreview category={node} />
