@@ -1,0 +1,13 @@
+.moduleDetails {
+    opacity: 0.75;
+}
+
+.icon {
+    transition: all 200ms ease;
+    margin: 0 0.5em;
+  }
+  
+  .icon:hover, .icon:active {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }

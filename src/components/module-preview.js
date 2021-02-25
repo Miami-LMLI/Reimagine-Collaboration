@@ -34,12 +34,15 @@ class ModulePreview extends React.Component {
         <h3 className={styles.previewTitle}>
           {module.title}
         </h3>
-        <i>Time to read: {module.body.childMarkdownRemark.timeToRead} min</i>
-        <div
+        <div className={styles.previewBody}
           dangerouslySetInnerHTML={{
             __html: module.description.childMarkdownRemark.html,
           }}
         />
+        <p className={styles.previewDetails}>
+          {module.authors && <span>By {module.authors.join(", ")} &#183; </span>}
+          {module.body.childMarkdownRemark.timeToRead} min read
+        </p>
       </Link >
     );
   }

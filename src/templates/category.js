@@ -102,6 +102,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
+          authors
           heroImage {
             fluid(maxWidth: 960, maxHeight: 540, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid

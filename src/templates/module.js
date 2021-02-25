@@ -1,22 +1,29 @@
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import { Col, Row } from 'react-bootstrap';
+
+// Imports the share buttons for social media sharing the module.
 import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
 } from "react-share";
 
-// Sets up all FontAwesome used in the footer.
+// Sets up the fontawesome for the share buttons.
 import {
   faFacebook,
   faLinkedin,
-  faTwitter}
-  from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+  faTwitter
+}
+from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Brings in stuff needed for css.
+import styles from '../css/module.module.css';
 
 /**
  * The class that represents the template for a module page.
@@ -36,36 +43,45 @@ class ModuleTemplate extends React.Component {
         description={module.tagLine}
         image={module.heroImage.fluid.src}
         location={this.props.location}>
-        <div style={{background: '#fff'}}>
+        <div style={{ background: '#fff' }}>
           <Header text={module.title} bgImage={module.heroImage.fluid} />
           <div className="wrapper">
             <div className="section-headline">
-            {module.tagLine &&
-              <h1>
-                {module.tagLine}
-              </h1>
-            }
-            <p>
-            Share on&nbsp;
-            <TwitterShareButton url={this.props.location.href} 
-                                title={module.title} 
-                                hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
-              <FontAwesomeIcon icon={faTwitter} />
-            </TwitterShareButton>&nbsp;
-            <FacebookShareButton url={this.props.location.href}
-                                 quote={module.tagLine}
-                                 hashtag={'#Envision2040 #Leadership #MiamiOH'}>
-              <FontAwesomeIcon icon={faFacebook} />
-            </FacebookShareButton>&nbsp;
-            <LinkedinShareButton  url={this.props.location.href}
-                                  title={module.title}
-                                  summary={module.tagLine}>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </LinkedinShareButton>
-            </p>
-            <p>
-              <i>Time to read: {module.body.childMarkdownRemark.timeToRead} min</i>
-            </p>
+              {module.tagLine &&
+                <h1>
+                  {module.tagLine}
+                </h1>
+              }
+            </div>
+            <div className="section-headline">
+            <Row className={styles.moduleDetails}>
+              <Col  md={4}>
+              <p>{module.authors && <span>By {module.authors.join(", ")}</span>}</p>
+              </Col>
+              <Col  md={4}>
+                <p>Time to read: {module.body.childMarkdownRemark.timeToRead} min</p>
+              </Col>
+              <Col md={4}>
+                <p>
+                  Share on&nbsp;
+                    <TwitterShareButton className={styles.icon} url={this.props.location.href}
+                    title={module.title}
+                    hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </TwitterShareButton>&nbsp;
+                    <FacebookShareButton className={styles.icon} url={this.props.location.href}
+                    quote={module.tagLine}
+                    hashtag={'#Envision2040 #Leadership #MiamiOH'}>
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </FacebookShareButton>&nbsp;
+                    <LinkedinShareButton className={styles.icon} url={this.props.location.href}
+                    title={module.title}
+                    summary={module.tagLine}>
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </LinkedinShareButton>
+                </p>
+              </Col>
+            </Row>
             </div>
             <div
               dangerouslySetInnerHTML={{
@@ -93,6 +109,7 @@ export const pageQuery = graphql`
     contentfulModule(slug: { eq: $slug }) {
       title
       tagLine
+      authors
       category {
         title
       }
