@@ -34,6 +34,7 @@ class ModulePreview extends React.Component {
         <h3 className={styles.previewTitle}>
           {module.title}
         </h3>
+        <i>Time to read: {module.body.childMarkdownRemark.timeToRead} min</i>
         <div
           dangerouslySetInnerHTML={{
             __html: module.description.childMarkdownRemark.html,

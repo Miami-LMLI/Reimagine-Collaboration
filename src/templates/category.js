@@ -112,6 +112,11 @@ export const pageQuery = graphql`
               html
             }
           }
+          body {
+            childMarkdownRemark {
+              timeToRead
+            }
+          }
           category {
             sortOrder
           }

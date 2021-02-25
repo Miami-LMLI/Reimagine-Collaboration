@@ -26,11 +26,16 @@ class ModuleTemplate extends React.Component {
         <div style={{background: '#fff'}}>
           <Header text={module.title} bgImage={module.heroImage.fluid} />
           <div className="wrapper">
+            <div className="section-headline">
             {module.tagLine &&
-              <h1 className="section-headline">
+              <h1>
                 {module.tagLine}
               </h1>
             }
+            <p>
+              <i>Time to read: {module.body.childMarkdownRemark.timeToRead} min</i>
+            </p>
+            </div>
             <div
               dangerouslySetInnerHTML={{
                 __html: module.body.childMarkdownRemark.html,
@@ -72,6 +77,7 @@ export const pageQuery = graphql`
       body {
         childMarkdownRemark {
           html
+          timeToRead
         }
       }
     }
