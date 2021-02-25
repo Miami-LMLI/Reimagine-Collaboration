@@ -4,6 +4,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
+
+// Sets up all FontAwesome used in the footer.
+import {
+  faFacebook,
+  faLinkedin,
+  faTwitter}
+  from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 /**
  * The class that represents the template for a module page.
@@ -32,6 +45,24 @@ class ModuleTemplate extends React.Component {
                 {module.tagLine}
               </h1>
             }
+            <p>
+            Share on&nbsp;
+            <TwitterShareButton url={this.props.location.href} 
+                                title={module.title} 
+                                hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
+              <FontAwesomeIcon icon={faTwitter} />
+            </TwitterShareButton>&nbsp;
+            <FacebookShareButton url={this.props.location.href}
+                                 quote={module.tagLine}
+                                 hashtag={'#Envision2040 #Leadership #MiamiOH'}>
+              <FontAwesomeIcon icon={faFacebook} />
+            </FacebookShareButton>&nbsp;
+            <LinkedinShareButton  url={this.props.location.href}
+                                  title={module.title}
+                                  summary={module.tagLine}>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </LinkedinShareButton>
+            </p>
             <p>
               <i>Time to read: {module.body.childMarkdownRemark.timeToRead} min</i>
             </p>
