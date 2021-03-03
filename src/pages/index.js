@@ -54,7 +54,7 @@ class Home extends React.Component {
                   uncertain future. This is where 2040 comes into play. Join the Lockheed
                   Martin Leadership Institute as we take a deep dive into how we can prepare for
                   what the next 20 years will bring as we explore the intersections
-                  of technology, social rights, and what it means to be human.
+                  of technology, social rights, and how will interact with others.
             </p>
               </Col>
             </Row>
