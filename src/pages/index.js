@@ -82,7 +82,7 @@ class Home extends React.Component {
 
         <div className="break" />
 
-        {/* <div className="content">
+        <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
               Listen to the Envision 2040 Podcast On
@@ -104,17 +104,17 @@ class Home extends React.Component {
                     href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80NjE5YThhYy9wb2RjYXN0L3Jzcw">
                     <FontAwesomeIcon icon={faGooglePlay} /></a>
                 </li>
-                <li className={styles.icon}>
+                {/* <li className={styles.icon}>
                   <a aria-label="Apple Podcasts"
                     href="">
                     <FontAwesomeIcon icon={faApple} /></a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="break" /> */}
+        <div className="break" />
 
         <div className="content">
           <div className="wrapper">
