@@ -97,7 +97,7 @@ export const pageQuery = graphql`
       sortOrder
     }
     allContentfulModule(filter: {category: {slug: {eq: $slug}}}, 
-                        sort: {fields: title}) {
+                        sort: {fields: sortOrder}) {
     edges {
         node {
           title
