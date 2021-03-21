@@ -7,6 +7,7 @@ exports.createPages = ({graphql, actions}) => {
   return new Promise((resolve, reject) => {
     const categoryTemplate = path.resolve('./src/templates/category.js');
     const moduleTemplate = path.resolve('./src/templates/module.js');
+    const memberTemplate = path.resolve('./src/templates/member.js');
 
     resolve(
         graphql(
@@ -15,7 +16,6 @@ exports.createPages = ({graphql, actions}) => {
             allContentfulCategory {
               edges {
                 node {
-                  title
                   slug
                 }
               }
@@ -23,11 +23,17 @@ exports.createPages = ({graphql, actions}) => {
             allContentfulModule {
               edges {
                 node {
-                  title
                   slug
                   category {
                     slug
                   }
+                }
+              }
+            }
+            allContentfulMember {
+              edges {
+                node {
+                  slug
                 }
               }
             }
@@ -53,10 +59,21 @@ exports.createPages = ({graphql, actions}) => {
           const modules = result.data.allContentfulModule.edges;
           modules.forEach((modules, index) => {
             createPage({
-              path: `/modules/${modules.node.slug}/`,
+              path: `/${modules.node.category.slug}/${modules.node.slug}/`,
               component: moduleTemplate,
               context: {
                 slug: modules.node.slug,
+              },
+            });
+          });
+
+          const members = result.data.allContentfulMember.edges;
+          members.forEach((members, index) => {
+            createPage({
+              path: `/cohortix/${members.node.slug}/`,
+              component: memberTemplate,
+              context: {
+                slug: members.node.slug,
               },
             });
           });

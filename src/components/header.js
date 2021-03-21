@@ -35,8 +35,13 @@ class Header extends React.Component {
                 src={image} fluid />
             </Animated>
           }
-          {image == null && bgImage != null &&
+          {image == null && bgImage != null && text == null &&
             <Img className={styles.heroImageGradient}
+              alt={alt}
+              fluid={bgImage} />
+          }
+        {image == null && bgImage != null && text != null &&
+            <Img className={styles.heroImageGradientBlurred}
               alt={alt}
               fluid={bgImage} />
           }

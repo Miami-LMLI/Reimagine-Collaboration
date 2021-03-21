@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -19,11 +19,12 @@ import {
   faLinkedin,
   faTwitter
 }
-from '@fortawesome/free-brands-svg-icons';
+  from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Brings in stuff needed for css.
 import styles from '../css/module.module.css';
+import { Fragment } from 'react';
 
 /**
  * The class that represents the template for a module page.
@@ -54,34 +55,42 @@ class ModuleTemplate extends React.Component {
               }
             </div>
             <div className="section-headline">
-            <Row className={styles.moduleDetails}>
-              <Col  md={4}>
-              <p>{module.authors && <span>By {module.authors.join(", ")}</span>}</p>
-              </Col>
-              <Col  md={4}>
-                <p>Time to read: {module.body.childMarkdownRemark.timeToRead} min</p>
-              </Col>
-              <Col md={4}>
-                <p>
-                  Share on&nbsp;
+              <Row className={styles.moduleDetails}>
+                <Col md={4}>
+                  <span>By </span>
+                  {module.author.map((val, idx) => {
+                    return (
+                      <Link to={`/cohortix/${val.slug}`}>
+                        {val.firstName} {val.lastName}
+                        {idx < module.author.length - 1 && <span>, </span>}
+                      </Link>
+                    );
+                  })}
+                </Col>
+                <Col md={4}>
+                  <p>Time to read: {module.body.childMarkdownRemark.timeToRead} min</p>
+                </Col>
+                <Col md={4}>
+                  <p>
+                    Share on&nbsp;
                     <TwitterShareButton className={styles.icon} url={this.props.location.href}
-                    title={module.title}
-                    hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </TwitterShareButton>&nbsp;
+                      title={module.title}
+                      hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </TwitterShareButton>&nbsp;
                     <FacebookShareButton className={styles.icon} url={this.props.location.href}
-                    quote={module.tagLine}
-                    hashtag={'#Envision2040 #Leadership #MiamiOH'}>
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </FacebookShareButton>&nbsp;
+                      quote={module.tagLine}
+                      hashtag={'#Envision2040 #Leadership #MiamiOH'}>
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </FacebookShareButton>&nbsp;
                     <LinkedinShareButton className={styles.icon} url={this.props.location.href}
-                    title={module.title}
-                    summary={module.tagLine}>
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </LinkedinShareButton>
-                </p>
-              </Col>
-            </Row>
+                      title={module.title}
+                      summary={module.tagLine}>
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </LinkedinShareButton>
+                  </p>
+                </Col>
+              </Row>
             </div>
             <div
               dangerouslySetInnerHTML={{
@@ -109,7 +118,11 @@ export const pageQuery = graphql`
     contentfulModule(slug: { eq: $slug }) {
       title
       tagLine
-      authors
+      author {
+        firstName
+        lastName
+        slug
+      }
       category {
         title
       }

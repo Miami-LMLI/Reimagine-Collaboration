@@ -49,6 +49,15 @@
 }
 
 .heroImageGradient {
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
+
+  /* Center's the image. */
+  margin: auto;
+}
+
+.heroImageGradientBlurred {
   /* Blurs the image. */
   filter: blur(3px);
   transform: scale(1.05);

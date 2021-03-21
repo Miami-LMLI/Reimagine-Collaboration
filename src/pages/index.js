@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faPodcast } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -77,6 +77,23 @@ class Home extends React.Component {
                 );
               })}
             </Row>
+          </div>
+        </div>
+
+        <div className="break" />
+
+        <div className="content">
+          <div className="wrapper">
+            <h2 className="section-headline">
+              Meet the Cohort Behind Envision 2040
+            </h2>
+            <p>
+              Envision 2040 was made possible by a dedicate team of students from
+              Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
+              about them and why they think Envision 2040 is important!
+            </p>
+            <Link to={`/cohortix`}>Meet Cohort IX</Link>
+            <p><i>TO DO: MAKE THIS LOOK NICE!</i></p>
           </div>
         </div>
 

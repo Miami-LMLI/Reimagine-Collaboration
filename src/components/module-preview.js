@@ -23,7 +23,7 @@ class ModulePreview extends React.Component {
     const {module} = this.props;
 
     return (
-      <Link to={`/modules/${module.slug}`}>
+      <Link to={`/${module.category.slug}/${module.slug}`}>
         <div className={styles.previewBackground}>
           <Img
             alt={module.title}
@@ -40,7 +40,7 @@ class ModulePreview extends React.Component {
           }}
         />
         <p className={styles.previewDetails}>
-          {module.authors && <span>By {module.authors.join(", ")} &#183; </span>}
+          <span>By {module.author.map(x => x.firstName + " " + x.lastName).join(", ")} &#183; </span>
           {module.body.childMarkdownRemark.timeToRead} min read
         </p>
       </Link >

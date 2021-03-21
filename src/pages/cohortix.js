@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Col, Row} from 'react-bootstrap';
-import CategoryPreview from '../components/category-preview';
+import MemberPreview from '../components/member-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
 
@@ -20,26 +20,36 @@ class Categories extends React.Component {
   render() {
     // Gets the GraphQL page query. This gets the images, title, descriptions,
     // and slugs for all categories.
-    const categories = get(this.props, 'data.allContentfulCategory.edges');
+    const categories = get(this.props, 'data.allContentfulMember.edges');
 
     return (
       <Layout
-        title="Categories"
+        title="Cohort IX"
         location={this.props.location}>
+
         <div className="content">
-          <Header text={'Categories'} applyGradient={true}/>
+          <Header text={'Who is Cohort IX?'} applyGradient={true}/>
           <div className="wrapper">
+              <h2 className="section-headline">
+                Meet the Cohort behind Envision 2040!
+              </h2>
+          </div>
+        </div>
+
+        <div className="content">
+        <div className="wrapper">
             <Row>
               {categories.map(({node}) => {
                 return (
                   <Col key={node.slug} md={4}>
-                    <CategoryPreview category={node} />
+                    <MemberPreview author={node} />
                   </Col>
                 );
               })}
             </Row>
           </div>
         </div>
+
       </Layout>
     );
   }
@@ -55,11 +65,11 @@ export default Categories;
 // Performs a GraphQL query to get the image, description, title,
 // and slug used above.
 export const pageQuery = graphql`
-  query Categories {
-    allContentfulCategory {
+  query Members {
+    allContentfulMember(sort: {fields: lastName, order: ASC}) {
       edges {
         node {
-          heroImage {
+          portrait {
             fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
             }
@@ -69,9 +79,9 @@ export const pageQuery = graphql`
               html
             }
           }
-          title
+          firstName
+          lastName
           slug
-          sortOrder
         }
       }
     }

@@ -102,7 +102,10 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          authors
+          author {
+            firstName
+            lastName
+          }
           heroImage {
             fluid(maxWidth: 960, maxHeight: 540, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
@@ -119,7 +122,7 @@ export const pageQuery = graphql`
             }
           }
           category {
-            sortOrder
+            slug
           }
         }
       }
