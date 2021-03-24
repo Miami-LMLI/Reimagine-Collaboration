@@ -13,6 +13,7 @@ import { Col, Row } from 'react-bootstrap';
 import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import Img from 'gatsby-image';
 
 // Brings in stuff needed for css.
 import styles from '../css/index.module.css';
@@ -31,6 +32,7 @@ class Home extends React.Component {
    */
   render() {
     const categories = get(this.props, 'data.allContentfulCategory.edges');
+    const cohort9 = get(this.props, 'data.file.childImageSharp.fluid');
 
     return (
       <Layout
@@ -87,13 +89,18 @@ class Home extends React.Component {
             <h2 className="section-headline">
               Meet the Cohort Behind Envision 2040
             </h2>
-            <p>
-              Envision 2040 was made possible by a dedicate team of students from
-              Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
-              about them and why they think Envision 2040 is important!
-            </p>
-            <Link to={`/cohortix`}>Meet Cohort IX</Link>
-            <p><i>TO DO: MAKE THIS LOOK NICE!</i></p>
+            <Row>
+              <Col md={6}>
+                <Img fluid={cohort9} />
+              </Col>
+              <Col md={6}>
+                <p>
+                  Envision 2040 was made possible by a dedicate team of students from
+                  Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
+                  about them and why they think Envision 2040 matters!</p>
+                  <p><Link to={`/cohortix`}>Meet Cohort 9!</Link></p>
+              </Col>
+            </Row>
           </div>
         </div>
 
@@ -188,6 +195,13 @@ export const pageQuery = graphql`
             }
           }
           sortOrder
+        }
+      }
+    }
+    file(relativePath: {eq: "images/cohort9.jpg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

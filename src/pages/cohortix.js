@@ -1,8 +1,8 @@
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Col, Row} from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import MemberPreview from '../components/member-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
@@ -28,18 +28,24 @@ class Categories extends React.Component {
         location={this.props.location}>
 
         <div className="content">
-          <Header text={'Who is Cohort IX?'} applyGradient={true}/>
+          <Header text={'Who is Cohort IX?'} applyGradient={true} />
           <div className="wrapper">
-              <h2 className="section-headline">
-                Meet the Cohort behind Envision 2040!
+            <h2 className="section-headline">
+              Meet the Cohort behind Envision 2040!
               </h2>
+            <p>
+              Envision 2040 was made possible by a dedicate team of students from
+              Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
+                  about them and why they think Envision 2040 matters!</p>
           </div>
         </div>
 
+        <div className="break" />
+
         <div className="content">
-        <div className="wrapper">
+          <div className="wrapper">
             <Row>
-              {categories.map(({node}) => {
+              {categories.map(({ node }) => {
                 return (
                   <Col key={node.slug} md={4}>
                     <MemberPreview author={node} />

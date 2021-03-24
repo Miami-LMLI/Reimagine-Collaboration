@@ -45,7 +45,7 @@ class ModuleTemplate extends React.Component {
         image={author.portrait.fluid.src}
         location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Header bgImage={author.portrait.fluid} />
+          <Header bgImage={author.portrait.fluid} applyGradient={true}/>
           <div className="wrapper">
             <div className="section-headline">
               <h1>{tagLine}</h1>
