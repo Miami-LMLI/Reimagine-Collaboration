@@ -76,7 +76,7 @@ export const pageQuery = graphql`
       edges {
         node {
           portrait {
-            fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
+            fluid(maxWidth: 700, maxHeight: 700, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
             }
           }

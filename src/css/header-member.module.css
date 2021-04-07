@@ -1,0 +1,57 @@
+/* Sets the height for the containers. */
+:root {
+  --height: 350px;
+}
+
+.hero {
+  position: relative;
+  color: #fff;
+
+  /* Set's containers height. */
+  height: var(--height);
+  max-height: var(--height);
+
+  /* Ensures there is no overflow. */
+  overflow: hidden;
+}
+
+/*
+ * Defines a gradient with all colors.
+ */
+.heroGradient {
+  background: linear-gradient(-45deg, #ee7752, #963484, #3066be, #2af5ff);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  height: 100%;
+  width: 100%;
+}
+
+.heroSolid {
+  background: #fff;
+}
+
+.heroImageGradient {
+  /* Set's containers height. */
+  height: var(--height);
+  width: var(--height);
+  max-height: var(--height);
+
+  /* Make the border rounded */
+  border-radius: 50%;
+
+  /* Center's the image. */
+  margin: auto;
+}
+
+/* Gradient background animation. */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

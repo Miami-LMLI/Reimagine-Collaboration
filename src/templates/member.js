@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Header from '../components/header';
+import Header from '../components/header-member';
 import Layout from '../components/layout';
 import { Col, Row } from 'react-bootstrap';
 
@@ -42,10 +42,10 @@ class ModuleTemplate extends React.Component {
     return (
       <Layout title={author.firstName}
         description={tagLine}
-        image={author.portrait.fluid.src}
+        image={author.ogImg.fluid.src}
         location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Header bgImage={author.portrait.fluid} applyGradient={true}/>
+          <Header image={author.portrait.fluid} applyGradient={true}/>
           <div className="wrapper">
             <div className="section-headline">
               <h1>{tagLine}</h1>
@@ -105,6 +105,12 @@ export const pageQuery = graphql`
       lastName
       linkedIn
       portrait {
+        fluid(maxWidth: 1180, background: "rgb:000000") {
+          ...GatsbyContentfulFluid
+          src
+        }
+      }
+      ogImg {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid
           src

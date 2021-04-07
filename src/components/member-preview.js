@@ -7,7 +7,7 @@ import {Link} from 'gatsby';
 import Img from 'gatsby-image';
 
 // Brings in stuff needed for css.
-import styles from '../css/category-preview.module.css';
+import styles from '../css/member-preview.module.css';
 
 /**
  * The class that represents the category preview component.
