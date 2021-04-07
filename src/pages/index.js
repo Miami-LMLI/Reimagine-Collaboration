@@ -46,9 +46,9 @@ class Home extends React.Component {
               today?
             </h2>
             <Row>
-              {/* <Col md={6}>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/I8ZtHxOqFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </Col> */}
+              <Col md={6}>
+                <iframe width="100%" height="320" src="https://www.youtube.com/embed/x7TWKtFRDO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </Col>
               <Col>
                 <p>
                   Between a global health crisis, heightened social rights
