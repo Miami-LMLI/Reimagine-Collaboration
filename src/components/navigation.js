@@ -54,6 +54,9 @@ class Navigation extends React.Component {
               <Nav.Link eventKey="/contact" as={Link} to="/contact">
                 Contact Us
               </Nav.Link>
+              <Nav.Link eventKey="/cohortix" as={Link} to="/cohortix">
+                Meet Cohort IX
+              </Nav.Link>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
