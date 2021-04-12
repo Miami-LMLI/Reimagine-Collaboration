@@ -30,7 +30,9 @@ class SEO extends React.Component {
     const lang = data.site.siteMetadata.lang;
     const metaLocale = data.site.siteMetadata.locale;
     const metaUrl = location.href;
-    const metaImage = image || `https://envision2040.com/${ogImg}`;
+    let metaImage = image ? image : `https://envision2040.com${ogImg}`;
+    metaImage = metaImage.replace("//images.ctfassets.net", "http://images.ctfassets.net/");
+    metaImage = metaImage.replace(/([^:]\/)\/+/g, "$1");
     const metaType = data.site.siteMetadata.type;
 
     return (
@@ -74,16 +76,24 @@ class SEO extends React.Component {
             content: metaImage,
           },
           {
-            name: `twitter:card`,
-            content: `summary`,
-          },
-          {
             name: `twitter:title`,
             content: metaTitle ? metaTitle : `${siteName}`,
           },
           {
             name: `twitter:description`,
             content: metaDescription,
+          },
+          {
+            name: `twitter:card`,
+            content: "summary_large_image",
+          },
+          {
+            name: `twitter:creator`,
+            content: '@MUEngLdrInst',
+          },
+          {
+            name: `twitter:site`,
+            content: '@MUEngLdrInst',
           },
         ]}
       />
