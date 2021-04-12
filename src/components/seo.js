@@ -51,7 +51,7 @@ class SEO extends React.Component {
           },
           {
             property: `og:title`,
-            content: metaTitle,
+            content: metaTitle ? metaTitle : `${siteName}`,
           },
           {
             property: `og:description`,
@@ -70,12 +70,16 @@ class SEO extends React.Component {
             content: metaType,
           },
           {
+            property: `twitter:image`,
+            content: metaImage,
+          },
+          {
             name: `twitter:card`,
             content: `summary`,
           },
           {
             name: `twitter:title`,
-            content: metaTitle,
+            content: metaTitle ? metaTitle : `${siteName}`,
           },
           {
             name: `twitter:description`,
