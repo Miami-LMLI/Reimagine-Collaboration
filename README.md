@@ -17,7 +17,7 @@
 
 <a name="overview"/></a>
 ## Overview
-This repository is for the development of Lockheed Martin Leadership Institute's Cohort 10 website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/LMLI-Cohort-9/Envision-2040).
+This repository is for the development of the Lockheed Martin Leadership Institute's Cohort 10 website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/LMLI-Cohort-9/Envision-2040).
 
 <a name="tech"/></a>
 ## Core Tech Stack
