@@ -2,7 +2,7 @@
   "name": "envision-2040",
   "description": "As a result of a global health crisis, heightened social rights tension, and a polarized political environment, the world faces an uncertain future. This is where 2040 comes into play. Join us in the near future as we take a deep dive into how we can prepare for what the next 20 years will bring as we explore the intersections of technology, social rights, and what it means to be human.",
   "version": "1.0.0",
-  "author": "Kyle Lierer <liererkt@gmail.com>",
+  "author": "Sam Kuhbander <kuhbandersam@gmail.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",

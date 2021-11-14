@@ -19,7 +19,7 @@
  * Defines a gradient with all colors.
  */
 .heroGradient {
-  background: linear-gradient(-45deg, #ee7752, #963484, #3066be, #2af5ff);
+  background: linear-gradient(-45deg, #fbf5e6, #B6D880, #F9E483, #78CBEE);
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   height: 100%;
