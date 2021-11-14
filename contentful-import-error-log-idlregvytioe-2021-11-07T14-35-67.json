@@ -1,0 +1,32 @@
+[
+  {
+    "ts": "2021-11-07T19:35:32.974Z",
+    "level": "error",
+    "error": {
+      "originalError": {
+        "name": "AccessTokenInvalid",
+        "message": "{\n  \"status\": 401,\n  \"statusText\": \"Unauthorized\",\n  \"message\": \"The access token you sent could not be found or is invalid.\",\n  \"details\": {},\n  \"request\": {\n    \"url\": \"/spaces/idlregvytioe\",\n    \"headers\": {\n      \"Accept\": \"application/json, text/plain, */*\",\n      \"Content-Type\": \"application/vnd.contentful.management.v1+json\",\n      \"X-Contentful-User-Agent\": \"app contentful.import/7.9.29; feature library-import; sdk contentful-management.js/7.5.1; platform node.js/v12.18.3; os macOS/20.6.0;\",\n      \"Authorization\": \"Bearer ...ytioe\",\n      \"user-agent\": \"node.js/v12.18.3\",\n      \"Accept-Encoding\": \"gzip\"\n    },\n    \"method\": \"get\"\n  },\n  \"requestId\": \"269a5a16-03a2-4399-abe3-36d91297f992\"\n}"
+      },
+      "data": {
+        "status": 401,
+        "statusText": "Unauthorized",
+        "message": "The access token you sent could not be found or is invalid.",
+        "details": {
+        },
+        "request": {
+          "url": "/spaces/idlregvytioe",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.9.29; feature library-import; sdk contentful-management.js/7.5.1; platform node.js/v12.18.3; os macOS/20.6.0;",
+            "Authorization": "Bearer ...ytioe",
+            "user-agent": "node.js/v12.18.3",
+            "Accept-Encoding": "gzip"
+          },
+          "method": "get"
+        },
+        "requestId": "269a5a16-03a2-4399-abe3-36d91297f992"
+      }
+    }
+  }
+]

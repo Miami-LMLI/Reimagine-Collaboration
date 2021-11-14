@@ -1,13 +1,13 @@
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LMLI-Cohort-9/Envision-2040)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LMLI-Cohort-9/Envision-2040)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/LMLI-Cohort-9/Cohort-10)
-[![GitHub issues](https://img.shields.io/github/issues/LMLI-Cohort-9/Envision-2040)](https://github.com/LMLI-Cohort-9/Cohort-10/issues)
-![GitHub repo size](https://img.shields.io/github/repo-size/LMLI-Cohort-9/Cohort-10)
+![GitHub last commit](https://img.shields.io/github/last-commit/LMLI-Cohort-9/Reimagine-Collaboration)
+[![GitHub issues](https://img.shields.io/github/issues/LMLI-Cohort-9/Envision-2040)](https://github.com/LMLI-Cohort-9/Reimagine-Collaboration/issues)
+![GitHub repo size](https://img.shields.io/github/repo-size/LMLI-Cohort-9/Reimagine-Collaboration)
 
-# Cohort 10 Big Project
+# Reimagine Collaboration: Navigating the Evolving Workplace
 
-- [Cohort 10 Big Project](#cohort-10-big-project)
+- [Reimagine Collaboration: Navigating the Evolving Workplace](#reimagine-collaboration:-navigating-the-evolving-workplace)
   - [Overview](#overview)
   - [Core Tech Stack](#core-tech-stack)
   - [Prerequisites](#prerequisites)
@@ -17,7 +17,7 @@
 
 <a name="overview"/></a>
 ## Overview
-This repository is for the development of the Lockheed Martin Leadership Institute's Cohort 10 website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/LMLI-Cohort-9/Envision-2040).
+This repository is for the development of the Lockheed Martin Leadership Institute's Reimagine Collaboration website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/LMLI-Cohort-9/Envision-2040).
 
 <a name="tech"/></a>
 ## Core Tech Stack
@@ -38,12 +38,12 @@ This repository is for the development of the Lockheed Martin Leadership Institu
 ## Setup
 1. Clone the repository.
 ```
-git clone git@github.com:LMLI-Cohort-9/Cohort-10.git
+git clone git@github.com:LMLI-Cohort-9/Reimagine-Collaboration.git
 ```
 
 2. Check into the cloned repository.
 ```
-cd Cohort-10/
+cd Reimagine-Collaboration/
 ```
 
 3. Install dependencies.
@@ -87,9 +87,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 <a name="license"/></a>
 ## License
 
-The underlying source code is licensed under the [LICENSE](https://github.com/LMLI-Cohort-9/Cohort-10/blob/main/LICENSE.md)
+The underlying source code is licensed under the [LICENSE](https://github.com/LMLI-Cohort-9/Reimagine-Collaboration/blob/main/LICENSE.md)
 
-[![LICENSE](https://img.shields.io/badge/LICENSE-grey.svg)](https://github.com/LMLI-Cohort-9/Cohort-10/blob/main/LICENSE.md)
+[![LICENSE](https://img.shields.io/badge/LICENSE-grey.svg)](https://github.com/LMLI-Cohort-9/Reimagine-Collaboration/blob/main/LICENSE.md)
 
 The graphics used are licensed under a [CC BY-NC 4.0 License](https://licensebuttons.net/l/by-nc/4.0/80x15.png).
 

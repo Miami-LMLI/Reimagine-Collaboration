@@ -1,0 +1,97 @@
+[
+  {
+    "ts": "2021-11-13T21:29:57.018Z",
+    "level": "error",
+    "error": {
+      "name": "ValidationFailed",
+      "entity": {
+        "metadata": {
+          "tags": [
+          ]
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "12r5v5hq5gxs"
+            }
+          },
+          "id": "NtrAOsz9vcJ8cseFZBykm",
+          "type": "Asset",
+          "createdAt": "2021-11-10T00:27:43.704Z",
+          "updatedAt": "2021-11-13T21:29:36.573Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "3p6UMIOVIZ9gLod7YcZTUL"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "2z8v38ZO9jDd45bS83XlnE"
+            }
+          },
+          "publishedCounter": 0,
+          "version": 6
+        },
+        "fields": {
+          "title": {
+            "en-US": "watch?v=BPwdhMVIRNg"
+          },
+          "file": {
+            "en-US": {
+              "upload": "https://assets.ctfassets.net/keiomil1rdyy/NtrAOsz9vcJ8cseFZBykm/b85dce8d5093ca8d764ffcf2f8c0f9fa/watch",
+              "fileName": "watch?v=BPwdhMVIRNg",
+              "contentType": "text/html"
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "Validation error",
+        "details": {
+          "errors": [
+            {
+              "name": "invalidContentType",
+              "details": "The contentType of the asset is invalid. If you want to process assets with this contentType, please contact support@contentful.com.",
+              "path": [
+                "fields",
+                "file",
+                "en-US",
+                "contentType"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/12r5v5hq5gxs/environments/master/assets/NtrAOsz9vcJ8cseFZBykm/files/en-US/process",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.9.29; feature library-import; sdk contentful-management.js/7.5.1; platform node.js/v12.18.3; os macOS/20.6.0;",
+            "Authorization": "Bearer ...ZrL0g",
+            "user-agent": "node.js/v12.18.3",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 6
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "e47c65ed-7a03-4a32-a820-2dff969e0b66"
+      }
+    }
+  }
+]
