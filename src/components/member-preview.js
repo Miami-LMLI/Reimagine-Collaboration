@@ -23,7 +23,7 @@ class AuthorPreview extends React.Component {
     const {author} = this.props;
 
     return (
-      <Link to={`/cohortix/${author.slug}`}>
+      <Link to={`/cohortx/${author.slug}`}>
         <Img alt={author.firstName}
           className={styles.previewImg}
           fluid={author.portrait.fluid}

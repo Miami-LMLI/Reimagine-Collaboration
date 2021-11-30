@@ -70,7 +70,7 @@ exports.createPages = ({graphql, actions}) => {
           const members = result.data.allContentfulMember.edges;
           members.forEach((members, index) => {
             createPage({
-              path: `/cohortix/${members.node.slug}/`,
+              path: `/cohortx/${members.node.slug}/`,
               component: memberTemplate,
               context: {
                 slug: members.node.slug,

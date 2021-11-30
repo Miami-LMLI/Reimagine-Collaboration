@@ -60,7 +60,7 @@ class ModuleTemplate extends React.Component {
                   <span>By </span>
                   {module.author.map((val, idx) => {
                     return (
-                      <Link to={`/cohortix/${val.slug}`}>
+                      <Link to={`/cohortx/${val.slug}`}>
                         {val.firstName} {val.lastName}
                         {idx < module.author.length - 1 && <span>, </span>}
                       </Link>
