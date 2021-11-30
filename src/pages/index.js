@@ -98,7 +98,7 @@ class Home extends React.Component {
                   Envision 2040 was made possible by a dedicate team of students from
                   Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
                   about them and why they think Envision 2040 matters!</p>
-                  <p><Link to={`/cohortix`}>Meet Cohort IX!</Link></p>
+                  <p><Link to={`/cohortx`}>Meet Cohort IX!</Link></p>
               </Col>
             </Row>
           </div>

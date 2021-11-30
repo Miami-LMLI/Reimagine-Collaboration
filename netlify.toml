@@ -2,5 +2,5 @@
   incoming-hooks = ["Contentful"]
 
 [template.environment]
-    CONTENTFUL_SPACE_ID = ""
-    CONTENTFUL_ACCESS_TOKEN = ""
+    CONTENTFUL_SPACE_ID = "12r5v5hq5gxs"
+    CONTENTFUL_ACCESS_TOKEN = "CFPAT-FT66A30ej99EKj7Ad7IbvTsI7vnKYePfrZHpfYqYvZU"

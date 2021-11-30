@@ -33,7 +33,7 @@ class Navigation extends React.Component {
               Home
             </Nav.Link>
           </Nav>
-          <Nav className="mx-auto" activeKey={location.pathname}>
+         {/*  <Nav className="mx-auto" activeKey={location.pathname}>
             {data.allContentfulCategory.edges.map(({node}) => {
               return (
                 <Nav.Link
@@ -45,7 +45,7 @@ class Navigation extends React.Component {
                 </Nav.Link>
               );
             })}
-          </Nav>
+          </Nav> */}
           <Nav className="ml-auto" activeKey={location.pathname}>
             <NavDropdown title="More" id="nav-dropdown">
               <Nav.Link eventKey="/about" as={Link} to="/about">
@@ -54,8 +54,8 @@ class Navigation extends React.Component {
               <Nav.Link eventKey="/contact" as={Link} to="/contact">
                 Contact Us
               </Nav.Link>
-              <Nav.Link eventKey="/cohortix" as={Link} to="/cohortix">
-                Meet Cohort IX
+              <Nav.Link eventKey="/cohortx" as={Link} to="/cohortx">
+                Meet Cohort X
               </Nav.Link>
             </NavDropdown>
           </Nav>
