@@ -26,6 +26,34 @@
        url('../assets/fonts/gilbert/gilbert-bold.svg#GilbertBoldPreview5') format('svg'); /* Legacy iOS */
 }
 
+/* retroica*/
+@font-face {
+  font-family: 'Retroica';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/retroica/retroica.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../assets/fonts/retroica/retroica.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/retroica/retroica.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/retroica/retroica.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/retroica/retroica.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/retroica/retroica.svg') format('svg'); /* Legacy iOS */
+}
+
+/* promixaNova */
+@font-face {
+  font-family: 'Promixa-Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/proximaNova/ProximaNova-Thin.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../assets/fonts/proximaNova/ProximaNova-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/proximaNova/ProximaNova-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/proximaNova/ProximaNova-Thin.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/proximaNova/ProximaNova-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/proximaNova/ProximaNova-Thin.svg') format('svg'); /* Legacy iOS */
+}
+
 :root {
   /* 
   Sets the color palette to be used.
@@ -45,8 +73,8 @@
   To ensure fonts blend together and avoid
   complexity.
   */
-  --brand-font: 'Gilbert', sans-serif;
-  --main-font: 'Roboto', sans-serif;
+  --brand-font: 'Retroica', sans-serif;
+  --main-font: 'Promixa-Nova', sans-serif;
 }
 
 body {
@@ -102,6 +130,7 @@ p a {
 p a:hover, p a:active {
   color: var(--text-shade);
   text-decoration: none;
+  
 }
 
 .content {
