@@ -122,6 +122,10 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.25em;
+}
+
 p a {
   color: var(--text-accent);
   transition: all 200ms ease;
@@ -130,7 +134,6 @@ p a {
 p a:hover, p a:active {
   color: var(--text-shade);
   text-decoration: none;
-  
 }
 
 .content {
