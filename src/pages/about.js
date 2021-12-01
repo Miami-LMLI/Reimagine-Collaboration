@@ -41,8 +41,7 @@ class About extends React.Component {
                 <p>
                 The Lockheed Martin Leadership Institute is a 3-year leadership
                 development program – we’re continuously looking to learn and
-                improve ourselves. Below is a list of some of our favorite
-                leadership resources.
+                improve ourselves.
                 </p>
                 <p>
                   To learn more about the leadership institute, check out the
@@ -58,7 +57,7 @@ class About extends React.Component {
               <Col lg>
                 <h3>Who is Supporting Us?</h3>
                 <p>
-                  <i>Envision 2040</i> is made possible by Lockheed Martin and
+                  <i>Reimagine Collaboration</i> is made possible by Lockheed Martin and
                   Miami University&apos;s College of Engineering and Computing.
                 </p>
               </Col>

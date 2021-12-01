@@ -75,12 +75,12 @@ class ModuleTemplate extends React.Component {
                     Share on&nbsp;
                     <TwitterShareButton className={styles.icon} url={this.props.location.href}
                       title={module.title}
-                      hashtags={['Envision2040', 'Leadership', 'MiamiOH']}>
+                      hashtags={['ReimagineCollaboration', 'Leadership', 'MiamiOH']}>
                       <FontAwesomeIcon icon={faTwitter} />
                     </TwitterShareButton>&nbsp;
                     <FacebookShareButton className={styles.icon} url={this.props.location.href}
                       quote={module.tagLine}
-                      hashtag={'#Envision2040 #Leadership #MiamiOH'}>
+                      hashtag={'#ReimagineCollaboration #Leadership #MiamiOH'}>
                       <FontAwesomeIcon icon={faFacebook} />
                     </FacebookShareButton>&nbsp;
                     <LinkedinShareButton className={styles.icon} url={this.props.location.href}

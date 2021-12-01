@@ -58,16 +58,6 @@ class Contact extends React.Component {
                   (513) 529-0759
                 </p>
               </Col>
-              <Col lg>
-                <h3>Karen Moss</h3>
-                <p>
-                  <strong>Assistant Director</strong>
-                  <br />
-                  <a href="mailto:mosskp@miamioh.edu">mosskp@miamioh.edu</a>
-                  <br />
-                  (513) 529-0342
-                </p>
-              </Col>
             </Row>
             <Row>
               <Col lg>
@@ -117,7 +107,6 @@ class Contact extends React.Component {
                   Institute&apos;s Website
                 </a>
               </Col>
-              <Col></Col>
             </Row>
           </div>
         </div>

@@ -21,6 +21,6 @@ ${chalk.yellow(
   )} to create a production ready static site in ${chalk.green('./public')}
 
 For further information check the readme of the project
-(https://github.com/LMLI-Cohort-9/Envision-2040-Website-Gatsby/tree/development)
+(https://github.com/Miami-LMLI/Envision-2040-Website-Gatsby/tree/development)
 
 `);

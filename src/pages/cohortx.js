@@ -24,19 +24,19 @@ class Categories extends React.Component {
 
     return (
       <Layout
-        title="Cohort IX"
+        title="Cohort X"
         location={this.props.location}>
 
         <div className="content">
-          <Header text={'Who is Cohort IX?'} applyGradient={true} />
+          <Header text={'Who is Cohort X?'} applyGradient={true} />
           <div className="wrapper">
             <h2 className="section-headline">
-              Meet the Cohort behind Envision 2040!
+              Meet the Cohort behind Reimagine Collaboration!
               </h2>
             <p>
-              Envision 2040 was made possible by a dedicate team of students from
-              Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
-                  about them and why they think Envision 2040 matters!</p>
+              Reimagine Collaboration is made possible by a dedicated team of students from
+              Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
+                  about them and why they think Reimagine Collaboration matters!</p>
           </div>
         </div>
 

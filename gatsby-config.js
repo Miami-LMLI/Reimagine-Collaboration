@@ -25,9 +25,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://envision2040.com',
-    title: 'Envision 2040',
-    description: 'Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring as we explore the intersections of technology, social rights, and what it means to be human.',
+    siteUrl: 'https://reimagine-collaboration.com',
+    title: 'Reimagine Collaboration',
+    description: 'After the world went virtual, organizations across the globe had to quickly adapt to a new work environment in which there was little to no in-person communication. Cohort X’s Reimagine Collaboration Conference seeks to analyze and interpret this new way of living through the lenses of diversity, equity, and inclusion, tools and technology, and engagement and mindset.',
     lang: 'en',
     locale: 'en_US',
     type: 'website',
@@ -40,7 +40,7 @@ module.exports = {
       website: 'https://miamioh.edu/cec/about/centers-institutes/lockheed-martin/index.html',
     },
   },
-  pathPrefix: '/Envision-2040',
+  pathPrefix: '/Reimagine-Collaboration',
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
