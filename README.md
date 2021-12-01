@@ -8,6 +8,7 @@
 # Reimagine Collaboration: Navigating the Evolving Workplace
 
 - [Reimagine Collaboration: Navigating the Evolving Workplace](#reimagine-collaboration-navigating-the-evolving-workplace)
+
   - [Overview](#overview)
   - [Core Tech Stack](#core-tech-stack)
   - [Prerequisites](#prerequisites)
@@ -17,7 +18,8 @@
 
 <a name="overview"/></a>
 ## Overview
-This repository is for the development of the Lockheed Martin Leadership Institute Cohort 10's Reimagine Collaboration website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/Miami-LMLI/Envision-2040).
+
+This repository is for the development of the Lockheed Martin Leadership Institute's Reimagine Collaboration website. This project was initially forked from [Cohort 9's Envision 2040 website](https://github.com/LMLI-Cohort-9/Envision-2040).
 
 <a name="tech"/></a>
 ## Core Tech Stack
@@ -38,7 +40,9 @@ This repository is for the development of the Lockheed Martin Leadership Institu
 ## Setup
 1. Clone the repository.
 ```
+
 git clone git@github.com:Miami-LMLI/Reimagine-Collaboration.git
+
 ```
 
 2. Check into the cloned repository.
