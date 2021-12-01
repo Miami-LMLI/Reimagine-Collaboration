@@ -32,31 +32,35 @@ class Home extends React.Component {
    */
   render() {
     const categories = get(this.props, 'data.allContentfulCategory.edges');
-    const cohort9 = get(this.props, 'data.file.childImageSharp.fluid');
+    const cohort10 = get(this.props, 'data.file.childImageSharp.fluid');
 
     return (
       <Layout
         description="Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring."
         location={this.props.location}>
         <div className="content">
-          <Header image={headerImg} alt={"Envision 2040"} applyGradient={true} />
+          <Header image={headerImg} alt={"Reimagine Collaboration"} applyGradient={true} />
           <div className="wrapper">
             <h2 className="section-headline">
-              Why wait for the world of tomorrow when it could be the world of
-              today?
+              As we adapt our ways of working, how we collaborate has to adapt, too.
             </h2>
             <Row>
-              <Col md={6}>
+              {/*<Col md={6}>
                 <iframe width="100%" height="320" src="https://www.youtube.com/embed/x7TWKtFRDO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </Col>
+              </Col> */}
               <Col>
                 <p>
-                  Between a global health crisis, heightened social rights
-                  tension, and a polarized political environment, the world faces an
-                  uncertain future. This is where 2040 comes into play. Join the Lockheed
-                  Martin Leadership Institute as we take a deep dive into how we can prepare for
-                  what the next 20 years will bring as we explore the intersections
-                  of technology, social rights, and how we interact with others.
+                  After the world went virtual, organizations across the globe 
+                  had to quickly adapt to a new work environment in which there 
+                  was little to no in-person communication. This transition has 
+                  reinvented the way we interact with people. Cohort X’s Reimagine 
+                  Collaboration Conference seeks to analyze and interpret this new 
+                  way of living through the lenses of diversity, equity, and 
+                  inclusion, tools and technology, and engagement and mindset. 
+                  Through your attendance in this conference, you will hear about 
+                  the research and investments we as a cohort have made, and how we 
+                  believe that our generation can bring a new and innovative perspective 
+                  into the ever changing world of work.
             </p>
               </Col>
             </Row>
@@ -65,7 +69,7 @@ class Home extends React.Component {
 
         <div className="break" />
 
-        <div className="content">
+        {/* <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
               Start Exploring
@@ -82,23 +86,23 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="break" />
+        <div className="break" /> */}
 
         <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
-              Meet the Cohort Behind Envision 2040
+              Meet the Cohort Behind Reimagine Collaboration
             </h2>
             <Row>
               <Col md={6}>
-                <Img fluid={cohort9} />
+                <Img fluid={cohort10} />
               </Col>
               <Col md={6}>
                 <p>
-                  Envision 2040 was made possible by a dedicate team of students from
-                  Lockheed Martin Leadership Institute's Cohort IX. Take a moment to learn
-                  about them and why they think Envision 2040 matters!</p>
-                  <p><Link to={`/cohortx`}>Meet Cohort IX!</Link></p>
+                  Reimagine Collaboration is made possible by a dedicated team of students from
+                  Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
+                  about them and why they think Reimagine Collaboration matters!</p>
+                  <p><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
               </Col>
             </Row>
           </div>
@@ -106,7 +110,7 @@ class Home extends React.Component {
 
         <div className="break" />
 
-        <div className="content">
+        {/* <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
               Listen to the Envision 2040 Podcast On
@@ -128,17 +132,17 @@ class Home extends React.Component {
                     href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80NjE5YThhYy9wb2RjYXN0L3Jzcw">
                     <FontAwesomeIcon icon={faGooglePlay} /></a>
                 </li>
-                {/* <li className={styles.icon}>
+                <li className={styles.icon}>
                   <a aria-label="Apple Podcasts"
                     href="">
                     <FontAwesomeIcon icon={faApple} /></a>
-                </li> */}
+                </li> 
               </ul>
             </nav>
           </div>
-        </div>
+        </div> 
 
-        <div className="break" />
+        <div className="break" /> */}
 
         <div className="content">
           <div className="wrapper">
@@ -147,15 +151,15 @@ class Home extends React.Component {
             </h2>
             <p>
               We are Miami University&apos;s Lockheed Martin Leadership
-              Institute! The Lockheed Martin Leadership is a three year
+              Institute! The Lockheed Martin Leadership is a three-year
               intensive cohort certification program that focuses on
-              Transformational Leadership for Students in Miami
+              Transformational Leadership for students in Miami
               University&apos;s College of Engineering and Computing. The
               purpose of the Lockheed Martin Leadership Institute is simple,
               yet powerful: to cultivate leaders who will flourish in their
-              professions and lives by: thinking strategically; working
-              collaboratively with others; effectively communicating their
-              ideas; finding innovative solutions to society&apos;s most
+              professions and lives by thinking strategically, working
+              collaboratively with others, effectively communicating their
+              ideas, and finding innovative solutions to society&apos;s most
               complex problems.
             </p>
             <p>
