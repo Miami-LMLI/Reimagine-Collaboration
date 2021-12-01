@@ -46,18 +46,22 @@ class Navigation extends React.Component {
               );
             })}
           </Nav> */}
-          <Nav className="ml-auto" activeKey={location.pathname}>
-            <NavDropdown title="More" id="nav-dropdown">
+          <Nav activeKey={location.pathname}>
+          {/*  <NavDropdown title="More" id="nav-dropdown"> */}
               <Nav.Link eventKey="/about" as={Link} to="/about">
                 About
               </Nav.Link>
+          </Nav>
+          <Nav activeKey={location.pathname}>
               <Nav.Link eventKey="/contact" as={Link} to="/contact">
                 Contact Us
               </Nav.Link>
+          </Nav>
+          <Nav activeKey={location.pathname}>
               <Nav.Link eventKey="/cohortx" as={Link} to="/cohortx">
                 Meet Cohort X
               </Nav.Link>
-            </NavDropdown>
+           {/* </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

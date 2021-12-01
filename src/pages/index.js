@@ -202,7 +202,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: {eq: "images/cohort9.jpg"}) {
+    file(relativePath: {eq: "images/cohort10.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
