@@ -36,7 +36,7 @@ class Categories extends React.Component {
             <p>
               Reimagine Collaboration is made possible by a dedicated team of students from
               Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
-                  about them and why they think Reimagine Collaboration matters!</p>
+              about them!</p>
           </div>
         </div>
 
