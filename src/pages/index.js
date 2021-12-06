@@ -36,7 +36,7 @@ class Home extends React.Component {
 
     return (
       <Layout
-        description="Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring."
+        description="As we adapt our ways of working, how we collaborate has to adapt, too."
         location={this.props.location}>
         <div className="content">
           <Header image={headerImg} alt={"Reimagine Collaboration"} applyGradient={true} />
@@ -102,7 +102,8 @@ class Home extends React.Component {
                   Reimagine Collaboration is made possible by a dedicated team of students from
                   Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
                   about them and why they think Reimagine Collaboration matters!</p>
-                  <p><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
+                  <p><Link to={`/cohortx`}><button type="button">Meet Cohort X</button></Link></p>
+                  
               </Col>
             </Row>
           </div>
