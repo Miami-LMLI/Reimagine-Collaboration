@@ -56,12 +56,15 @@ class Home extends React.Component {
                   reinvented the way we interact with people. Cohort X’s Reimagine 
                   Collaboration Conference seeks to analyze and interpret this new 
                   way of living through the lenses of diversity, equity, and 
-                  inclusion, tools and technology, and engagement and mindset. 
+                  inclusion; tools and technology; and engagement and mindset. 
                   Through your attendance in this conference, you will hear about 
                   the research and investments we as a cohort have made, and how we 
                   believe that our generation can bring a new and innovative perspective 
-                  into the ever changing world of work.
-            </p>
+                  into the ever-changing world of work.      
+                </p>
+                <p>
+                  We are excited to see you at our conference on March 11, 2022!
+                </p>
               </Col>
             </Row>
           </div>
