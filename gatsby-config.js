@@ -33,10 +33,10 @@ module.exports = {
     type: 'website',
     social: {
       facebook: 'https://www.facebook.com/cecleadership',
-      twitter: 'https://twitter.com/MUEngLdrInst',
+      twitter: 'https://twitter.com/ReimagineCollab',
       youtube: 'https://www.youtube.com/channel/UCF9Pze8Ma2RiYjRupxNC_dQ',
       instagram: 'https://www.instagram.com/muleadershipinstitute/',
-      linkedin: 'https://www.linkedin.com/groups/4276871/',
+      linkedin: 'https://www.linkedin.com/company/reimagine-collaboration/',
       website: 'https://miamioh.edu/cec/about/centers-institutes/lockheed-martin/index.html',
     },
   },

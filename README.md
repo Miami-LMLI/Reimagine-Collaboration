@@ -1,8 +1,8 @@
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Miami-LMLI/Envision-2040)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Miami-LMLI/Envision-2040)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Miami-LMLI/Reimagine-Collaboration)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Miami-LMLI/Reimagine-Collaboration)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Miami-LMLI/Reimagine-Collaboration)
-[![GitHub issues](https://img.shields.io/github/issues/Miami-LMLI/Envision-2040)](https://github.com/Miami-LMLI/Reimagine-Collaboration/issues)
+[![GitHub issues](https://img.shields.io/github/issues/Miami-LMLI/Reimagine-Collaboration)](https://github.com/Miami-LMLI/Reimagine-Collaboration/issues)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Miami-LMLI/Reimagine-Collaboration)
 
 # Reimagine Collaboration: Navigating the Evolving Workplace

@@ -166,7 +166,7 @@ class Home extends React.Component {
               complex problems.
             </p>
             <p>
-              To learn more about us, you can checkout our
+              To learn more about us, you can check out our
               <a href="/about"> about page</a> or our
               <a href="/contact"> contact page</a>.
             </p>
