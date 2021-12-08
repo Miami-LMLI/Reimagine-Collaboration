@@ -11,7 +11,6 @@ import {Link} from 'gatsby';
 // Brings in Bootstrap components for navigation.
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
-
 /**
  * The class that represents the navigation component.
  */

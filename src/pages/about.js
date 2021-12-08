@@ -40,7 +40,7 @@ class About extends React.Component {
                 </p>
                 <p>
                 The Lockheed Martin Leadership Institute is a 3-year leadership
-                development program – we’re continuously looking to learn and
+                development program–we’re continuously looking to learn and
                 improve ourselves.
                 </p>
                 <p>
