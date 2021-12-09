@@ -30,7 +30,7 @@ class SEO extends React.Component {
     const lang = data.site.siteMetadata.lang;
     const metaLocale = data.site.siteMetadata.locale;
     const metaUrl = location.href;
-    let metaImage = image ? image : `https://envision2040.com${ogImg}`;
+    let metaImage = image ? image : `https://reimagine-collaboration.com${ogImg}`;
     metaImage = metaImage.replace("//images.ctfassets.net", "http://images.ctfassets.net/");
     metaImage = metaImage.replace(/([^:]\/)\/+/g, "$1");
     const metaType = data.site.siteMetadata.type;

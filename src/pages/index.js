@@ -36,7 +36,7 @@ class Home extends React.Component {
 
     return (
       <Layout
-        description="Join the Lockheed Martin Leadership Institute as we take a deep dive into how we can prepare for what the next 20 years will bring."
+        description="Join the Lockheed Martin Leadership Institute as we Reimagine Collaboration. As we adapt our ways of working, how we collaborate has to adapt, too."
         location={this.props.location}>
         <div className="content">
           <Header image={headerImg} alt={"Reimagine Collaboration"} applyGradient={true} />
@@ -56,12 +56,15 @@ class Home extends React.Component {
                   reinvented the way we interact with people. Cohort X’s Reimagine 
                   Collaboration Conference seeks to analyze and interpret this new 
                   way of living through the lenses of diversity, equity, and 
-                  inclusion, tools and technology, and engagement and mindset. 
+                  inclusion; tools and technology; and engagement and mindset. 
                   Through your attendance in this conference, you will hear about 
                   the research and investments we as a cohort have made, and how we 
                   believe that our generation can bring a new and innovative perspective 
-                  into the ever changing world of work.
-            </p>
+                  into the ever-changing world of work.      
+                </p>
+                <p>
+                  We are excited to see you at our conference on March 11, 2022!
+                </p>
               </Col>
             </Row>
           </div>
@@ -101,7 +104,7 @@ class Home extends React.Component {
                 <p>
                   Reimagine Collaboration is made possible by a dedicated team of students from
                   Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
-                  about them and why they think Reimagine Collaboration matters!</p>
+                  about them!</p>
                   <p><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
               </Col>
             </Row>
@@ -163,7 +166,7 @@ class Home extends React.Component {
               complex problems.
             </p>
             <p>
-              To learn more about us, you can checkout our
+              To learn more about us, you can check out our
               <a href="/about"> about page</a> or our
               <a href="/contact"> contact page</a>.
             </p>
