@@ -58,6 +58,16 @@ class Contact extends React.Component {
                   (513) 529-0759
                 </p>
               </Col>
+              <Col lg>
+                <h3>Fabienne Bohon</h3>
+                <p>
+                  <strong>Assistant Director</strong>
+                  <br />
+                  <a href="mailto:bohonf@miamioh.edu">bohonf@miamioh.edu</a>
+                  <br />
+                  (513) 529-0342
+                </p>
+              </Col>
             </Row>
             <Row>
               <Col lg>
@@ -106,6 +116,8 @@ class Contact extends React.Component {
                   <FontAwesomeIcon icon={faGlobe} /> Lockheed Martin Leadership
                   Institute&apos;s Website
                 </a>
+              </Col>
+              <Col lg>
               </Col>
             </Row>
           </div>
