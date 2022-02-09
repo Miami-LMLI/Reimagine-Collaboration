@@ -42,7 +42,7 @@ class Home extends React.Component {
         <div className="content">
           <Header image={headerImg} alt={"Reimagine Collaboration"} applyGradient={true} />
           <div className="wrapper">
-            <h2 className="section-headline">
+            <h2 className="section-headline" style={{fontSize:"1.75em"}}>
               As we adapt our ways of working, how we collaborate has to adapt, too.
             </h2>
             <Row>
@@ -114,7 +114,7 @@ class Home extends React.Component {
                   Reimagine Collaboration is made possible by a dedicated team of students from
                   Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
                   about them!</p>
-                  <p><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
+                  <p style={{textAlign:"center"}}><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
               </Col>
             </Row>
           </div>
