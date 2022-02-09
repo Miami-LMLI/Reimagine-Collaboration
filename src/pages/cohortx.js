@@ -28,7 +28,7 @@ class Categories extends React.Component {
         location={this.props.location}>
 
         <div className="content">
-          <Header text={'Who is Cohort X?'} applyGradient={true} />
+          <Header text={'Meet Cohort X'} applyGradient={true} />
           <div className="wrapper">
             <h2 className="section-headline">
               Meet the Cohort behind Reimagine Collaboration!

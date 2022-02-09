@@ -14,6 +14,7 @@ import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
+import AllSpeakers from '../assets/images/AllSpeakers.png';
 
 // Brings in stuff needed for css.
 import styles from '../css/index.module.css';
@@ -67,9 +68,17 @@ class Home extends React.Component {
                 </p>
               </Col>
             </Row>
+            
           </div>
         </div>
-
+        <div className="break" />
+        <div className="content">
+          <div className="wrapper">
+            <Row>
+              <img src={AllSpeakers} style={{width:"75%", margin:"auto"}} alt="Reimagine Collaboration Speakers Amy Leschke-Kahle, Bryce Williams, Jeff Wilcox"/>
+            </Row>
+            </div>
+          </div>
         <div className="break" />
 
         {/* <div className="content">
@@ -150,7 +159,7 @@ class Home extends React.Component {
         <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
-              Who Are We?
+              Who We Are
             </h2>
             <p>
               We are Miami University&apos;s Lockheed Martin Leadership

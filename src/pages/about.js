@@ -28,7 +28,7 @@ class About extends React.Component {
           <div className="wrapper">
             <Row>
               <Col lg>
-                <h3>Who Are We?</h3>
+                <h3>Who Are We</h3>
                 <p>
                 The Lockheed Martin Leadership Institute was established to
                 address the need for a new kind of transformational leadership
