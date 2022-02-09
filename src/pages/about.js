@@ -55,7 +55,7 @@ class About extends React.Component {
                 </p>
               </Col>
               <Col lg>
-                <h3>Who is Supporting Us?</h3>
+                <h3>Our Support</h3>
                 <p>
                   <i>Reimagine Collaboration</i> is made possible by Lockheed Martin and
                   Miami University&apos;s College of Engineering and Computing.
