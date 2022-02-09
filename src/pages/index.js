@@ -75,7 +75,7 @@ class Home extends React.Component {
         <div className="content">
           <div className="wrapper">
             <Row>
-              <img src={AllSpeakers} style={{width:"75%", margin:"auto"}} alt="Reimagine Collaboration Speakers Amy Leschke-Kahle, Bryce Williams, Jeff Wilcox"/>
+              <img src={AllSpeakers} style={{width:"75%", margin:"auto"}} alt="Reimagine Collaboration Speakers Amy Leschke-Kahle (Vice President of Performance Acceleration at The Marcus Buckingham Company), Bryce Williams (Advisor + Workforce Collaboration at Eli Lily and Company), Jeff Wilcox (Former Vice President of Digital Transformation at Lockheed Martin)"/>
             </Row>
             </div>
           </div>
