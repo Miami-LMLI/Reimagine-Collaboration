@@ -63,6 +63,11 @@ class Navigation extends React.Component {
               </Nav.Link>
            {/* </NavDropdown> */}
           </Nav>
+          <Nav activeKey={location.pathname}>
+              <Nav.Link eventKey="/gallery" as={Link} to="/gallery">
+                Gallery
+              </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     );
