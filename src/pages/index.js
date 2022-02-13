@@ -14,6 +14,7 @@ import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
+import AllSpeakers from '../assets/images/AllSpeakers.png';
 
 // Brings in stuff needed for css.
 import styles from '../css/index.module.css';
@@ -41,7 +42,7 @@ class Home extends React.Component {
         <div className="content">
           <Header image={headerImg} alt={"Reimagine Collaboration"} applyGradient={true} />
           <div className="wrapper">
-            <h2 className="section-headline">
+            <h2 className="section-headline" style={{ fontSize: "1.75em" }}>
               As we adapt our ways of working, how we collaborate has to adapt, too.
             </h2>
             <Row>
@@ -50,17 +51,17 @@ class Home extends React.Component {
               </Col> */}
               <Col>
                 <p>
-                  After the world went virtual, organizations across the globe 
-                  had to quickly adapt to a new work environment in which there 
-                  was little to no in-person communication. This transition has 
-                  reinvented the way we interact with people. Cohort X’s Reimagine 
-                  Collaboration Conference seeks to analyze and interpret this new 
-                  way of living through the lenses of diversity, equity, and 
-                  inclusion; tools and technology; and engagement and mindset. 
-                  Through your attendance in this conference, you will hear about 
-                  the research and investments we as a cohort have made, and how we 
-                  believe that our generation can bring a new and innovative perspective 
-                  into the ever-changing world of work.      
+                  After the world went virtual, organizations across the globe
+                  had to quickly adapt to a new work environment in which there
+                  was little to no in-person communication. This transition has
+                  reinvented the way we interact with people. Cohort X’s Reimagine
+                  Collaboration Conference seeks to analyze and interpret this new
+                  way of living through the lenses of diversity, equity, and
+                  inclusion; tools and technology; and engagement and mindset.
+                  Through your attendance in this conference, you will hear about
+                  the research and investments we as a cohort have made, and how we
+                  believe that our generation can bring a new and innovative perspective
+                  into the ever-changing world of work.
                 </p>
                 <p>
                   We are excited to see you at our conference on March 11, 2022!
@@ -69,7 +70,17 @@ class Home extends React.Component {
             </Row>
           </div>
         </div>
-
+        <div className="break" />
+        <div className="content">
+          <div className="wrapper">
+          <h2 className="section-headline">
+            Meet the Speakers of Reimagine Collaboration
+          </h2>
+            <Row>
+              <img src={AllSpeakers} style={{ width: "75%", margin: "auto" }} alt="Reimagine Collaboration Speakers Amy Leschke-Kahle (Vice President of Performance Acceleration at The Marcus Buckingham Company), Bryce Williams (Advisor + Workforce Collaboration at Eli Lily and Company), Jeff Wilcox (Former Vice President of Digital Transformation at Lockheed Martin)" />
+            </Row>
+          </div>
+        </div>
         <div className="break" />
 
         {/* <div className="content">
@@ -105,7 +116,7 @@ class Home extends React.Component {
                   Reimagine Collaboration is made possible by a dedicated team of students from
                   Lockheed Martin Leadership Institute's Cohort X. Take a moment to learn
                   about them!</p>
-                  <p><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
+                <p style={{ textAlign: "center" }}><Link to={`/cohortx`}>Meet Cohort X!</Link></p>
               </Col>
             </Row>
           </div>
@@ -150,7 +161,7 @@ class Home extends React.Component {
         <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
-              Who Are We?
+              Who We Are
             </h2>
             <p>
               We are Miami University&apos;s Lockheed Martin Leadership
