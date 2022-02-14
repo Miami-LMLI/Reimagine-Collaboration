@@ -21,14 +21,14 @@ function createData(time, event, location) {
 const rows = [
     createData("9:00 - 9:45", "Check-In", "Benton Hall Atrium"),
     createData("9:45 - 10:00", "", "Transition to Farmer"),
-    createData("10:00 - 10:20", "Welcome", "Farmer School of Business 0025"),
-    createData("10:20 - 11:05", "Jeff Wilcox", "Farmer School of Business 0025"),
+    createData("10:00 - 10:20", "Welcome: Louise Morman: Executive Director of LMLI, Dr. Gregory Crawford: President of Miami University", "Farmer School of Business 0025"),
+    createData("10:20 - 11:05", "Jeff Wilcox: Former Vice President of Digital Transformation at Lockheed Martin", "Farmer School of Business 0025"),
     createData("11:10-11:40", "Breakout Groups", "Farmer School of Business 0024, 0027, 0028, 0031"),
     createData("11:40-12:35", "Lunch", "Farmer School of Business Common Area"),
-    createData("12:45-1:30", "Amy Leschke-Kahle", "Farmer School of Business 0025"),
+    createData("12:45-1:30", "Amy Leschke-Kahle: Vice President of Performance Acceleration at the Marcus Buckingham Company", "Farmer School of Business 0025"),
     createData("1:30-1:45", "Break", ""),
-    createData("1:45-2:30", "Bryce Williams", "Farmer School of Business 0025"),
-    createData("2:30-3:00", "Closing Remarks", "Farmer School of Business 0025"),
+    createData("1:45-2:30", "Bryce Williams: Advisor + Workforce Collaboration at Eli Lilly and Company", "Farmer School of Business 0025"),
+    createData("2:30-3:00", "Closing Remarks: Dr. Beena Sukumaran- Dean, College of Engineering and Computing", "Farmer School of Business 0025"),
 ];
 
 /**
