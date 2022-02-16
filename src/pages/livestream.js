@@ -13,6 +13,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Crawford from '../assets/images/Crawford.png';
+import Wilcox from '../assets/images/Wilcox.png';
+import Leschke from '../assets/images/Leschke-Kahle.png';
+import Williams from '../assets/images/Williams.png';
+import Sukumaran from '../assets/images/Sukumaran.png';
 
 /**
  * The class that represents the categories page.
@@ -54,34 +59,44 @@ class Categories extends React.Component {
                         </div>
                     </div>
                     <TableContainer component={Paper}>
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <Table sx={{ minWidth: 650}} aria-label="simple table">
                             <TableBody>
                                 <TableRow>
-                                    <TableCell>10:00 - 10:20 </TableCell>
+                                    <TableCell align='center'>10:00 - 10:20 
+                                        <img src={Crawford} alt="Crawford" style={{ height: "150px", width: "150px" }} />
+                                    </TableCell>
                                     <TableCell >Opening Remarks
                                         Louise Morman - Executive Director of Lockheed Martin Leadership Institute
                                         Dr. Gregory Crawford - President of Miami University</TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>10:20 - 11:05 </TableCell>
+                                    <TableCell align='center'>10:20 - 11:05 
+                                        <img src={Wilcox} alt="Wilcox" style={{ height: "150px", width: "150px" }} />
+                                    </TableCell>
                                     <TableCell> Jeff Wilcox
                                         Former Vice President of Digital Transformation at Lockheed Martin
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>12:45 - 1:30 </TableCell>
+                                    <TableCell align='center'>12:45 - 1:30 
+                                        <img src={Leschke} alt="Leschke" style={{ height: "150px", width: "150px" }} />
+                                    </TableCell>
                                     <TableCell> Amy Leschke-Kahle
                                         Vice President of Performance Acceleration at the Marcus Buckingham Company
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>1:45 - 2:30 </TableCell>
+                                    <TableCell align='center'>1:45 - 2:30 
+                                        <img src={Williams} alt="Williams" style={{ height: "150px", width: "150px" }} />
+                                    </TableCell>
                                     <TableCell> Bryce Williams
                                         Advisor + Workforce Collaboration at Eli Lilly and Company
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell>2:30 - 3:00 </TableCell>
+                                    <TableCell align='center'>2:30 - 3:00 
+                                        <img src={Sukumaran} alt="Sukumaran" style={{ height: "150px", width: "150px" }} />
+                                    </TableCell>
                                     <TableCell> Closing Remarks
                                         Dr. Beena Sukumaran - Dean, College of Engineering and Computing</TableCell>
                                 </TableRow>
