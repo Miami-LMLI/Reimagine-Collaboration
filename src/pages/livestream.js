@@ -54,51 +54,55 @@ class Categories extends React.Component {
                     <div className="content">
                         <div className="wrapper">
                             <h2 className="section-headline">
-                                Virtual Schedule
+                                Virtual Schedule (EST)
                             </h2>
                         </div>
                     </div>
                     <TableContainer component={Paper}>
-                        <Table sx={{ minWidth: 650}} aria-label="simple table">
+                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
                             <TableBody>
                                 <TableRow>
-                                    <TableCell align='center'>10:00 - 10:20 
+                                    <TableCell> <h4> 10:00 - 10:20 </h4>
                                         <img src={Crawford} alt="Crawford" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell >Opening Remarks
-                                        Louise Morman - Executive Director of Lockheed Martin Leadership Institute
-                                        Dr. Gregory Crawford - President of Miami University</TableCell>
+                                    <TableCell > <h2> Opening Remarks</h2>
+                                        <h2> Louise Morman </h2>
+                                        <p> Executive Director of Lockheed Martin Leadership Institute </p>
+                                        <h2> Dr. Gregory Crawford </h2> 
+                                        <p> President of Miami University </p>
+                                        </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell align='center'>10:20 - 11:05 
+                                    <TableCell> <h4> 10:20 - 11:05 </h4>
                                         <img src={Wilcox} alt="Wilcox" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> Jeff Wilcox
-                                        Former Vice President of Digital Transformation at Lockheed Martin
+                                    <TableCell> <h2> Jeff Wilcox </h2>
+                                        <p> Former Vice President of Digital Transformation at Lockheed Martin </p>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell align='center'>12:45 - 1:30 
+                                    <TableCell> <h4> 12:45 - 1:30 </h4> 
                                         <img src={Leschke} alt="Leschke" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> Amy Leschke-Kahle
-                                        Vice President of Performance Acceleration at the Marcus Buckingham Company
+                                    <TableCell> <h2> Amy Leschke-Kahle </h2>
+                                       <p> Vice President of Performance Acceleration at the Marcus Buckingham Company </p>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell align='center'>1:45 - 2:30 
+                                    <TableCell> <h4> 1:45 - 2:30 </h4>
                                         <img src={Williams} alt="Williams" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> Bryce Williams
-                                        Advisor + Workforce Collaboration at Eli Lilly and Company
+                                    <TableCell> <h2> Bryce Williams </h2>
+                                        <p> Advisor + Workforce Collaboration at Eli Lilly and Company </p>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell align='center'>2:30 - 3:00 
+                                    <TableCell> <h4> 2:30 - 3:00 </h4>
                                         <img src={Sukumaran} alt="Sukumaran" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> Closing Remarks
-                                        Dr. Beena Sukumaran - Dean, College of Engineering and Computing</TableCell>
+                                    <TableCell> <h2> Closing Remarks </h2>
+                                        <p> Dr. Beena Sukumaran - Dean, College of Engineering and Computing </p>
+                                    </TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>
