@@ -97,7 +97,7 @@ class Categories extends React.Component {
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
-                                    <TableCell> <h4> 2:30 - 3:00 </h4>
+                                    <TableCell> <h4>  2:30 - 3:00 </h4>
                                         <img src={Sukumaran} alt="Sukumaran" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
                                     <TableCell> <h2> Closing Remarks </h2>

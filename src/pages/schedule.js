@@ -65,9 +65,9 @@ class Categories extends React.Component {
                                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell align="right">Time</TableCell>
-                                            <TableCell align="right">Event</TableCell>
-                                            <TableCell align="right">Location</TableCell>
+                                            <TableCell align="right"><h2>Time</h2></TableCell>
+                                            <TableCell align="right"><h2>Event</h2></TableCell>
+                                            <TableCell align="right"><h2>Location</h2></TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
