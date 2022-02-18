@@ -50,6 +50,14 @@ class Categories extends React.Component {
                         <iframe width="960" height="540" src="https://www.youtube.com/embed/U9bAh-W2r_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
+                <div className="content" style={{ textAlign: "center" }}>
+                    <div className="wrapper">
+                        <h2 className="section-headline">
+                            Register for the Virtual Event
+                        </h2>
+                        <p><a href="https://www.eventbrite.com/x/266411061657/">Livestream Registration</a></p>
+                    </div>
+                </div>
                 <div>
                     <div className="content">
                         <div className="wrapper">
@@ -65,10 +73,10 @@ class Categories extends React.Component {
                                     <TableCell> <h4> 10:00 - 10:20 </h4>
                                         <img src={Crawford} alt="Crawford" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell > <h2> Opening Remarks</h2>
-                                        <h2> Louise Morman </h2>
+                                    <TableCell > <h3> Opening Remarks</h3>
+                                        <h3> Louise Morman </h3>
                                         <p> Executive Director of Lockheed Martin Leadership Institute </p>
-                                        <h2> Dr. Gregory Crawford </h2> 
+                                        <h3> Dr. Gregory Crawford </h3> 
                                         <p> President of Miami University </p>
                                         </TableCell>
                                 </TableRow>
@@ -76,7 +84,7 @@ class Categories extends React.Component {
                                     <TableCell> <h4> 10:20 - 11:05 </h4>
                                         <img src={Wilcox} alt="Wilcox" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> <h2> Jeff Wilcox </h2>
+                                    <TableCell> <h3> Jeff Wilcox </h3>
                                         <p> Former Vice President of Digital Transformation at Lockheed Martin </p>
                                     </TableCell>
                                 </TableRow>
@@ -84,15 +92,15 @@ class Categories extends React.Component {
                                     <TableCell> <h4> 12:45 - 1:30 </h4> 
                                         <img src={Leschke} alt="Leschke" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> <h2> Amy Leschke-Kahle </h2>
-                                       <p> Vice President of Performance Acceleration at the Marcus Buckingham Company </p>
+                                    <TableCell> <h3> Amy Leschke-Kahle </h3>
+                                        <p> Vice President of Performance Acceleration at the Marcus Buckingham Company </p>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
                                     <TableCell> <h4> 1:45 - 2:30 </h4>
                                         <img src={Williams} alt="Williams" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> <h2> Bryce Williams </h2>
+                                    <TableCell> <h3> Bryce Williams </h3>
                                         <p> Advisor + Workforce Collaboration at Eli Lilly and Company </p>
                                     </TableCell>
                                 </TableRow>
@@ -100,8 +108,9 @@ class Categories extends React.Component {
                                     <TableCell> <h4>  2:30 - 3:00 </h4>
                                         <img src={Sukumaran} alt="Sukumaran" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> <h2> Closing Remarks </h2>
-                                        <p> Dr. Beena Sukumaran - Dean, College of Engineering and Computing </p>
+                                    <TableCell> <h3> Closing Remarks </h3>
+                                        <h3> Dr. Beena Sukumaran </h3>
+                                        <p> Dean, College of Engineering and Computing </p>
                                     </TableCell>
                                 </TableRow>
                             </TableBody>

@@ -55,9 +55,9 @@ class Categories extends React.Component {
 
                 <div className="content">
                     <div className="wrapper">
-                        <h2 className="section-headline">
+                        <h1 className="section-headline">
                             Schedule (EST)
-                        </h2>
+                        </h1>
                     </div>
                     <div className="content" style={{ textAlign: "center" }}>
                         <div className="wrapper">
