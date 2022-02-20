@@ -26,26 +26,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../css/member.module.css';
 
 /**
- * The class that represents the template for a module page.
+ * The class that represents the template for a member page.
  */
 class ModuleTemplate extends React.Component {
   /**
-   * Returns the module page content that is supposed to be rendered
+   * Returns the member page content that is supposed to be rendered
    * by a user's browser inside a Layout component.
    * @return {*} The a module page content that is supposed to
    * be rendered by a browser.
    */
   render() {
-    const author = get(this.props, 'data.contentfulMember');
-    const tagLine = `Meet ${author.firstName} ${author.lastName}!`
+    const member = get(this.props, 'data.contentfulMember');
+    const tagLine = `Meet ${member.firstName} ${member.lastName}!`
 
     return (
-      <Layout title={author.firstName}
+      <Layout title={member.firstName}
         description={tagLine}
-        image={author.ogImg.fluid.src}
+        image={member.ogImg.fluid.src}
         location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Header image={author.portrait.fluid} applyGradient={true}/>
+          <Header image={member.portrait.fluid} applyGradient={true}/>
           <div className="wrapper">
             <div className="section-headline">
               <h1>{tagLine}</h1>
@@ -53,7 +53,7 @@ class ModuleTemplate extends React.Component {
             <div className="section-headline">
             <Row className={styles.moduleDetails}>
               <Col  md={6}>
-              <a href={author.linkedIn}><FontAwesomeIcon icon={faLinkedin} /> Connect with {author.firstName} {author.lastName} on LinkedIn</a>
+              <a href={member.linkedIn}><FontAwesomeIcon icon={faLinkedin} /> Connect with {member.firstName} {member.lastName} on LinkedIn</a>
               </Col>
               <Col md={6}>
                 <p>
@@ -69,7 +69,7 @@ class ModuleTemplate extends React.Component {
                     <FontAwesomeIcon icon={faFacebook} />
                   </FacebookShareButton>&nbsp;
                     <LinkedinShareButton className={styles.icon} url={this.props.location.href}
-                    title={author.title}
+                    title={member.title}
                     summary={tagLine}>
                     <FontAwesomeIcon icon={faLinkedin} />
                   </LinkedinShareButton>
@@ -79,7 +79,7 @@ class ModuleTemplate extends React.Component {
             </div>
             <div
               dangerouslySetInnerHTML={{
-                __html: author.body.childMarkdownRemark.html,
+                __html: member.body.childMarkdownRemark.html,
               }}
             />
           </div>
