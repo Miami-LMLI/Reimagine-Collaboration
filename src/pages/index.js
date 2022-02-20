@@ -14,7 +14,7 @@ import CategoryPreview from '../components/category-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
-import AllSpeakers from '../assets/images/AllSpeakers.png';
+import AllSpeakers from '../assets/images/AllSpeakers.jpg';
 
 // Brings in stuff needed for css.
 import styles from '../css/index.module.css';
@@ -216,7 +216,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: {eq: "images/cohort10.png"}) {
+    file(relativePath: {eq: "images/cohort10.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

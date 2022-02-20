@@ -13,11 +13,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Crawford from '../assets/images/Crawford.png';
-import Wilcox from '../assets/images/Wilcox.png';
-import Leschke from '../assets/images/Leschke-Kahle.png';
-import Williams from '../assets/images/Williams.png';
-import Sukumaran from '../assets/images/Sukumaran.png';
+import Crawford from '../assets/images/Crawford.jpg';
+import Wilcox from '../assets/images/Wilcox.jpg';
+import Leschke from '../assets/images/Leschke-Kahle.jpg';
+import Williams from '../assets/images/Williams.jpg';
+import Sukumaran from '../assets/images/Sukumaran.jpg';
 
 /**
  * The class that represents the categories page.
@@ -40,9 +40,9 @@ class Categories extends React.Component {
                 location={this.props.location}>
                 <div className="content">
                     <div className="wrapper">
-                        <h2 className="section-headline">
+                        <h1 className="section-headline">
                             Livestream
-                        </h2>
+                        </h1>
                     </div>
                 </div>
                 <div className="content" style={{ textAlign: "center" }}>
