@@ -37,7 +37,7 @@ class Categories extends React.Component {
                         <div className="content schedule" style={{ textAlign: "center" }}>                  
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 9:00 - 9:45 </h4> 
+                                    <h4><b> 9:00 - 9:45 </b></h4> 
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Check-In </h3>
@@ -48,7 +48,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 9:45 - 10:00 </h4> 
+                                    <h4><b> 9:45 - 10:00 </b></h4> 
                                 </Col>
                                 <Col md={4}>
                                 </Col>
@@ -58,7 +58,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 10:00 - 10:20 </h4> 
+                                    <h4><b> 10:00 - 10:20 </b></h4> 
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Welcome </h3>
@@ -71,7 +71,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 10:20 - 11:05 </h4>
+                                    <h4><b> 10:20 - 11:05 </b></h4>
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Jeff Wilcox </h3>
@@ -83,7 +83,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 11:10 - 11:40 </h4> 
+                                    <h4><b>11:10 - 11:40 </b></h4> 
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Breakout Groups </h3>
@@ -94,7 +94,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 11:40 - 12:35 </h4> 
+                                    <h4><b> 11:40 - 12:35 </b></h4> 
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Lunch </h3>
@@ -105,7 +105,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 12:45 - 1:30 </h4> 
+                                    <h4><b> 12:45 - 1:30 </b></h4> 
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Amy Leschke-Kahle </h3>
@@ -117,7 +117,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 1:30 - 1:45 </h4>
+                                    <h4><b> 1:30 - 1:45 </b></h4>
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Break </h3>
@@ -127,7 +127,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row className="pb-4">
                                 <Col md={4}> 
-                                    <h4> 1:45 - 2:30 </h4>
+                                    <h4><b> 1:45 - 2:30 </b></h4>
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Bryce Williams </h3>
@@ -139,7 +139,7 @@ class Categories extends React.Component {
                             </Row>
                             <Row>
                                 <Col md={4}> 
-                                    <h4>  2:30 - 3:00 </h4>
+                                    <h4><b>  2:30 - 3:00 </b></h4>
                                 </Col>
                                 <Col md={4}> 
                                     <h3> Closing Remarks </h3>
