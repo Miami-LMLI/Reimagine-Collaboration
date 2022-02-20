@@ -53,7 +53,7 @@ class Categories extends React.Component {
                         <h2 className="section-headline">
                             Register for the Virtual Event
                         </h2>
-                        <p><a href="https://www.eventbrite.com/x/266411061657/">Livestream Registration</a></p>
+                        <p><a href="https://www.eventbrite.com/e/reimagine-collaboration-tickets-266411061657">Livestream Registration</a></p>
                     </div>
                 </div>
                 <div>
