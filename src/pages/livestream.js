@@ -1,9 +1,7 @@
-import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import MemberPreview from '../components/member-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Crawford from '../assets/images/Crawford.jpg';
@@ -64,7 +62,7 @@ class Categories extends React.Component {
                             <h2 className="section-headline">
                                 Virtual Schedule (EST)
                             </h2>
-                            <div className="livestream-schedule p-5">
+                            <div className="content livestream-schedule p-5">
                                 <Row className="pb-4">
                                     <Col md={6}> 
                                         <h4 className="text-center"> 10:00 - 10:20 </h4>

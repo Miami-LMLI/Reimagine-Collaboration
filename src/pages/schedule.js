@@ -1,20 +1,9 @@
-import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import MemberPreview from '../components/member-preview';
 import Header from '../components/header';
 import Layout from '../components/layout';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
-
 
 function createData(time, event, location) {
     return { time, event, location };
@@ -52,44 +41,129 @@ class Categories extends React.Component {
             <Layout
                 title="Schedule"
                 location={this.props.location}>
-
                 <div className="content">
+                    <Header text={'Schedule'} applyGradient={true} />
                     <div className="wrapper">
                         <h1 className="section-headline">
-                            Schedule (EST)
+                            Schedule for Reimagine Collaboration (EST)
                         </h1>
-                    </div>
-                    <div className="content" style={{ textAlign: "center" }}>
-                        <div className="wrapper">
-                            <TableContainer component={Paper}>
-                                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell align="right"><h2>Time</h2></TableCell>
-                                            <TableCell align="right"><h2>Event</h2></TableCell>
-                                            <TableCell align="right"><h2>Location</h2></TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {rows.map((row) => (
-                                            <TableRow
-                                                key={row.name}
-                                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                            >
-                                                <TableCell align="right">{row.time}</TableCell>
-                                                <TableCell align="right">{row.event}</TableCell>
-                                                <TableCell align="right">{row.location}</TableCell>
-                                            </TableRow>
-                                        ))}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
+                        <div className="content schedule" style={{ textAlign: "center" }}>                  
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 9:00 - 9:45 </h4> 
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Check-In </h3>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Benton Hall Atrium </h4>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 9:45 - 10:00 </h4> 
+                                </Col>
+                                <Col md={4}>
+                                </Col>
+                                <Col md={4}> 
+                                    <h4> Transition to Farmer </h4>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 10:00 - 10:20 </h4> 
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Welcome </h3>
+                                    <p> Louise Morman - Executive Director of Lockheed Martin Leadership Institute </p>
+                                    <p> Dr. Gregory Crawford - President of Miami University </p>
+                                </Col>
+                                <Col md={4}>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 10:20 - 11:05 </h4>
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Jeff Wilcox </h3>
+                                    <p> Former Vice President of Digital Transformation at Lockheed Martin </p>
+                                </Col>
+                                <Col md={4}>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 11:10 - 11:40 </h4> 
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Breakout Groups </h3>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Farmer School of Business 0024, 0027, 0028, 0031</h4>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 11:40 - 12:35 </h4> 
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Lunch </h3>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Farmer School of Business Common Area </h4>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 12:45 - 1:30 </h4> 
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Amy Leschke-Kahle </h3>
+                                    <p> Vice President of Performance Acceleration at the Marcus Buckingham Company </p>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Farmer School of Business 0025</h4>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 1:30 - 1:45 </h4>
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Break </h3>
+                                </Col>
+                                <Col md={4}>
+                                </Col>
+                            </Row>
+                            <Row className="pb-4">
+                                <Col md={4}> 
+                                    <h4> 1:45 - 2:30 </h4>
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Bryce Williams </h3>
+                                    <p> Advisor + Workforce Collaboration at Eli Lilly and Company </p>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Farmer School of Business 0025</h4>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md={4}> 
+                                    <h4>  2:30 - 3:00 </h4>
+                                </Col>
+                                <Col md={4}> 
+                                    <h3> Closing Remarks </h3>
+                                    <p> Dr. Beena Sukumaran - Dean, College of Engineering and Computing </p>
+                                </Col>
+                                <Col md={4}>
+                                    <h4> Farmer School of Business 0025</h4>
+                                </Col>
+                            </Row>
                         </div>
                     </div>
                 </div>
                 <div className="break" />
-
-
             </Layout>
         );
     }

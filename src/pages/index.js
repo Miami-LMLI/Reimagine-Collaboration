@@ -46,9 +46,6 @@ class Home extends React.Component {
               As we adapt our ways of working, how we collaborate has to adapt, too.
             </h2>
             <Row>
-              {/*<Col md={6}>
-                <iframe width="100%" height="320" src="https://www.youtube.com/embed/x7TWKtFRDO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </Col> */}
               <Col>
                 <p>
                   After the world went virtual, organizations across the globe
@@ -123,40 +120,6 @@ class Home extends React.Component {
         </div>
 
         <div className="break" />
-
-        {/* <div className="content">
-          <div className="wrapper">
-            <h2 className="section-headline">
-              Listen to the Envision 2040 Podcast On
-            </h2>
-            <nav role="navigation">
-              <ul className={styles.navigation}>
-                <li className={styles.icon}>
-                  <a aria-label="Anchor.FM"
-                    href="https://anchor.fm/lmli">
-                    <FontAwesomeIcon icon={faPodcast} /></a>
-                </li>
-                <li className={styles.icon}>
-                  <a aria-label="Spotify"
-                    href="https://open.spotify.com/show/3sWcFQlKp21onkA35AxZ3O">
-                    <FontAwesomeIcon icon={faSpotify} /></a>
-                </li>
-                <li className={styles.icon}>
-                  <a aria-label="Google Podcasts"
-                    href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80NjE5YThhYy9wb2RjYXN0L3Jzcw">
-                    <FontAwesomeIcon icon={faGooglePlay} /></a>
-                </li>
-                <li className={styles.icon}>
-                  <a aria-label="Apple Podcasts"
-                    href="">
-                    <FontAwesomeIcon icon={faApple} /></a>
-                </li> 
-              </ul>
-            </nav>
-          </div>
-        </div> 
-
-        <div className="break" /> */}
 
         <div className="content">
           <div className="wrapper">
