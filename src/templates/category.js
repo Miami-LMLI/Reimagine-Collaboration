@@ -48,7 +48,7 @@ class CategoryTemplate extends React.Component {
         <div className="content">
           <div className="wrapper">
             <h2 className="section-headline">
-              Explore {category.title} Modules
+              Explore our {category.title}
             </h2>
             <Row>
               {modules.map(({ node }) => {
