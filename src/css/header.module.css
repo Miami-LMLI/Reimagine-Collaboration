@@ -75,7 +75,7 @@
    * Set's font size 
    * relative to container size. 
    */
-  font-size: 4em;
+  font-size: 3.75em;
 
   /* Center's text */
   display: flex;

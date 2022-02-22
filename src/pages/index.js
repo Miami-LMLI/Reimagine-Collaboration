@@ -61,7 +61,7 @@ class Home extends React.Component {
                   into the ever-changing world of work.
                 </p>
                 <p>
-                  We are excited to see you at our conference on March 11, 2022!
+                  We are excited to see you at <a href="/livestream">our conference</a> on March 11, 2022!
                 </p>
               </Col>
             </Row>

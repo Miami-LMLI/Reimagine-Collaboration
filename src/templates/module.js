@@ -45,18 +45,18 @@ class ModuleTemplate extends React.Component {
         image={module.heroImage.fluid.src}
         location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Header text={module.title} bgImage={module.heroImage.fluid} />
+          <Header text={module.title} bgImage={module.heroImage.fluid}/>
           <div className="wrapper">
             <div className="section-headline">
               {module.tagLine &&
-                <h1>
+                <h2>
                   {module.tagLine}
-                </h1>
+                </h2>
               }
             </div>
             <div className="section-headline">
               <Row className={styles.moduleDetails}>
-                {/*<Col md={4}>
+                <Col md={4}>
                   <span>By </span>
                   {module.author.map((val, idx) => {
                     return (
@@ -66,7 +66,7 @@ class ModuleTemplate extends React.Component {
                       </Link>
                     );
                   })}
-                </Col>*/}
+                </Col>
                 <Col md={4}>
                   <p>Time to read: {module.body.childMarkdownRemark.timeToRead} min</p>
                 </Col>

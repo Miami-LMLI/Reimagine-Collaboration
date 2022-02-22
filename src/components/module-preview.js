@@ -39,10 +39,10 @@ class ModulePreview extends React.Component {
             __html: module.description.childMarkdownRemark.html,
           }}
         />
-        {/*<p className={styles.previewDetails}>
+        <p className={styles.previewDetails}>
           <span>By {module.author.map(x => x.firstName + " " + x.lastName).join(", ")} &#183; </span>
           {module.body.childMarkdownRemark.timeToRead} min read
-        </p>*/}
+        </p>
       </Link >
     );
   }
