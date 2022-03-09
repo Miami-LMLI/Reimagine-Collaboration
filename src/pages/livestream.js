@@ -74,10 +74,10 @@ class Categories extends React.Component {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell> <h4> 10:20 - 11:05 </h4>
-                                        <img src={Wilcox} alt="Wilcox" style={{ height: "150px", width: "150px" }} />
+                                        <img src={Williams} alt="Williams" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
-                                    <TableCell> <h2> Jeff Wilcox </h2>
-                                        <p> Former Vice President of Digital Transformation at Lockheed Martin </p>
+                                    <TableCell> <h2> Bryce Williams </h2>
+                                        <p> Advisor + Workforce Collaboration at Eli Lilly and Company </p>
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -88,16 +88,9 @@ class Categories extends React.Component {
                                        <p> Vice President of Performance Acceleration at the Marcus Buckingham Company </p>
                                     </TableCell>
                                 </TableRow>
+                                
                                 <TableRow>
-                                    <TableCell> <h4> 1:45 - 2:30 </h4>
-                                        <img src={Williams} alt="Williams" style={{ height: "150px", width: "150px" }} />
-                                    </TableCell>
-                                    <TableCell> <h2> Bryce Williams </h2>
-                                        <p> Advisor + Workforce Collaboration at Eli Lilly and Company </p>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell> <h4>  2:30 - 3:00 </h4>
+                                    <TableCell> <h4> 2:30 - 3:00 </h4>
                                         <img src={Sukumaran} alt="Sukumaran" style={{ height: "150px", width: "150px" }} />
                                     </TableCell>
                                     <TableCell> <h2> Closing Remarks </h2>
