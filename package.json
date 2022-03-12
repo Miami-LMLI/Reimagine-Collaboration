@@ -2,7 +2,13 @@
   "name": "reimagine-collaboration",
   "description": "",
   "version": "1.0.0",
-  "author": "Sam Kuhbander <kuhbandersam@gmail.com",
+  "contributors": [
+    "Kyle Lierer <liererkt@miamioh.edu>",
+    "Sophia Staudt <staudts@miamioh.edu>",
+    "Sam Kuhbander <kuhbandersam@gmail.com>",
+    "Morghan Jones <jonesm38@miamioh.edu>",
+    "Hannah Duncan <duncanhm@miamioh.edu>"
+  ],
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
