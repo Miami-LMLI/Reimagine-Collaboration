@@ -37,7 +37,7 @@ class Contact extends React.Component {
           <div className="wrapper">
             <Row>
               <Col lg>
-                <h3>Address</h3>
+                <h2>Address</h2>
                 <p>
                   College of Engineering &amp; Computing
                   <br />
@@ -49,7 +49,7 @@ class Contact extends React.Component {
                 </p>
               </Col>
               <Col lg>
-                <h3>Louise M. Morman</h3>
+                <h2>Louise M. Morman</h2>
                 <p>
                   <strong>Executive Director and Instructor</strong>
                   <br />
@@ -59,7 +59,7 @@ class Contact extends React.Component {
                 </p>
               </Col>
               <Col lg>
-                <h3>Fabienne Bohon</h3>
+                <h2>Fabienne Bohon</h2>
                 <p>
                   <strong>Assistant Director</strong>
                   <br />
@@ -71,7 +71,7 @@ class Contact extends React.Component {
             </Row>
             <Row>
               <Col lg>
-                <h3>Social Media</h3>
+                <h2>Social Media</h2>
                 <a
                   aria-label="Facebook"
                   href={data.site.siteMetadata.social.facebook}
@@ -108,13 +108,13 @@ class Contact extends React.Component {
                 </a>
               </Col>
               <Col lg>
-                <h3>Website</h3>
+                <h2>Website</h2>
                 <a
                   aria-label="Lockheed Martin Leadership Institute's Website"
                   href={data.site.siteMetadata.social.website}
                 >
                   <FontAwesomeIcon icon={faGlobe} /> Lockheed Martin Leadership
-                  Institute&apos;s Website
+                  Institute
                 </a>
               </Col>
               <Col lg>
